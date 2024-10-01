@@ -1,10 +1,10 @@
-import Task from './Task.jsx'
+import ToDoList from './ToDoList.jsx'
 
 function App() {
 
   return (
     <>
-      <Task />
+      <ToDoList />
     </>
   )
 }

@@ -1,0 +1,13 @@
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    border: solid 2px #dddddd;
+}
+
+.task-date {
+    color: #555555;
+}
