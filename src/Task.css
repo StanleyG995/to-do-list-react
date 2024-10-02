@@ -3,11 +3,37 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    font-size: 1.2rem;
-    margin: 20px 0;
-    border: solid 2px #dddddd;
+    font-size: 1.6rem;
+    padding: 20px;
+}
+
+.task:nth-child(odd) {
+    background-color:#f4f4ff;
+}
+
+.task:nth-child(even) {
+    background-color:#f9f9ff;
 }
 
 .task-date {
     color: #555555;
+}
+
+.task-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    transition: filter 0.3s ease;
+    cursor: pointer;
+    background-color: #d1d5f5;
+}
+
+.task-button:hover {
+    filter: brightness(1.05);
+}
+
+.task-button--done {
+    background-color:rgb(6, 30, 216);
+    color: white;
 }
