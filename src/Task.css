@@ -22,11 +22,12 @@
 .task-button {
     padding: 10px 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 50px;
     font-size: 1.6rem;
     transition: filter 0.3s ease;
     cursor: pointer;
-    background-color: #d1d5f5;
+    background-color: #dfe2f8;
+    border: solid 1px #b8bcdd;
 }
 
 .task-button:hover {
@@ -35,5 +36,13 @@
 
 .task-button--done {
     background-color:rgb(6, 30, 216);
+    border: solid 1px rgb(6, 30, 216);
     color: white;
 }
+
+.task-button--delete {
+    background-color:rgb(250, 217, 217);
+    border: solid 1px rgb(192, 47, 36);
+    color: rgb(192, 47, 36);
+}
+
