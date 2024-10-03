@@ -1,10 +1,17 @@
-.task {
+.task{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     font-size: 1.6rem;
     padding: 20px;
+}
+
+.task-directional-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .task:nth-child(odd) {
@@ -46,3 +53,4 @@
     color: rgb(192, 47, 36);
 }
 
+.task-button-
