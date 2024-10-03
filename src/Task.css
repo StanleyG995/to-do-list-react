@@ -4,7 +4,7 @@
     align-items: center;
     gap: 20px;
     font-size: 1.6rem;
-    padding: 20px;
+    padding: 14px 20px;
 }
 
 .task-directional-controls {
@@ -27,7 +27,7 @@
 }
 
 .task-button {
-    padding: 10px 20px;
+    padding:8px 16px;
     border: none;
     border-radius: 50px;
     font-size: 1.6rem;
