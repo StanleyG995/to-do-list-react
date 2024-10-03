@@ -5,6 +5,10 @@ function TaskList() {
 
     const [tasks, setTasks] = useState(['Test1', 'Test2', 'Test3'])
 
+    const addTask = () => {
+        
+    }
+
     console.log(tasks)
 
     return (
