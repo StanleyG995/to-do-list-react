@@ -25,3 +25,27 @@
 .task-date {
     color: #555555;
 }
+
+.task-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 2rem;
+    color: #555555;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.task-arrow:focus {
+    outline: 2px solid rgb(6, 30, 216);
+    border-radius: 50%;
+}
+
+.task-arrow:hover, .task-arrow:focus {
+    color: rgb(6, 30, 216);
+}

@@ -46,7 +46,7 @@ body{
     border: solid 1px #b8bcdd;
 }
 
-.button:hover {
+.button:hover, .button:focus{
     filter: brightness(1.05);
 }
 

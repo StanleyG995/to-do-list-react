@@ -13,7 +13,7 @@ function App() {
 
       <h2 className='app-title'>Current tasks</h2>
       <TaskList />  
-
+    
     </div>
   )
 }
