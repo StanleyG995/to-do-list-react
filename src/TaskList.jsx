@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Task from './Task.jsx'
+import Input from './Input.jsx'
 
 function TaskList() {
 
@@ -12,9 +13,13 @@ function TaskList() {
     console.log(tasks)
 
     return (
-       <ul>
+        <div className='to-do-list'>
+            <Input />
+            <ul>
             {tasks.map((task, index) => <Task key={index} taskDesc={task}/>)}
-       </ul> 
+            </ul> 
+        </div>
+       
     )
     
 }

@@ -1,10 +1,9 @@
 import TaskList from './TaskList.jsx'
+import Input from './Input.jsx'
 
 function ToDoList() {
     return (
-        <div className='to-do-list'>
-            <TaskList />
-        </div>
+        <TaskList /> 
     )
 }
 
