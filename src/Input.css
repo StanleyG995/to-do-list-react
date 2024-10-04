@@ -28,6 +28,7 @@
 }
 
 .input-task-input {
+    width: 100%;
     border: none;
     outline: solid 1px #b8bcdd;
     border-radius: 6px;
@@ -47,4 +48,18 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container .input-clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    margin-right: 5px;
+    top:50%;
+    transform: translateY(-50%);
 }
