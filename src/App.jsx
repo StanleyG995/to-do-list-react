@@ -6,9 +6,11 @@ function App() {
 
   return (
     <>
-      <Input />
+      <AddNewTask>
+        <Input />
+      </AddNewTask>
+      
       <TaskList />  
-      <AddNewTask />
     </>
   )
 }

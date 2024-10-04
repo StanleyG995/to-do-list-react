@@ -1,14 +1,20 @@
+import React, { useState, useContext } from 'react'
+import { IsVisibleContext } from './AddNewTask'
 import './input.css'
 
+
 function Input() {
+
+    const isVisible = useContext(IsVisibleContext)
+
     return (
-        <div className="input-overlay input-hidden">
+        <div id='input-overlay' className={`input-overlay ${isVisible ? 'input-visible' : 'input-hidden'}`}>
             <div className="input-modal">
                 <label htmlFor="input-task-name" className="input-task-name">Enter task description:</label>
 
                 <div className="input-container">
                     <input id="input-task-name" className="input-task-input" type="text" />
-                    <button className='button button--danger input-clear'>X Clear</button>
+                    <button className='button button--danger input-clear'><span style={{fontWeight: 'bold',}}>✕</span> Clear</button>
                 </div>
                 
 
