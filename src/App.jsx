@@ -1,10 +1,14 @@
-import ToDoList from './ToDoList.jsx'
+import TaskList from './TaskList.jsx'
+import Input from './Input.jsx'
+import AddNewTask from './AddNewTask.jsx'
 
 function App() {
 
   return (
     <>
-      <ToDoList />
+      <Input />
+      <TaskList />  
+      <AddNewTask />
     </>
   )
 }

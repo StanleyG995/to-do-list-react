@@ -2,7 +2,7 @@ import './input.css'
 
 function Input() {
     return (
-        <div className="input-overlay">
+        <div className="input-overlay input-hidden">
             <div className="input-modal">
                 <label htmlFor="input-task-name" className="input-task-name">Enter task description:</label>
 

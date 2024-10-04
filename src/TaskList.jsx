@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import Task from './Task.jsx'
-import Input from './Input.jsx'
+
 
 function TaskList(props) {
 
@@ -15,7 +15,6 @@ function TaskList(props) {
 
     return (
         <div className='to-do-list'>
-            <Input />
             <ul>
             {tasks.map((task, index) => <Task key={index} taskDesc={task}/>)}
             </ul> 
