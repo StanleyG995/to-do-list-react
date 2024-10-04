@@ -13,6 +13,7 @@ function Task(props) {
 
             <p className="task-desc">{props.taskDesc}</p>
             <span className="task-date">{new Date().toLocaleString()}</span>
+            
             <button className="button button--primary">✔ Done</button>
             <button className="button">✎ Edit</button>
             <button className="button button--danger"><span style={{fontWeight: 'bold',}}>✕</span> Delete</button>
