@@ -12,6 +12,14 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
+.app-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
 .button {
     padding:8px 16px;
     border: none;

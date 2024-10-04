@@ -9,15 +9,7 @@ function AddNewTask() {
     const [isVisible, setIsVisible] = useState(false)
 
     const toggleVisibility = () => {
-        if(isVisible === true){
-            setIsVisible(false)
-        }
-
-        else {
-            setIsVisible(true)
-        }
-            
-    
+        setIsVisible(!isVisible)
     }
 
     return (

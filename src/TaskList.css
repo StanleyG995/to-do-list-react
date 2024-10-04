@@ -1,0 +1,6 @@
+.task-list-container {
+    max-width: 1200px;
+    border: solid 1px #b8bcdd;
+    border-radius: 10px;
+    overflow: hidden;
+}
