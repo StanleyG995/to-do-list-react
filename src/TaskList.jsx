@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
+import PropTypes from 'prop-types'
 import Task from './Task.jsx'
 import Input from './Input.jsx'
 
-function TaskList() {
+function TaskList(props) {
 
     const [tasks, setTasks] = useState(['Test1', 'Test2', 'Test3'])
 
@@ -22,6 +23,10 @@ function TaskList() {
        
     )
     
+}
+
+TaskList.propTypes = {
+    taskListName: PropTypes.string,
 }
 
 export default TaskList

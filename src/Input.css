@@ -1,0 +1,50 @@
+.input-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    background-color: #ffffff77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-modal {
+    border: solid 1px #b8bcdd;
+    border-radius: 10px;
+    background: #fcfcfc;
+    box-shadow: 5px 5px 8px #eeeeff;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 1.6rem;
+}
+
+.input-task-name {
+    margin-bottom: 12px;
+}
+
+.input-task-input {
+    border: none;
+    outline: solid 1px #b8bcdd;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    padding: 10px 20px;
+    transition: border .3s ease, background-color .3s ease;
+}
+
+.input-task-input:focus {
+    outline: solid 2px #a2a7d4;
+    background-color: #eeeeff;
+}
+
+.input-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
