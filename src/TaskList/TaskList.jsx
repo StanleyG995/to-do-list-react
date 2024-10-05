@@ -7,11 +7,7 @@ import { ToDoListContext } from "../App.jsx"
 
 function TaskList(props) {
 
-    const {currentTasks, setCurrentTasks} = useContext(ToDoListContext)
-
-    const addTask = () => {
-        
-    }
+    const {currentTasks, setCurrentTasks, taskDesc, setTaskDesc} = useContext(ToDoListContext)
 
     return (
         <div className='task-list-container'>

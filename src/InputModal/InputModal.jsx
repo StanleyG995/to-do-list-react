@@ -1,10 +1,11 @@
 import React, { useState, useContext } from "react"
 import { ToDoListContext } from "../App.jsx"
+import Task from '../Task/Task.jsx'
 import "./InputModal.css"
 
 function Input() {
 
-	const {isVisible, setIsVisible, taskDesc, setTaskDesc} = useContext(ToDoListContext)
+	const {isVisible, setIsVisible, taskDesc, setTaskDesc, currentTasks, setCurrentTasks} = useContext(ToDoListContext)
 
 	const closeInputModal = () => {
 		setIsVisible(false)
@@ -17,6 +18,12 @@ function Input() {
 	const clearInput = () => {
 		setTaskDesc("")
 	}
+
+	const addTask = (taskDesc) => {
+        currentTasks.push(taskDesc)
+		setTaskDesc("")
+		setIsVisible(false)
+    }
 
 	return (
 		<div
@@ -51,7 +58,7 @@ function Input() {
 					<button className='button' onClick={closeInputModal}>
 						Cancel
 					</button>
-					<button className='button button--primary'>+ Add</button>
+					<button className='button button--primary' onClick={() => addTask(taskDesc)}>+ Add</button>
 				</div>
 			</div>
 		</div>
