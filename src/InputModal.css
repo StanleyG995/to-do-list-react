@@ -1,4 +1,4 @@
-.input-overlay {
+.input-modal-overlay {
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -9,9 +9,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 99999999;
 }
 
-.input-modal {
+.input-modal-modal {
     border: solid 1px #b8bcdd;
     border-radius: 10px;
     background: #fcfcfc;
@@ -23,11 +24,11 @@
     font-size: 1.6rem;
 }
 
-.input-task-name {
+.input-modal-task-name {
     margin-bottom: 12px;
 }
 
-.input-task-input {
+.input-modal-task-input {
     width: 100%;
     border: none;
     outline: solid 1px #b8bcdd;
@@ -37,12 +38,12 @@
     transition: border .3s ease, background-color .3s ease;
 }
 
-.input-task-input:focus {
+.input-modal-task-input:focus {
     outline: solid 2px #a2a7d4;
     background-color: #eeeeff;
 }
 
-.input-buttons {
+.input-modal-buttons {
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -50,11 +51,11 @@
     gap: 20px;
 }
 
-.input-container {
+.input-modal-container {
     position: relative;
 }
 
-.input-container .input-clear {
+.input-modal-container .input-modal-clear {
     position: absolute;
     top: 0;
     right: 0;
@@ -62,12 +63,15 @@
     margin-right: 5px;
     top:50%;
     transform: translateY(-50%);
+    color: rgb(192, 47, 36);
+    border: none !important;
+    background: none !important;
 }
 
-.input-visible {
+.input-modal-visible {
     display: flex;
 }
 
-.input-hidden {
+.input-modal-hidden {
     display: none;
 }

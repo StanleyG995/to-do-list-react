@@ -6,23 +6,33 @@ import './inputModal.css'
 function Input() {
 
     const [isVisible, setIsVisible] = useContext(IsVisibleContext)
+    const [taskDesc, setTaskDesc] = useState('')
 
     const closeInputModal = () => {
         setIsVisible(false)
     }
 
-    return (
-        <div id='input-overlay' className={`input-overlay ${isVisible ? 'input-visible' : 'input-hidden'}`}>
-            <div className="input-modal">
-                <label htmlFor="input-task-name" className="input-task-name">Enter task description:</label>
+    const handleInputChange = (e) => {
+        setTaskDesc(e.target.value)
+        console.log(taskDesc)
+    }
 
-                <div className="input-container">
-                    <input id="input-task-name" className="input-task-input" type="text" placeholder='New task' />
-                    <button className='button button--danger input-clear'><span style={{fontWeight: 'bold',}}>✕</span> Clear</button>
+    const clearInput = () => {
+        setTaskDesc('')
+    }
+
+    return (
+        <div id='input-modal-overlay' className={`input-modal-overlay ${isVisible ? 'input-modal-visible' : 'input-modal-hidden'}`}>
+            <div className="input-modal-modal">
+                <label htmlFor="input-modal-task-name" className="input-modal-task-name">Enter task description:</label>
+
+                <div className="input-modal-container">
+                    <input id="input-modal-task-name" className="input-modal-task-input" type="text" placeholder='New task' value={taskDesc} onChange={(e) => handleInputChange(e)} />
+                    <button className='button button--danger input-modal-clear' onClick={clearInput}><span style={{fontWeight: 'bold',}}>✕</span> Clear</button>
                 </div>
                 
 
-                <div className="input-buttons">
+                <div className="input-modal-buttons">
                     <button className="button" onClick={closeInputModal}>Cancel</button>
                     <button className="button button--primary">+ Add</button>
                 </div>
