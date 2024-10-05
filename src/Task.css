@@ -1,6 +1,6 @@
 .task{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
     font-size: 1.6rem;
@@ -22,30 +22,41 @@
     background-color:hsl(233, 95%, 97%);
 }
 
+.task-desc {
+    flex-grow: 1;
+}
+
 .task-date {
-    color: #555555;
+    color: hsl(232, 42%, 57%);
 }
 
 .task-arrow {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     outline: none;
     border: none;
     background: none;
     font-size: 2rem;
-    color: #555555;
+    color: hsl(232, 42%, 57%);
     cursor: pointer;
-    padding: 12px;
-}
-
-.task-arrow:focus {
-    outline: 2px solid hsl(233, 95%, 44%);
-    border-radius: 50%;
+    padding: 10px;
+    transition: border .1s ease-in-out, padding .1s ease-in-out
 }
 
 .task-arrow:hover, .task-arrow:focus {
     color: hsl(233, 95%, 44%);
 }
+
+.task-arrow--up:hover, .task-arrow--up:focus {
+    padding-bottom: 12px;
+    border-bottom: 3px solid hsl(233, 95%, 44%);
+}
+
+.task-arrow--down:hover, .task-arrow--down:focus {
+    padding-top: 12px;
+    border-top: 3px solid hsl(233, 95%, 44%);
+}
+

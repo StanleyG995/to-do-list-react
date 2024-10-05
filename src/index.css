@@ -12,6 +12,24 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(232, 62%, 83%);
+    z-index: -999;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(232, 54%, 67%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(233, 95%, 44%);
+}
+
 .app-wrapper {
     display: flex;
     justify-content: center;

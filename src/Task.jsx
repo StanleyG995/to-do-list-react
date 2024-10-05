@@ -7,8 +7,8 @@ function Task(props) {
         <li className='task' >
 
             <div className='task-directional-controls'>
-                <button className='task-arrow'>▲</button>
-                <button className='task-arrow'>▼</button>
+                <button className='task-arrow task-arrow--up'>▲</button>
+                <button className='task-arrow task-arrow--down'>▼</button>
             </div>
 
             <p className="task-desc">{props.taskDesc}</p>
