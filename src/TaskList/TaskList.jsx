@@ -1,18 +1,17 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import PropTypes from 'prop-types'
-import Task from './Task.jsx'
+import Task from '../Task/Task.jsx'
 import './TaskList.css'
+import { ToDoListContext } from "../App.jsx"
 
 
 function TaskList(props) {
 
-    const [tasks, setTasks] = useState(['Walk the dog', 'Cook the dinner', 'Fix the leaking sink', 'Do laundry', 'Work on a project', 'Meet with friends', 'Study for exam', 'Refuel the car', 'Water the plants', 'Go to the gym'])
+    const {currentTasks, setCurrentTasks} = useContext(ToDoListContext)
 
     const addTask = () => {
         
     }
-
-    console.log(tasks)
 
     return (
         <div className='task-list-container'>
@@ -20,7 +19,7 @@ function TaskList(props) {
             <div className="task-list-outer">
                 <div className='task-list-inner'>
                 <ul className='task-list'>
-                {tasks.map((task, index) => <Task key={index} taskDesc={task}/>)}
+                    {currentTasks.map((task, index) => <Task key={index} taskDesc={task}/>)}
                 </ul> 
                 </div>
             </div>
