@@ -15,11 +15,11 @@
 }
 
 .task:nth-child(odd) {
-    background-color:#f4f4ff;
+    background-color:hsl(233, 95%, 95%);
 }
 
 .task:nth-child(even) {
-    background-color:#f9f9ff;
+    background-color:hsl(233, 95%, 97%);
 }
 
 .task-date {
@@ -42,10 +42,10 @@
 }
 
 .task-arrow:focus {
-    outline: 2px solid rgb(6, 30, 216);
+    outline: 2px solid hsl(233, 95%, 44%);
     border-radius: 50%;
 }
 
 .task-arrow:hover, .task-arrow:focus {
-    color: rgb(6, 30, 216);
+    color: hsl(233, 95%, 44%);
 }
