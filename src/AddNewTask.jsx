@@ -1,5 +1,5 @@
 import React, {useState, createContext} from 'react'
-import Input from './Input.jsx'
+import InputModal from './InputModal.jsx'
 import './AddNewTask.css'
 
 export const IsVisibleContext = createContext()
@@ -16,8 +16,8 @@ function AddNewTask() {
         <>
             <button onClick={toggleVisibility} className='button button--primary add-new-task'><span style={{fontWeight: 'bold',}}>+</span> Add new task</button>
 
-            <IsVisibleContext.Provider value={isVisible}>
-                <Input />
+            <IsVisibleContext.Provider value={[isVisible,setIsVisible]}>
+                <InputModal />
             </IsVisibleContext.Provider>
             
         </>

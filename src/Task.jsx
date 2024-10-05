@@ -17,7 +17,7 @@ function Task(props) {
             <button className="button button--primary">✔ Done</button>
             <button className="button">✎ Edit</button>
             <button className="button button--danger"><span style={{fontWeight: 'bold',}}>✕</span> Delete</button>
-           
+            
         </li>
 
         
