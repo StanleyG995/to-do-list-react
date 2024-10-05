@@ -6,7 +6,7 @@ import './TaskList.css'
 
 function TaskList(props) {
 
-    const [tasks, setTasks] = useState(['Test1', 'Test2', 'Test3'])
+    const [tasks, setTasks] = useState(['Test1', 'Test2', 'Test3', 'Test4', 'Test5', 'Test6', 'Test7', 'Test8', 'Test9', 'Test10'])
 
     const addTask = () => {
         
