@@ -25,6 +25,10 @@ function Input() {
 		setIsVisible(false)
     }
 
+	const removeTask = (index) => {
+		currentTasks.filter((task, i) => i !== index)
+	}
+
 	const handleKeyDown = (e) => {
 		if (e.key === 'Enter') {
 			addTask(taskDesc)
