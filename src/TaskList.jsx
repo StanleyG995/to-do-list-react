@@ -16,9 +16,12 @@ function TaskList(props) {
 
     return (
         <div className='task-list-container'>
-            <ul className='task-list'>
-            {tasks.map((task, index) => <Task key={index} taskDesc={task}/>)}
-            </ul> 
+            <h2 className='task-list-title'>Current tasks:</h2>
+            <div className='task-list-inner'>
+                <ul className='task-list'>
+                {tasks.map((task, index) => <Task key={index} taskDesc={task}/>)}
+                </ul> 
+            </div>
         </div>
        
     )

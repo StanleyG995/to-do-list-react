@@ -1,6 +1,18 @@
 .task-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.task-list-inner {
     max-width: 1200px;
     border: solid 1px #b8bcdd;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.task-list-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
