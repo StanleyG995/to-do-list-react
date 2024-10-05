@@ -25,6 +25,12 @@ function Input() {
 		setIsVisible(false)
     }
 
+	const handleKeyDown = (e) => {
+		if (e.key === 'Enter') {
+			addTask(taskDesc)
+		}
+	}
+
 	return (
 		<div
 			id='input-modal-overlay'
@@ -46,6 +52,7 @@ function Input() {
 						placeholder='New task'
 						value={taskDesc}
 						onChange={e => handleInputChange(e)}
+						onKeyDown={handleKeyDown}
 					/>
 					<button
 						className='button button--danger input-modal-clear'
