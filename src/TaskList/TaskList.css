@@ -10,7 +10,7 @@
     overflow: hidden;
     border-radius: 10px;
     max-height: 500px;
-    height: 500px;
+    min-height: 500px;
 }
 
 .task-list-inner {
@@ -20,7 +20,9 @@
     border: solid 1px #b8bcdd;
     border-radius: 10px;
     max-height: 500px;
+    min-height: 500px;
     overflow-y: scroll;
+    background: #dbdef7;
 }
 
 .task-list-outer::after, .task-list-outer::before {
@@ -47,4 +49,12 @@
 .task-list-title {
     font-size: 2rem;
     margin-bottom: 20px;
+}
+
+.empty-task-list-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    min-height: inherit;
 }
