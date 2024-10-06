@@ -1,10 +1,17 @@
+import React, {useState, useContext} from 'react'
 import PropTypes from 'prop-types'
 import './Task.css'
+import { ToDoListContext } from "../App.jsx"
+
 
 function Task(props) {
 
+    const {currentTasks, setCurrentTasks, taskDesc, setTaskDesc, removeTask} = useContext(ToDoListContext)
+
+    
+
     return (
-        <li className='task' >
+        <li id={`task-${props.taskId}`} className='task'  >
 
             <div className='task-directional-controls'>
                 <button className='task-arrow task-arrow--up'>▲</button>
@@ -16,7 +23,7 @@ function Task(props) {
             
             <button className="button button--primary">✔ Done</button>
             <button className="button">✎ Edit</button>
-            <button className="button button--danger"><span style={{fontWeight: 'bold',}}>✕</span> Delete</button>
+            <button className="button button--danger" onClick={() => removeTask(props.taskId)}><span style={{fontWeight: 'bold',}}>✕</span> Delete</button>
             
         </li>
 
@@ -27,6 +34,7 @@ function Task(props) {
 
 Task.propTypes = {
     taskDesc: PropTypes.string,
+    taskId: PropTypes.number
 }
 
 export default Task
