@@ -18,12 +18,12 @@ function Task(props) {
                 <button className='task-arrow task-arrow--down'>▼</button>
             </div>
 
-            <p className="task-desc">{props.taskDesc}</p>
+            <p className="task-desc">{props.taskId}{props.taskDesc}</p>
             <span className="task-date">{new Date().toLocaleString()}</span>
             
             <button className="button button--primary">✔ Done</button>
             <button className="button">✎ Edit</button>
-            <button className="button button--danger" onClick={() => removeTask(props.taskId)}><span style={{fontWeight: 'bold',}}>✕</span> Delete</button>
+            <button className="button button--danger" onClick={(e) => removeTask(e)}><span style={{fontWeight: 'bold', pointerEvents:'none'}}>✕</span> Delete</button>
             
         </li>
 

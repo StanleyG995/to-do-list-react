@@ -13,8 +13,20 @@ function App() {
 	const [taskDesc, setTaskDesc] = useState("")
 	const [currentTasks, setCurrentTasks] = useState([])
 
-	const removeTask = id => {
-		setCurrentTasks(currentTasks.filter(task => task.id !== id)) // Filtrujemy tablicę i ustawiamy nową bez zadania o danym ID
+	const reassignIds = () => {
+		setCurrentTasks(prevTasks =>
+			prevTasks.map((task, index) => ({
+				...task,
+				id: index,
+			}))
+		)
+	}
+
+	const removeTask = e => {
+		setCurrentTasks(currentTasks.filter(task => `task-${task.id}` !== e.target.parentElement.id))
+		console.log(e.target.parentElement.id)
+		currentTasks.forEach(task => console.log(task))
+		reassignIds()
 	}
 
 	const contextValues = {
