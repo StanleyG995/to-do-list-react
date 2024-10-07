@@ -9,8 +9,6 @@ function TaskList(props) {
 
     const {currentTasks, setCurrentTasks, taskDesc, setTaskDesc, removeTask} = useContext(ToDoListContext)
 
-    
-
     return (
         <div className='task-list-container'>
             <h2 className='task-list-title'>Current tasks:</h2>

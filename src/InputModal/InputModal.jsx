@@ -21,7 +21,7 @@ function Input() {
 
 	const addTask = (taskDesc) => {
         const newTask = { id: currentTasks.length, desc: taskDesc }; // Tworzymy obiekt z ID i opisem
-    	setCurrentTasks([...currentTasks, newTask]); // Aktualizujemy stan tablicy zadań
+    	setCurrentTasks(t => [...t, newTask]); // Aktualizujemy stan tablicy zadań
 		setTaskDesc("")
 		setIsVisible(false)
     }
