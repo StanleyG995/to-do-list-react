@@ -23,9 +23,7 @@ function App() {
 	}
 
 	const removeTask = e => {
-		setCurrentTasks(t => currentTasks.filter(t => `task-${t.id}` !== e.target.parentElement.id))
-		console.log(e.target.parentElement.id)
-		currentTasks.forEach(task => console.log(task))
+		setCurrentTasks(t => t.filter(task => `task-${task.id}` !== e.target.parentElement.id))
 		reassignIds()
 	}
 

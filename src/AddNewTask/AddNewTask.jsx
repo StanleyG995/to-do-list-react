@@ -13,7 +13,10 @@ function AddNewTask() {
 	return (
 		<div className='add-new-task-container'>
 			<button
-				onClick={toggleVisibility}
+				onClick={(e) => {
+					toggleVisibility();
+					e.target.blur();
+				}}
 				className='button button--primary add-new-task'>
 				<span style={{ fontWeight: "bold" }}>+</span> Add new task
 			</button>

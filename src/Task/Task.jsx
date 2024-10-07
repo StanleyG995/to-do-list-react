@@ -18,8 +18,8 @@ function Task(props) {
                 <button className='task-arrow task-arrow--down'>▼</button>
             </div>
 
-            <p className="task-desc">{props.taskId}{props.taskDesc}</p>
-            <span className="task-date">{new Date().toLocaleString()}</span>
+            <p className="task-desc">{props.taskDesc}</p>
+            <span className="task-date">{props.taskDate}</span>
             
             <button className="button button--primary">✔ Done</button>
             <button className="button">✎ Edit</button>

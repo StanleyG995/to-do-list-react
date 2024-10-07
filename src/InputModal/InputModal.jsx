@@ -20,15 +20,13 @@ function Input() {
 	}
 
 	const addTask = (taskDesc) => {
-        const newTask = { id: currentTasks.length, desc: taskDesc }; // Tworzymy obiekt z ID i opisem
-    	setCurrentTasks(t => [...t, newTask]); // Aktualizujemy stan tablicy zadań
-		setTaskDesc("")
-		setIsVisible(false)
+		if(taskDesc !== '') {
+			const newTask = { id: currentTasks.length, desc: taskDesc, date: new Date().toLocaleString()};
+    		setCurrentTasks(t => [...t, newTask]);
+			setTaskDesc("")
+			setIsVisible(false)
+		}
     }
-
-	const removeTask = (index) => {
-		currentTasks.filter((task, i) => i !== index)
-	}
 
 	const handleKeyDown = (e) => {
 		if (e.key === 'Enter') {
