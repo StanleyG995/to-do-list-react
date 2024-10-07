@@ -5,7 +5,7 @@ import './TaskList.css'
 import { ToDoListContext } from "../App.jsx"
 
 
-function TaskList(props) {
+function TaskList({props}) {
 
     const {currentTasks, setCurrentTasks, taskDesc, setTaskDesc, removeTask} = useContext(ToDoListContext)
 

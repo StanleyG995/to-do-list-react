@@ -21,7 +21,13 @@ function Input() {
 
 	const addTask = (taskDesc) => {
 		if(taskDesc !== '') {
-			const newTask = { id: currentTasks.length, desc: taskDesc, date: new Date().toLocaleString()};
+			const newTask = { id: currentTasks.length, desc: taskDesc, date: new Date().toLocaleDateString('en-GB', {
+  				day: '2-digit', 
+ 				month: '2-digit', 
+  				year: 'numeric',
+				hour: '2-digit',
+				minute: '2-digit'
+			})}
     		setCurrentTasks(t => [...t, newTask]);
 			setTaskDesc("")
 			setIsVisible(false)
