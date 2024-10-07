@@ -34,7 +34,8 @@ function Task(props) {
 
 Task.propTypes = {
     taskDesc: PropTypes.string,
-    taskId: PropTypes.number
+    taskId: PropTypes.number,
+    taskDate: PropTypes.string
 }
 
 export default Task
