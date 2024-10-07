@@ -14,8 +14,8 @@ function App() {
 	const [currentTasks, setCurrentTasks] = useState([])
 
 	const reassignIds = () => {
-		setCurrentTasks(prevTasks =>
-			prevTasks.map((task, index) => ({
+		setCurrentTasks(t =>
+			t.map((task, index) => ({
 				...task,
 				id: index,
 			}))
@@ -23,7 +23,7 @@ function App() {
 	}
 
 	const removeTask = e => {
-		setCurrentTasks(currentTasks.filter(task => `task-${task.id}` !== e.target.parentElement.id))
+		setCurrentTasks(t => currentTasks.filter(t => `task-${t.id}` !== e.target.parentElement.id))
 		console.log(e.target.parentElement.id)
 		currentTasks.forEach(task => console.log(task))
 		reassignIds()
