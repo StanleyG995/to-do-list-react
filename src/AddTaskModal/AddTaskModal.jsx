@@ -4,23 +4,23 @@ import "./AddTaskModal.css"
 
 function Input() {
 
-	const {isVisible, setIsVisible, taskDesc, setTaskDesc, currentTasks, setCurrentTasks} = useContext(ToDoListContext)
+	const {isVisible, setIsVisible, taskDescription, setTaskDescription, currentTasks, setCurrentTasks} = useContext(ToDoListContext)
 
 	const closeInputModal = () => {
 		setIsVisible(false)
 	}
 
 	const handleInputChange = e => {
-		setTaskDesc(e.target.value)
+		setTaskDescription(e.target.value)
 	}
 
 	const clearInput = () => {
-		setTaskDesc("")
+		setTaskDescription("")
 	}
 
-	const addTask = (taskDesc) => {
-		if(taskDesc !== '') {
-			const newTask = { id: currentTasks.length, desc: taskDesc, date: new Date().toLocaleDateString('en-GB', {
+	const addTask = (taskDescription) => {
+		if(taskDescription !== '') {
+			const newTask = { id: currentTasks.length, description: taskDescription, date: new Date().toLocaleDateString('en-GB', {
   				day: '2-digit', 
  				month: '2-digit', 
   				year: 'numeric',
@@ -28,14 +28,14 @@ function Input() {
 				minute: '2-digit'
 			})}
     		setCurrentTasks(t => [...t, newTask]);
-			setTaskDesc("")
+			setTaskDescription("")
 			setIsVisible(false)
 		}
     }
 
 	const handleKeyDown = (e) => {
 		if (e.key === 'Enter') {
-			addTask(taskDesc)
+			addTask(taskDescription)
 		}
 	}
 
@@ -58,7 +58,7 @@ function Input() {
 						className='add-task-modal-input'
 						type='text'
 						placeholder='New task'
-						value={taskDesc}
+						value={taskDescription}
 						onChange={e => handleInputChange(e)}
 						onKeyDown={handleKeyDown}
 					/>
@@ -73,7 +73,7 @@ function Input() {
 					<button className='button' onClick={closeInputModal}>
 						Cancel
 					</button>
-					<button className='button button--primary' onClick={() => addTask(taskDesc)}>+ Add</button>
+					<button className='button button--primary' onClick={() => addTask(taskDescription)}>+ Add</button>
 				</div>
 			</div>
 		</div>

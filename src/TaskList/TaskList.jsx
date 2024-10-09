@@ -7,7 +7,7 @@ import { ToDoListContext } from "../App.jsx"
 
 function TaskList({props}) {
 
-    const {currentTasks, setCurrentTasks, taskDesc, setTaskDesc, removeTask} = useContext(ToDoListContext)
+    const {currentTasks} = useContext(ToDoListContext)
 
     return (
         <div className='task-list-container'>
@@ -16,7 +16,7 @@ function TaskList({props}) {
                 <div className='task-list-inner'>
                 {currentTasks.length === 0 ? <div className='empty-task-list-msg'><p>No current tasks, add some.</p></div> : null}
                 <ul className='task-list'>
-                    {currentTasks.map((task, index) => <Task key={index} taskId={index} taskDesc={task.desc} taskDate={task.date} taskCategory={task.category}/>)}
+                    {currentTasks.map((task, index) => <Task key={index} taskId={index} taskDescription={task.description} taskDate={task.date} taskCategory={task.category}/>)}
                 </ul> 
                 </div>
             </div>
