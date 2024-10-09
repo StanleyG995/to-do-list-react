@@ -10,6 +10,7 @@ export const ToDoListContext = createContext()
 function App() {
 	const [isVisible, setIsVisible] = useState(false)
 	const [taskDescription, setTaskDescription] = useState("")
+	const [taskCategory, setTaskCategory] = useState("")
 	const [currentTasks, setCurrentTasks] = useState([
 		{
 			id: 0, 
@@ -71,6 +72,8 @@ function App() {
 		currentTasks,
 		setCurrentTasks,
 		removeTask,
+		taskCategory,
+		setTaskCategory,
 	}
 
 	return (

@@ -3,10 +3,11 @@ import { ToDoListContext } from "../App.jsx"
 import "./AddNewTask.css"
 
 function AddNewTask() {
-	const { isVisible, setIsVisible } = useContext(ToDoListContext)
+	const { isVisible, setIsVisible, setTaskCategory } = useContext(ToDoListContext)
 
 	const toggleVisibility = () => {
 		setIsVisible(!isVisible)
+		setTaskCategory('🏠 Home')
 	}
 
 	return (

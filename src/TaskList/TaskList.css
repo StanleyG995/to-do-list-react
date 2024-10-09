@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+    max-width: 1200px;
 }
 
 .task-list-outer {
@@ -18,7 +19,6 @@
 .task-list-inner {
     position: relative;
     width: 100%;
-    max-width: 1000px;
     border: solid 1px #b8bcdd;
     border-radius: 10px;
     max-height: 500px;

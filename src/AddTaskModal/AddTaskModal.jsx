@@ -4,7 +4,7 @@ import "./AddTaskModal.css"
 
 function Input() {
 
-	const {isVisible, setIsVisible, taskDescription, setTaskDescription, currentTasks, setCurrentTasks} = useContext(ToDoListContext)
+	const {isVisible, setIsVisible, taskDescription, setTaskDescription, currentTasks, setCurrentTasks, taskCategory, setTaskCategory} = useContext(ToDoListContext)
 
 	const closeInputModal = () => {
 		setIsVisible(false)
@@ -14,13 +14,17 @@ function Input() {
 		setTaskDescription(e.target.value)
 	}
 
+	const handleCategoryChange = e => {
+		setTaskCategory(e.target.value)
+	}
+
 	const clearInput = () => {
 		setTaskDescription("")
 	}
 
 	const addTask = (taskDescription) => {
 		if(taskDescription !== '') {
-			const newTask = { id: currentTasks.length, description: taskDescription, date: new Date().toLocaleDateString('en-GB', {
+			const newTask = { id: currentTasks.length, description: taskDescription, category: taskCategory, date: new Date().toLocaleDateString('en-GB', {
   				day: '2-digit', 
  				month: '2-digit', 
   				year: 'numeric',
@@ -62,6 +66,15 @@ function Input() {
 						onChange={e => handleInputChange(e)}
 						onKeyDown={handleKeyDown}
 					/>
+					<select name="" defaultValue="Home" id="add-task-modal-category-select" onChange={(e) => handleCategoryChange(e)}>
+						<option value='🏠 Home'>Home</option>
+						<option value='🎓 Study'>Study</option>
+						<option value='💼 Work'>Work</option>
+						<option value='👪 Family'>Family</option>
+						<option value='💪 Sport'>Sport</option>
+						<option value='🚗 Car'>Car</option>
+						<option value='🎸 Hobby'>Hobby</option>
+					</select>
 					<button
 						className='button button--danger add-task-modal-clear'
 						onClick={clearInput}>

@@ -9,24 +9,43 @@
 
 .task-container {
     display: flex;
-
-    gap: 10px;
+    gap: 5px;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
 }
 
-.task-container-info {
-    flex-grow: 1
+.task-info {
+    flex-grow: 2;
+    justify-content: space-around;
 }
 
-.task-container-descriptionription {
-    flex-grow: 4;
+.task-description{
+    overflow: hidden;
+    white-space: normal;
+    overflow-wrap: break-word;
+    flex-grow: 5;
+    flex-wrap: wrap;
 }
 
 .task-controls {
+    flex-direction: column;
     display: flex;
+    justify-content: space-around;
     gap: 10px;
+    flex-grow: 1;
+    align-items: stretch;
+}
 
+.task-description-title {
+    font-weight: bold;
+}
+
+.task-description-text {
+    overflow: hidden;
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 75%;
 }
 
 .task:nth-child(odd) {
@@ -43,8 +62,8 @@
 }
 
 .task-date, .task-till {
-    margin: 10px 0;
     color: hsl(232, 42%, 57%);
+    margin: 6px 0;
 }
 
 .task-category {
