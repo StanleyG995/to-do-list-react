@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 12px;
+    gap: 20px;
     font-size: 1.6rem;
     padding: 14px 20px;
 }
@@ -16,7 +16,7 @@
 }
 
 .task-info {
-    flex-grow: 1;
+    flex-grow: 1cd;
     justify-content: space-around;
 }
 
@@ -29,15 +29,17 @@
 }
 
 .task-controls {
-    flex-direction: column;
     display: flex;
     justify-content: space-around;
     gap: 10px;
     flex-grow: 1;
     align-items: stretch;
+    min-width: 120px;
+    max-width: 120px;
 }
 
 .task-description-title {
+    margin-bottom: 6px;
     font-weight: bold;
 }
 
