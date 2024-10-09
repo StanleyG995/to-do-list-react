@@ -13,11 +13,6 @@ function Task(props) {
     return (
         <li id={`task-${props.taskId}`} className='task'  >
 
-            <div className='task-directional-controls'>
-                <button className='task-arrow task-arrow--up'>▲</button>
-                <button className='task-arrow task-arrow--down'>▼</button>
-            </div>
-
             <p className="task-desc">{props.taskDesc}</p>
             <span className="task-date">{props.taskDate}</span>
             

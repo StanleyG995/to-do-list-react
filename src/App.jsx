@@ -11,7 +11,35 @@ export const ToDoListContext = createContext()
 function App() {
 	const [isVisible, setIsVisible] = useState(false)
 	const [taskDesc, setTaskDesc] = useState("")
-	const [currentTasks, setCurrentTasks] = useState([])
+	const [currentTasks, setCurrentTasks] = useState([
+		{
+			id: 0, desc: 'Do the laundry', date: new Date().toLocaleDateString('en-GB', {
+			day: '2-digit', 
+	  		month: '2-digit', 
+			year: 'numeric',
+	  		hour: '2-digit',
+	  		minute: '2-digit', 
+		})
+		},
+		{
+			id: 1, desc: 'Walk the dog', date: new Date().toLocaleDateString('en-GB', {
+			day: '2-digit', 
+	  		month: '2-digit', 
+			year: 'numeric',
+	  		hour: '2-digit',
+	  		minute: '2-digit', 
+		})
+		},
+		{
+			id: 2, desc: 'Clean the flat', date: new Date().toLocaleDateString('en-GB', {
+			day: '2-digit', 
+	  		month: '2-digit', 
+			year: 'numeric',
+	  		hour: '2-digit',
+	  		minute: '2-digit', 
+		})
+		}	
+])
 
 	const reassignIds = () => {
 		setCurrentTasks(t =>
