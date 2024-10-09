@@ -2,7 +2,7 @@ import React, { useState, useContext, createContext } from "react"
 
 import Task from "./Task/Task.jsx"
 import TaskList from "./TaskList/TaskList.jsx"
-import InputModal from "./InputModal/InputModal.jsx"
+import AddTaskModal from "./AddTaskModal/AddTaskModal.jsx"
 import AddNewTask from "./AddNewTask/AddNewTask.jsx"
 import Header from "./Header/Header.jsx"
 
@@ -41,7 +41,7 @@ function App() {
 		<ToDoListContext.Provider value={contextValues}>
 			<div className='app-wrapper'>
 				<Header />
-				<InputModal />
+				<AddTaskModal />
 				<TaskList />
 				<AddNewTask />
 			</div>

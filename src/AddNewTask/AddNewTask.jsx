@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react"
-import InputModal from "../InputModal/InputModal.jsx"
 import { ToDoListContext } from "../App.jsx"
 import "./AddNewTask.css"
 

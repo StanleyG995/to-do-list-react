@@ -1,7 +1,6 @@
-import React, { useState, useContext } from "react"
+import React, {useContext } from "react"
 import { ToDoListContext } from "../App.jsx"
-import Task from '../Task/Task.jsx'
-import "./InputModal.css"
+import "./AddTaskModal.css"
 
 function Input() {
 
@@ -42,21 +41,21 @@ function Input() {
 
 	return (
 		<div
-			id='input-modal-overlay'
-			className={`input-modal-overlay ${
-				isVisible ? "input-modal-visible" : "input-modal-hidden"
+			id='add-task-modal-overlay'
+			className={`add-task-modal-overlay ${
+				isVisible ? "add-task-modal-visible" : "add-task-modal-hidden"
 			}`}>
-			<div className='input-modal-modal'>
+			<div className='add-task-modal'>
 				<label
-					htmlFor='input-modal-task-name'
-					className='input-modal-task-name'>
+					htmlFor='add-task-modal-name'
+					className='add-task-modal-name'>
 					Enter task description:
 				</label>
 
-				<div className='input-modal-container'>
+				<div className='add-task-modal-container'>
 					<input
-						id='input-modal-task-name'
-						className='input-modal-task-input'
+						id='add-task-modal-name'
+						className='add-task-modal-input'
 						type='text'
 						placeholder='New task'
 						value={taskDesc}
@@ -64,13 +63,13 @@ function Input() {
 						onKeyDown={handleKeyDown}
 					/>
 					<button
-						className='button button--danger input-modal-clear'
+						className='button button--danger add-task-modal-clear'
 						onClick={clearInput}>
 						<span style={{ fontWeight: "bold" }}>✕</span> Clear
 					</button>
 				</div>
 
-				<div className='input-modal-buttons'>
+				<div className='add-task-modal-buttons'>
 					<button className='button' onClick={closeInputModal}>
 						Cancel
 					</button>
