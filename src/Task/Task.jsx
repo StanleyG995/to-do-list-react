@@ -6,13 +6,12 @@ import { ToDoListContext } from "../App.jsx"
 
 function Task(props) {
 
-    const {currentTasks, setCurrentTasks, taskDesc, setTaskDesc, removeTask} = useContext(ToDoListContext)
-
-    
+    const {removeTask} = useContext(ToDoListContext)
 
     return (
         <li id={`task-${props.taskId}`} className='task'  >
 
+            <p className='task-category'>{props.taskCategory}</p>
             <p className="task-desc">{props.taskDesc}</p>
             <span className="task-date">{props.taskDate}</span>
             
@@ -30,7 +29,8 @@ function Task(props) {
 Task.propTypes = {
     taskDesc: PropTypes.string,
     taskId: PropTypes.number,
-    taskDate: PropTypes.string
+    taskDate: PropTypes.string,
+    taskCategory: PropTypes.string
 }
 
 export default Task

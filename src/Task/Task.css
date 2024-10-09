@@ -2,16 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
     font-size: 1.6rem;
     padding: 14px 20px;
-}
-
-.task-directional-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
 }
 
 .task:nth-child(odd) {
@@ -23,40 +16,17 @@
 }
 
 .task-desc {
-    flex-grow: 1;
+    flex-grow: 3;
 }
 
 .task-date {
     color: hsl(232, 42%, 57%);
 }
 
-.task-arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 12px;
-    height: 12px;
-    outline: none;
-    border: none;
-    background: none;
-    font-size: 2rem;
-    color: hsl(232, 42%, 57%);
-    cursor: pointer;
-    padding: 10px;
-    transition: border .1s ease-in-out, padding .1s ease-in-out
-}
-
-.task-arrow:hover, .task-arrow:focus {
-    color: hsl(233, 95%, 44%);
-}
-
-.task-arrow--up:hover, .task-arrow--up:focus {
-    padding-bottom: 12px;
-    border-bottom: 3px solid hsl(233, 95%, 44%);
-}
-
-.task-arrow--down:hover, .task-arrow--down:focus {
-    padding-top: 12px;
-    border-top: 3px solid hsl(233, 95%, 44%);
+.task-category {
+    flex-grow: 1;
+    font-weight: bold;
+    min-width: 80px;
+    max-width: 80px;
 }
 
