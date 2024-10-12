@@ -1,7 +1,7 @@
 .task{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 20px;
     font-size: 1.6rem;
     padding: 14px 20px;
@@ -36,12 +36,18 @@
 
 .task-controls {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 10px;
     flex-grow: 1;
     align-items: stretch;
     min-width: 120px;
     max-width: 120px;
+}
+
+.task-controls--secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .task-description-title {

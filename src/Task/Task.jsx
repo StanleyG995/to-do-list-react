@@ -28,8 +28,10 @@ function Task(props) {
 
                 <div className="task-container task-controls">
                     <button className="button button--primary">✔ Done</button>
-                    <button className="button">✎ Edit</button>
-                    <button className="button button--danger" onClick={(e) => removeTask(e)}><span style={{fontWeight: 'bold', pointerEvents:'none'}}>✕</span> Delete</button>
+                    <div className="task-controls--secondary">
+                        <button className="button">✎ Edit</button>
+                        <button className="button button--danger task-button-remove" onClick={(e) => removeTask(e)}><span style={{fontWeight: 'bold', pointerEvents:'none'}}>✕</span> Delete</button>
+                    </div>
                 </div>         
             
         </li>
