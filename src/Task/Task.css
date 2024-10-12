@@ -5,6 +5,11 @@
     gap: 20px;
     font-size: 1.6rem;
     padding: 14px 20px;
+    transition: filter .3s ease-in-out;
+}
+
+.task:hover {
+    filter: brightness(1.1);
 }
 
 .task-container {
@@ -15,8 +20,9 @@
     flex-direction: column;
 }
 
-.task-info {
-    flex-grow: 1cd;
+.task-container.task-info {
+    flex-grow: 1;
+    align-items: stretch;
     justify-content: space-around;
 }
 
@@ -69,8 +75,7 @@
 }
 
 .task-category {
+    font-size: 2rem;
     font-weight: bold;
-    min-width: 80px;
-    max-width: 80px;
 }
 
