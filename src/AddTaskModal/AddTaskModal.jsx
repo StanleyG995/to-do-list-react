@@ -1,10 +1,18 @@
-import React, {useContext } from "react"
+import React, { useContext } from "react"
 import { ToDoListContext } from "../App.jsx"
 import "./AddTaskModal.css"
 
 function Input() {
-
-	const {isVisible, setIsVisible, taskDescription, setTaskDescription, currentTasks, setCurrentTasks, taskCategory, setTaskCategory} = useContext(ToDoListContext)
+	const {
+		isVisible,
+		setIsVisible,
+		taskDescription,
+		setTaskDescription,
+		currentTasks,
+		setCurrentTasks,
+		taskCategory,
+		setTaskCategory,
+	} = useContext(ToDoListContext)
 
 	const closeInputModal = () => {
 		setIsVisible(false)
@@ -22,23 +30,28 @@ function Input() {
 		setTaskDescription("")
 	}
 
-	const addTask = (taskDescription) => {
-		if(taskDescription !== '') {
-			const newTask = { id: currentTasks.length, description: taskDescription, category: taskCategory, date: new Date().toLocaleDateString('en-GB', {
-  				day: '2-digit', 
- 				month: '2-digit', 
-  				year: 'numeric',
-				hour: '2-digit',
-				minute: '2-digit'
-			})}
-    		setCurrentTasks(t => [...t, newTask]);
+	const addTask = taskDescription => {
+		if (taskDescription !== "") {
+			const newTask = {
+				id: currentTasks.length,
+				description: taskDescription,
+				category: taskCategory,
+				date: new Date().toLocaleDateString("en-GB", {
+					day: "2-digit",
+					month: "2-digit",
+					year: "numeric",
+					hour: "2-digit",
+					minute: "2-digit",
+				}),
+			}
+			setCurrentTasks(t => [...t, newTask])
 			setTaskDescription("")
 			setIsVisible(false)
 		}
-    }
+	}
 
-	const handleKeyDown = (e) => {
-		if (e.key === 'Enter') {
+	const handleKeyDown = e => {
+		if (e.key === "Enter") {
 			addTask(taskDescription)
 		}
 	}
@@ -50,23 +63,37 @@ function Input() {
 				isVisible ? "add-task-modal-visible" : "add-task-modal-hidden"
 			}`}>
 			<div className='add-task-modal'>
-				<label
-					htmlFor='add-task-modal-name'
-					className='add-task-modal-name'>
-					Enter task description:
-				</label>
-
 				<div className='add-task-modal-container'>
-					<input
-						id='add-task-modal-name'
-						className='add-task-modal-input'
-						type='text'
-						placeholder='New task'
-						value={taskDescription}
-						onChange={e => handleInputChange(e)}
-						onKeyDown={handleKeyDown}
-					/>
-					<select name="" defaultValue="Home" id="add-task-modal-category-select" onChange={(e) => handleCategoryChange(e)}>
+					<label htmlFor='add-task-modal-desc' className='add-task-modal-label'>
+						Enter task description:
+					</label>
+					<div className='add-task-modal-input-container'>
+						<input
+							id='add-task-modal-desc'
+							className='add-task-modal-input'
+							type='text'
+							placeholder='New task'
+							value={taskDescription}
+							onChange={e => handleInputChange(e)}
+							onKeyDown={handleKeyDown}
+						/>
+						<button
+							className='button button--danger add-task-modal-clear'
+							onClick={clearInput}>
+							<span style={{ fontWeight: "bold" }}>✕</span> Clear
+						</button>
+					</div>
+					<label
+						htmlFor='add-task-modal-category-select'
+						className='add-task-modal-label'>
+						Choose category:
+					</label>
+					<select
+						name=''
+						defaultValue='Home'
+						id='add-task-modal-category-select'
+						class='add-task-modal-select'
+						onChange={e => handleCategoryChange(e)}>
 						<option value='🏠 Home'>Home</option>
 						<option value='🎓 Study'>Study</option>
 						<option value='💼 Work'>Work</option>
@@ -75,18 +102,17 @@ function Input() {
 						<option value='🚗 Car'>Car</option>
 						<option value='🎸 Hobby'>Hobby</option>
 					</select>
-					<button
-						className='button button--danger add-task-modal-clear'
-						onClick={clearInput}>
-						<span style={{ fontWeight: "bold" }}>✕</span> Clear
-					</button>
 				</div>
 
 				<div className='add-task-modal-buttons'>
 					<button className='button' onClick={closeInputModal}>
 						Cancel
 					</button>
-					<button className='button button--primary' onClick={() => addTask(taskDescription)}>+ Add</button>
+					<button
+						className='button button--primary'
+						onClick={() => addTask(taskDescription)}>
+						+ Add
+					</button>
 				</div>
 			</div>
 		</div>
