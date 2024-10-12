@@ -92,7 +92,7 @@ function Input() {
 						name=''
 						defaultValue='Home'
 						id='add-task-modal-category-select'
-						class='add-task-modal-select'
+						className='add-task-modal-select'
 						onChange={e => handleCategoryChange(e)}>
 						<option value='🏠 Home'>Home</option>
 						<option value='🎓 Study'>Study</option>

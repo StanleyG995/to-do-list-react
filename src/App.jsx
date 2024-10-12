@@ -14,7 +14,7 @@ function App() {
 	const [currentTasks, setCurrentTasks] = useState([
 		{
 			id: 0, 
-			description: 'Do the laundry', 
+			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus felis dolor. Ut ut interdum nibh. Curabitur in hendrerit massa, et gravida leo. Cras commodo ipsum eget pulvinar ullamcorper. Vestibulum vel scelerisque leo, sed posuere elit. Phasellus venenatis purus vel nisi iaculis, sed sollicitudin risus commodo. Nullam eget pellentesque ipsum, eu auctor justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut interdum dui. Donec posuere odio vel ligula iaculis, eu vestibulum nisl tempus. Donec consectetur magna nec tellus hendrerit tempor.', 
 			date: new Date().toLocaleDateString('en-GB', {
 				day: '2-digit', 
 				month: '2-digit', 

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 12px;
+    gap: 20px;
     font-size: 1.6rem;
     padding: 14px 20px;
     transition: filter .3s ease-in-out;
@@ -20,8 +20,9 @@
     flex-direction: column;
 }
 
-.task-info {
+.task-container.task-info {
     flex-grow: 1;
+    align-items: stretch;
     justify-content: space-around;
 }
 
@@ -31,12 +32,11 @@
     overflow-wrap: break-word;
     flex-grow: 4;
     flex-wrap: wrap;
-    max-width: 250px;
 }
 
 .task-controls {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     gap: 10px;
     flex-grow: 1;
     align-items: stretch;
@@ -53,7 +53,6 @@
     overflow: hidden;
     white-space: normal;
     overflow-wrap: break-word;
-    max-width: 75%;
 }
 
 .task:nth-child(odd) {

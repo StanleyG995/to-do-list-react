@@ -16,12 +16,14 @@ function Task(props) {
                         <p className="task-date">Added: {props.taskDate}</p>
                         <p className="task-till">Do till: {props.taskTill}</p>
                     </div>
-                </div>
-
+                    
+                    <div className="task-container task-description">
+                        <p className='task-description-title'>Task description:</p>
+                        <p className="task-description-text">{props.taskDescription}</p>
+                    </div>
+                    
                 
-                <div className="task-container task-description">
-                    <p className='task-description-title'>Task description:</p>
-                    <p className="task-description-text">{props.taskDescription}</p>
+                    
                 </div> 
 
                 <div className="task-container task-controls">
