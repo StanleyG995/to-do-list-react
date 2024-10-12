@@ -94,13 +94,13 @@ function Input() {
 						id='add-task-modal-category-select'
 						className='add-task-modal-select'
 						onChange={e => handleCategoryChange(e)}>
-						<option value='🏠 Home'>Home</option>
-						<option value='🎓 Study'>Study</option>
-						<option value='💼 Work'>Work</option>
-						<option value='👪 Family'>Family</option>
-						<option value='💪 Sport'>Sport</option>
-						<option value='🚗 Car'>Car</option>
-						<option value='🎸 Hobby'>Hobby</option>
+						<option value='🏠 Home'>🏠 Home</option>
+						<option value='🎓 Study'>🎓 Study</option>
+						<option value='💼 Work'>💼 Work</option>
+						<option value='👪 Family'>👪 Family</option>
+						<option value='💪 Sport'>💪 Sport</option>
+						<option value='🚗 Car'>🚗 Car</option>
+						<option value='🎸 Hobby'>🎸 Hobby</option>
 					</select>
 				</div>
 
