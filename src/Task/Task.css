@@ -1,7 +1,7 @@
 .task{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 20px;
     font-size: 1.6rem;
     padding: 14px 20px;
@@ -20,11 +20,6 @@
     flex-direction: column;
 }
 
-.task-container.task-info {
-    flex-grow: 1;
-    align-items: stretch;
-    justify-content: space-around;
-}
 
 .task-description{
     overflow: hidden;
@@ -32,11 +27,14 @@
     overflow-wrap: break-word;
     flex-grow: 4;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
 .task-controls {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     gap: 10px;
     flex-grow: 1;
     align-items: stretch;
@@ -53,7 +51,6 @@
     overflow: hidden;
     white-space: normal;
     overflow-wrap: break-word;
-    max-width: 75%;
 }
 
 .task:nth-child(odd) {
