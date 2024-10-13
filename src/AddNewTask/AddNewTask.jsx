@@ -1,13 +1,24 @@
-import React, { useState, useContext } from "react"
+import React, { useEffect, useContext } from "react"
 import { ToDoListContext } from "../App.jsx"
 import "./AddNewTask.css"
 
 function AddNewTask() {
 	const { isVisible, setIsVisible, setTaskCategory } = useContext(ToDoListContext)
 
+	useEffect(() => {
+		if (isVisible) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = ''
+		}
+
+		return () => {
+			document.body.style.overflow = ''
+		}
+	}, [isVisible])
+
 	const toggleVisibility = () => {
 		setIsVisible(!isVisible)
-		isVisible ? document.body.style.overflow = '' : document.body.style.overflow = 'hidden'
 		setTaskCategory('🏠 Home')
 	}
 
