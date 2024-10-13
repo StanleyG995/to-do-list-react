@@ -76,6 +76,8 @@ function App() {
 		setTaskCategory,
 	}
 
+	
+
 	return (
 		<ToDoListContext.Provider value={contextValues}>
 			<div className='app-wrapper'>

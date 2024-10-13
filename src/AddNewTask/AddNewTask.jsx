@@ -7,6 +7,7 @@ function AddNewTask() {
 
 	const toggleVisibility = () => {
 		setIsVisible(!isVisible)
+		isVisible ? document.body.style.overflow = '' : document.body.style.overflow = 'hidden'
 		setTaskCategory('🏠 Home')
 	}
 
