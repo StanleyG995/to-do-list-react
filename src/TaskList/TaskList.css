@@ -32,7 +32,7 @@
     flex-direction: column-reverse;
 }
 
-.task-list-outer::after, .task-list-outer::before {
+.task-list-outer-frame-top::after, .task-list-outer-frame-bottom::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -40,14 +40,15 @@
     background: linear-gradient(#cccfec, #b8bcdd00);
     z-index:9;
     pointer-events: none;
+    visibility: none;
 }
 
-.task-list-outer::after {
+.task-list-outer-frame-top::after {
     top: 0;
     left: 0;
 }
 
-.task-list-outer::before{
+.task-list-outer-frame-bottom::before{
     bottom: 0;
     left: 0;
     transform: rotate(180deg)
