@@ -11,6 +11,7 @@ function App() {
 	const [isVisible, setIsVisible] = useState(false)
 	const [taskDescription, setTaskDescription] = useState("")
 	const [taskCategory, setTaskCategory] = useState("")
+	const [taskDate, setTaskDate] = useState('')
 	const [currentTasks, setCurrentTasks] = useState([
 		{
 			id: 0, 
@@ -67,13 +68,20 @@ function App() {
 	const contextValues = {
 		isVisible,
 		setIsVisible,
+
 		taskDescription,
 		setTaskDescription,
-		currentTasks,
-		setCurrentTasks,
-		removeTask,
+
 		taskCategory,
 		setTaskCategory,
+
+		taskDate,
+		setTaskDate,
+
+		currentTasks,
+		setCurrentTasks,
+
+		removeTask,
 	}
 
 	

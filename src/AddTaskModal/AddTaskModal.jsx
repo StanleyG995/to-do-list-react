@@ -6,19 +6,26 @@ function Input() {
 	const {
 		isVisible,
 		setIsVisible,
+
 		taskDescription,
 		setTaskDescription,
-		currentTasks,
-		setCurrentTasks,
+
 		taskCategory,
 		setTaskCategory,
+
+		taskDate,
+		setTaskDate,
+
+		currentTasks,
+		setCurrentTasks,
+
 	} = useContext(ToDoListContext)
 
 	const closeInputModal = () => {
 		setIsVisible(false)
 	}
 
-	const handleInputChange = e => {
+	const handleDescriptionChange = e => {
 		setTaskDescription(e.target.value)
 	}
 
@@ -26,29 +33,43 @@ function Input() {
 		setTaskCategory(e.target.value)
 	}
 
+	const handleDateChange = e => {	
+		if(new Date(e.target.value) >= new Date()) {
+			setTaskDate(e.target.value)
+		}
+		else {
+			console.log('Data mniejsza')
+		}	
+	}
+
 	const clearInput = () => {
 		setTaskDescription("")
 	}
 
 	const addTask = taskDescription => {
-		if (taskDescription !== "") {
+		if (taskDescription !== "" && taskDate !== '') {
 			const newTask = {
 				id: currentTasks.length,
 				description: taskDescription,
 				category: taskCategory,
-				date: new Date().toLocaleDateString("en-GB", {
+				date: new Date().toLocaleDateString("pl-PL", {
 					day: "2-digit",
 					month: "2-digit",
 					year: "numeric",
-					hour: "2-digit",
-					minute: "2-digit",
+				}),
+				due: new Date(taskDate).toLocaleDateString("pl-PL", {
+					day: "2-digit",
+					month: "2-digit",
+					year: "numeric",
 				}),
 			}
 			setCurrentTasks(t => [...t, newTask])
 			setTaskDescription("")
+			setTaskDate('')
 			setIsVisible(false)
 		}
 	}
+
 
 	const handleKeyDown = e => {
 		if (e.key === "Enter") {
@@ -74,7 +95,7 @@ function Input() {
 							type='text'
 							placeholder='New task'
 							value={taskDescription}
-							onChange={e => handleInputChange(e)}
+							onChange={e => handleDescriptionChange(e)}
 							onKeyDown={handleKeyDown}
 						/>
 						<button
@@ -102,6 +123,13 @@ function Input() {
 						<option value='🚗 Car'>🚗 Car</option>
 						<option value='🎸 Hobby'>🎸 Hobby</option>
 					</select>
+
+					<label
+						htmlFor='add-task-modal-date-select'
+						className='add-task-modal-label'>
+						Set due date:
+					</label>
+					<input type='date' className='add-task-modal-input' onChange={e => handleDateChange(e)}/>
 				</div>
 
 				<div className='add-task-modal-buttons'>

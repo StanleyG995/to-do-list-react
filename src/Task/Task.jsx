@@ -14,15 +14,11 @@ function Task(props) {
                     <p className='task-category'>{props.taskCategory}</p>
                     <div>
                         <p className="task-date">Added: {props.taskDate}</p>
-                        <p className="task-till">Do till: {props.taskTill}</p>
+                        <p className="task-till">Due: {props.taskDue}</p>
                     </div>
                     
-            
                     <p className='task-description-title'>Task description:</p>
                     <p className="task-description-text">{props.taskDescription}</p>
-          
-                    
-                
                     
                 </div> 
 
@@ -45,7 +41,7 @@ Task.propTypes = {
     taskDescription: PropTypes.string,
     taskId: PropTypes.number,
     taskDate: PropTypes.string,
-    taskTill: PropTypes.string,
+    taskDue: PropTypes.string,
     taskCategory: PropTypes.string
 }
 

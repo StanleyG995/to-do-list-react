@@ -16,7 +16,7 @@ function TaskList({props}) {
                 <div className='task-list-inner'>
                 {currentTasks.length === 0 ? <div className='empty-task-list-msg'><p>No current tasks, add some.</p></div> : null}
                 <ul className='task-list'>
-                    {currentTasks.map((task, index) => <Task key={index} taskId={index} taskDescription={task.description} taskDate={task.date} taskCategory={task.category}/>)}
+                    {currentTasks.map((task, index) => <Task key={index} taskId={index} taskDescription={task.description} taskDate={task.date} taskCategory={task.category} taskDue={task.due}/>)}
                 </ul> 
                 </div>
             </div>
