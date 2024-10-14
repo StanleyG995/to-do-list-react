@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import { ToDoListContext } from "../App.jsx"
 import "./AddTaskModal.css"
 
@@ -21,6 +21,11 @@ function AddTaskModal() {
 
 	} = useContext(ToDoListContext)
 
+	const [errorMessages, setErrorMessages] = useState({
+        description: "",
+        date: "",
+	})
+
 	const closeInputModal = () => {
 		setIsVisible(false)
 	}
@@ -34,20 +39,37 @@ function AddTaskModal() {
 	}
 
 	const handleDateChange = e => {	
-		if(new Date(e.target.value) >= new Date()) {
-			setTaskDate(e.target.value)
-		}
-		else {
-			console.log('Data mniejsza')
-		}	
+		setTaskDate(e.target.value)
 	}
 
 	const clearInput = () => {
 		setTaskDescription("")
 	}
 
+	const validateInputs = () => {
+
+        let hasError = false
+
+        const newErrorMessages = { description: "", date: "" }
+
+        if (taskDescription === "") {
+            newErrorMessages.description = "Task description must not be empty."
+            hasError = true;
+        }
+
+        if (taskDate === "" || new Date(taskDate) < new Date()) {
+            newErrorMessages.date = "Invalid date."
+            hasError = true
+        }
+
+        setErrorMessages(newErrorMessages)
+		
+        return hasError
+    };
+	
 	const addTask = taskDescription => {
-		if (taskDescription !== "" && taskDate !== '') {
+
+		if (!validateInputs()) {
 			const newTask = {
 				id: currentTasks.length,
 				description: taskDescription,
@@ -68,8 +90,8 @@ function AddTaskModal() {
 			setTaskDate('')
 			setIsVisible(false)
 		}
+	
 	}
-
 
 	const handleKeyDown = e => {
 		if (e.key === "Enter") {
@@ -104,6 +126,7 @@ function AddTaskModal() {
 							<span style={{ fontWeight: "bold" }}>✕</span> Clear
 						</button>
 					</div>
+					<p className="error-message">{errorMessages.description}</p>
 					<label
 						htmlFor='add-task-modal-category-select'
 						className='add-task-modal-label'>
@@ -134,6 +157,7 @@ function AddTaskModal() {
 						className='add-task-modal-input'
 						value={taskDate}
 						onChange={e => handleDateChange(e)}/>
+					<p className="error-message">{errorMessages.date}</p>
 				</div>
 
 				<div className='add-task-modal-buttons'>
