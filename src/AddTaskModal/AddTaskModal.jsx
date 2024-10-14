@@ -28,6 +28,9 @@ function AddTaskModal() {
 
 	const closeInputModal = () => {
 		setIsVisible(false)
+		setTaskDescription('')
+		setTaskDate('')
+		setErrorMessages({ description: "", date: "" })
 	}
 
 	const handleDescriptionChange = e => {
@@ -52,12 +55,12 @@ function AddTaskModal() {
 
         const newErrorMessages = { description: "", date: "" }
 
-        if (taskDescription === "") {
+        if (taskDescription === '') {
             newErrorMessages.description = "Task description must not be empty."
             hasError = true;
         }
 
-        if (taskDate === "" || new Date(taskDate) < new Date()) {
+        if (taskDate === '' || new Date(taskDate) < new Date()) {
             newErrorMessages.date = "Invalid date."
             hasError = true
         }
@@ -86,15 +89,13 @@ function AddTaskModal() {
 				}),
 			}
 			setCurrentTasks(t => [...t, newTask])
-			setTaskDescription("")
-			setTaskDate('')
-			setIsVisible(false)
+			closeInputModal()
 		}
 	
 	}
 
 	const handleKeyDown = e => {
-		if (e.key === "Enter") {
+		if (e.key === 'Enter') {
 			addTask(taskDescription)
 		}
 	}

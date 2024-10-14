@@ -27,10 +27,6 @@
     flex-wrap: wrap;
 }
 
-.task-dates {
-    display: flex;
-}
-
 .task-controls {
     display: flex;
     justify-content: space-between;
@@ -64,7 +60,6 @@
     background-color:hsl(233, 95%, 97%);
 }
 
-
 .task-description {
     text-align: left;
     overflow: hidden;
@@ -75,10 +70,11 @@
     margin: 6px 0;
 }
 
+.task-date {
+    color: hsl(232, 42%, 67%);
+}
+
 .task-due {
-    margin-left: 10px;
-    padding-left: 10px;
-    border-left: 1px solid hsl(232, 42%, 57%);
     font-weight: bold;
 }
 
