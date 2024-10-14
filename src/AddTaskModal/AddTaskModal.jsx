@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { ToDoListContext } from "../App.jsx"
 import "./AddTaskModal.css"
 
-function Input() {
+function AddTaskModal() {
 	const {
 		isVisible,
 		setIsVisible,
@@ -129,7 +129,11 @@ function Input() {
 						className='add-task-modal-label'>
 						Set due date:
 					</label>
-					<input type='date' className='add-task-modal-input' onChange={e => handleDateChange(e)}/>
+					<input 
+						type='date' 
+						className='add-task-modal-input'
+						value={taskDate}
+						onChange={e => handleDateChange(e)}/>
 				</div>
 
 				<div className='add-task-modal-buttons'>
@@ -147,4 +151,4 @@ function Input() {
 	)
 }
 
-export default Input
+export default AddTaskModal
