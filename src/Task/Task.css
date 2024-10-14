@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    flex-wrap: nowrap;
     gap: 20px;
     font-size: 1.6rem;
     padding: 14px 20px;
@@ -20,17 +21,9 @@
     flex-direction: column;
 }
 
-.task-container.task-info {
-    flex-grow: 1;
-    align-items: stretch;
-    justify-content: space-around;
-}
-
-.task-description{
+.task-info {
+    flex: 4;
     overflow: hidden;
-    white-space: normal;
-    overflow-wrap: break-word;
-    flex-grow: 4;
     flex-wrap: wrap;
 }
 
@@ -38,10 +31,8 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    flex-grow: 1;
+    flex: 1;
     align-items: stretch;
-    min-width: 120px;
-    max-width: 120px;
 }
 
 .task-controls--secondary {
@@ -57,8 +48,8 @@
 
 .task-description-text {
     overflow: hidden;
-    white-space: normal;
-    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 .task:nth-child(odd) {
@@ -72,6 +63,7 @@
 
 .task-description {
     text-align: left;
+    overflow: hidden;
 }
 
 .task-date, .task-till {

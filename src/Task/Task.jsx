@@ -17,10 +17,10 @@ function Task(props) {
                         <p className="task-till">Do till: {props.taskTill}</p>
                     </div>
                     
-                    <div className="task-container task-description">
-                        <p className='task-description-title'>Task description:</p>
-                        <p className="task-description-text">{props.taskDescription}</p>
-                    </div>
+            
+                    <p className='task-description-title'>Task description:</p>
+                    <p className="task-description-text">{props.taskDescription}</p>
+          
                     
                 
                     
