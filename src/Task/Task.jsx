@@ -12,9 +12,9 @@ function Task(props) {
         <li id={`task-${props.taskId}`} className='task'  >
                 <div className="task-container task-info">
                     <p className='task-category'>{props.taskCategory}</p>
-                    <div>
+                    <div className='task-dates'>
                         <p className="task-date">Added: {props.taskDate}</p>
-                        <p className="task-till">Due: {props.taskDue}</p>
+                        <p className="task-due">Due: {props.taskDue}</p>
                     </div>
                     
                     <p className='task-description-title'>Task description:</p>
