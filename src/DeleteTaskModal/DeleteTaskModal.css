@@ -1,0 +1,40 @@
+.delete-task-modal-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    background-color: #ffffff77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999999;
+    overflow: hidden;
+}
+
+.delete-task-modal {
+    border: solid 1px #b8bcdd;
+    border-radius: 10px;
+    background: #fcfcfc;
+    box-shadow: 5px 5px 8px #eeeeff;
+    max-width:500px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 1.6rem;
+    gap:20px;
+}
+
+.delete-task-modal-container {
+    text-align: center;
+}
+
+.delete-task-modal-visible {
+    display: flex;
+}
+
+.delete-task-modal-hidden {
+    display: none;
+}

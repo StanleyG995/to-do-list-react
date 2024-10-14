@@ -3,6 +3,7 @@ import React, { useState, createContext } from "react"
 import TaskList from "./TaskList/TaskList.jsx"
 import AddTaskModal from "./AddTaskModal/AddTaskModal.jsx"
 import AddNewTask from "./AddNewTask/AddNewTask.jsx"
+import DeleteTaskModal from './DeleteTaskModal/DeleteTaskModal.jsx'
 import Header from "./Header/Header.jsx"
 
 export const ToDoListContext = createContext()
@@ -100,6 +101,7 @@ function App() {
 			<div className='app-wrapper'>
 				<Header />
 				<AddTaskModal />
+				<DeleteTaskModal />
 				<TaskList />
 				<AddNewTask />
 			</div>

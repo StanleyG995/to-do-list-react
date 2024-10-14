@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useState, useContext } from "react"
 import { ToDoListContext } from "../App.jsx"
 import "./AddTaskModal.css"
 
