@@ -39,48 +39,6 @@ body{
     gap: 30px;
 }
 
-.button {
-    padding:8px 16px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.6rem;
-    transition: filter 0.3s ease;
-    cursor: pointer;
-    background-color: #dfe2f8;
-    border: solid 1px #b8bcdd;
-}
-
-.button:hover {
-    filter: brightness(1.05);
-}
-
-.button {
-    padding:8px 16px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.6rem;
-    transition: filter 0.3s ease;
-    cursor: pointer;
-    background-color: #dfe2f8;
-    border: solid 1px #b8bcdd;
-}
-
-.button:hover, .button:focus{
-    filter: brightness(1.05);
-}
-
-.button--primary {
-    background-color:rgb(6, 30, 216);
-    border: solid 1px rgb(6, 30, 216);
-    color: white;
-}
-
-.button--danger {
-    background-color:rgb(250, 217, 217);
-    border: solid 1px rgb(192, 47, 36);
-    color: rgb(192, 47, 36);
-}
-
 .error-message {
     color: rgb(192, 47, 36);
     font-size: 1.4rem;

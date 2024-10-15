@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react"
 import { ToDoListContext } from "../App.jsx"
-import "./AddTaskModal.css"
+import "./Modal.css"
 
-function AddTaskModal() {
+function Modal() {
 
 
     swtitch(props.modalType)
@@ -180,4 +180,4 @@ function AddTaskModal() {
 	)
 }
 
-export default AddTaskModal
+export default Modal
