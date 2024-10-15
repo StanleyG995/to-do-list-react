@@ -1,11 +1,11 @@
 import React, {useState, useContext} from 'react'
 import PropTypes from 'prop-types'
 import Task from '../Task/Task.jsx'
-import './TaskList.css'
+import './List.css'
 import { ToDoListContext } from "../App.jsx"
 
 
-function TaskList({props}) {
+function List({props}) {
 
     const {currentTasks} = useContext(ToDoListContext)
 
@@ -26,8 +26,8 @@ function TaskList({props}) {
     
 }
 
-TaskList.propTypes = {
+List.propTypes = {
     taskListName: PropTypes.string,
 }
 
-export default TaskList
+export default List

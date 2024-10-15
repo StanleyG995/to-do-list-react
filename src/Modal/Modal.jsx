@@ -5,7 +5,7 @@ import "./Modal.css"
 function Modal() {
 
 
-    swtitch(props.modalType)
+    // swtitch(props.modalType)
 
 	const {
 		isVisible,
@@ -106,19 +106,19 @@ function Modal() {
 
 	return (
 		<div
-			id='add-task-modal-overlay'
-			className={`add-task-modal-overlay ${
-				isVisible ? "add-task-modal-visible" : "add-task-modal-hidden"
+			id='modal-overlay'
+			className={`modal-overlay ${
+				isVisible ? "modal-visible" : "modal-hidden"
 			}`}>
-			<div className='add-task-modal'>
-				<div className='add-task-modal-container'>
-					<label htmlFor='add-task-modal-desc' className='add-task-modal-label'>
+			<div className='modal'>
+				<div className='modal-container'>
+					<label htmlFor='modal-desc' className='modal-label'>
 						Enter task description:
 					</label>
-					<div className='add-task-modal-input-container'>
+					<div className='modal-input-container'>
 						<input
-							id='add-task-modal-desc'
-							className='add-task-modal-input'
+							id='modal-desc'
+							className='modal-input'
 							type='text'
 							placeholder='New task'
 							value={taskDescription}
@@ -126,22 +126,22 @@ function Modal() {
 							onKeyDown={handleKeyDown}
 						/>
 						<button
-							className='button button--danger add-task-modal-clear'
+							className='button button--danger modal-clear'
 							onClick={clearInput}>
 							<span style={{ fontWeight: "bold" }}>✕</span> Clear
 						</button>
 					</div>
 					<p className="error-message">{errorMessages.description}</p>
 					<label
-						htmlFor='add-task-modal-category-select'
-						className='add-task-modal-label'>
+						htmlFor='modal-category-select'
+						className='modal-label'>
 						Choose category:
 					</label>
 					<select
 						name=''
 						defaultValue='Home'
-						id='add-task-modal-category-select'
-						className='add-task-modal-select'
+						id='modal-category-select'
+						className='modal-select'
 						onChange={e => handleCategoryChange(e)}>
 						<option value='🏠 Home'>🏠 Home</option>
 						<option value='🎓 Study'>🎓 Study</option>
@@ -153,19 +153,19 @@ function Modal() {
 					</select>
 
 					<label
-						htmlFor='add-task-modal-date-select'
-						className='add-task-modal-label'>
+						htmlFor='modal-date-select'
+						className='modal-label'>
 						Set due date:
 					</label>
 					<input 
 						type='date' 
-						className='add-task-modal-input'
+						className='modal-input'
 						value={taskDate}
 						onChange={e => handleDateChange(e)}/>
 					<p className="error-message">{errorMessages.date}</p>
 				</div>
 
-				<div className='add-task-modal-buttons'>
+				<div className='modal-buttons'>
 					<button className='button' onClick={closeInputModal}>
 						Cancel
 					</button>

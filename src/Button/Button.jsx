@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from "react"
 import { ToDoListContext } from "../App.jsx"
 import "./Button.css"
 
-function AddNewTask() {
+function Button() {
 	const { isVisible, setIsVisible, setTaskCategory } = useContext(ToDoListContext)
 
 	useEffect(() => {
@@ -36,4 +36,4 @@ function AddNewTask() {
 	)
 }
 
-export default AddNewTask
+export default Button

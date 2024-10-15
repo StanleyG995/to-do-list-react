@@ -1,14 +1,14 @@
 import React, { useState, createContext } from "react"
 
-import TaskList from "./TaskList/TaskList.jsx"
-import AddTaskModal from "./AddTaskModal/AddTaskModal.jsx"
-import AddNewTask from "./Button/Button.jsx"
-import DeleteTaskModal from './DeleteTaskModal/DeleteTaskModal.jsx'
 import Header from "./Header/Header.jsx"
+import Button from "./Button/Button.jsx"
+import List from "./List/List.jsx"
+import Modal from "./Modal/Modal.jsx"
 
 export const ToDoListContext = createContext()
 
 function App() {
+	const [currentTasks, setCurrentTasks] = useState([]);
 	const [isVisible, setIsVisible] = useState(false)
 	const [taskDescription, setTaskDescription] = useState("")
 	const [taskCategory, setTaskCategory] = useState("")
@@ -53,10 +53,9 @@ function App() {
 		<ToDoListContext.Provider value={contextValues}>
 			<div className='app-wrapper'>
 				<Header />
-				<AddTaskModal />
-				<DeleteTaskModal />
-				<TaskList />
-				<AddNewTask />
+				<Modal />
+				<List />
+				<Button />
 			</div>
 		</ToDoListContext.Provider>
 	)
