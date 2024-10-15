@@ -12,14 +12,6 @@
     gap:20px;
 }
 
-.modal-visible {
-    display: flex;
-}
-
-.modal-hidden {
-    display: none;
-}
-
 .modal-overlay {
     width: 100vw;
     height: 100vh;
@@ -33,6 +25,14 @@
     align-items: center;
     z-index: 99999999;
     overflow: hidden;
+}
+
+.modal-visible {
+    display: flex;
+}
+
+.modal-hidden {
+    display: none;
 }
 
 .modal-label {
@@ -69,7 +69,7 @@
     gap:10px;
 }
 
-.-modal-input-container {
+.modal-input-container {
     position: relative;
 }
 

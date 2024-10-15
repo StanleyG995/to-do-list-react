@@ -30,7 +30,7 @@ function Modal() {
         date: "",
 	})
 
-	const closeInputModal = () => {
+	const closeModal = () => {
 		setIsVisible(false)
 		setTaskDescription('')
 		setTaskDate('')
@@ -93,7 +93,7 @@ function Modal() {
 				}),
 			}
 			setCurrentTasks(t => [...t, newTask])
-			closeInputModal()
+			closeModal()
 		}
 	
 	}
@@ -166,7 +166,7 @@ function Modal() {
 				</div>
 
 				<div className='modal-buttons'>
-					<button className='button' onClick={closeInputModal}>
+					<button className='button' onClick={closeModal}>
 						Cancel
 					</button>
 					<button
