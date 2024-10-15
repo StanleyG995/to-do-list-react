@@ -13,53 +13,6 @@ function App() {
 	const [taskDescription, setTaskDescription] = useState("")
 	const [taskCategory, setTaskCategory] = useState("")
 	const [taskDate, setTaskDate] = useState('')
-	const [currentTasks, setCurrentTasks] = useState([
-		{
-			id: 0, 
-			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus felis dolor. Ut ut interdum nibh. Curabitur in hendrerit massa, et gravida leo. Cras commodo ipsum eget pulvinar ullamcorper. Vestibulum vel scelerisque leo, sed posuere elit. Phasellus venenatis purus vel nisi iaculis, sed sollicitudin risus commodo.', 
-			date: new Date().toLocaleDateString('pl-PL', {
-				day: '2-digit', 
-				month: '2-digit', 
-				year: 'numeric',
-			}),
-			due: new Date().toLocaleDateString('pl-PL', {
-				day: '2-digit', 
-				month: '2-digit', 
-				year: 'numeric',
-			}),
-			category: '🏠 Home'
-		},
-		{
-			id: 1, 
-			description: 'Prepare for exam', 
-			date: new Date().toLocaleDateString('pl-PL', {
-				day: '2-digit', 
-				month: '2-digit', 
-				year: 'numeric',
-			}),
-			due: new Date().toLocaleDateString('pl-PL', {
-				day: '2-digit', 
-				month: '2-digit', 
-				year: 'numeric',
-			}),
-			category: '🎓 Study'
-		},
-		{
-			id: 2, 
-			description: 'Go to the gym', 
-			date: new Date().toLocaleDateString('pl-PL', {
-				day: '2-digit', 
-				month: '2-digit', 
-				year: 'numeric',
-			}),
-			due: new Date().toLocaleDateString('pl-PL', {
-				day: '2-digit', 
-				month: '2-digit', 
-				year: 'numeric',
-			}),
-			category: '💪 Sport'
-		},
-	])
 
 	const reassignIds = () => {
 		setCurrentTasks(t =>

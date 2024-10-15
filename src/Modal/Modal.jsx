@@ -3,6 +3,10 @@ import { ToDoListContext } from "../App.jsx"
 import "./AddTaskModal.css"
 
 function AddTaskModal() {
+
+
+    swtitch(props.modalType)
+
 	const {
 		isVisible,
 		setIsVisible,
