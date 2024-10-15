@@ -35,10 +35,6 @@
     display: none;
 }
 
-.modal-label {
-    margin: 12px 0;
-}
-
 .modal-input, .modal-select {
     width: 100%;
     border: none;

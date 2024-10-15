@@ -4,9 +4,6 @@ import "./Modal.css"
 
 function Modal() {
 
-
-    // swtitch(props.modalType)
-
 	const {
 		isVisible,
 		setIsVisible,
@@ -105,17 +102,18 @@ function Modal() {
 	}
 
 	return (
-		<div
+		
+		<div 
 			id='modal-overlay'
 			className={`modal-overlay ${
 				isVisible ? "modal-visible" : "modal-hidden"
 			}`}>
 			<div className='modal'>
-				<div className='modal-container'>
-					<label htmlFor='modal-desc' className='modal-label'>
+				<div className='row'>
+					<label htmlFor='modal-desc' className='label'>
 						Enter task description:
 					</label>
-					<div className='modal-input-container'>
+					<div className='row'>
 						<input
 							id='modal-desc'
 							className='modal-input'

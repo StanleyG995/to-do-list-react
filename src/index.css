@@ -49,3 +49,6 @@ body{
     visibility: hidden;
 }
 
+.label {
+    margin: 12px 0;
+}
