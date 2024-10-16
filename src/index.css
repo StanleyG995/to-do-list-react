@@ -30,22 +30,3 @@ body{
     background: hsl(233, 95%, 44%);
 }
 
-.app-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px;
-    gap: 30px;
-}
-
-.error-message {
-    color: rgb(192, 47, 36);
-    font-size: 1.4rem;
-    visibility: visible;
-}
-
-.error-message--hidden {
-    visibility: hidden;
-}
-
