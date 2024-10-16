@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react"
-import { ToDoListContext } from "../App.jsx"
+import { ToDoListContext } from "../../../App.jsx"
 import "./Modal.css"
 
 function Modal() {

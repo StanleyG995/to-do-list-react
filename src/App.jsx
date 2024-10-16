@@ -1,9 +1,9 @@
 import React, { useState, createContext } from "react"
 
-import Header from "./Header/Header.jsx"
-import Button from "./Button/Button.jsx"
+import Header from "./components/Header/Header.jsx"
+import Button from "./components/UI/Button/Button.jsx"
 import List from "./List/List.jsx"
-import Modal from "./Modal/Modal.jsx"
+import Modal from "./components/UI/Modal/Modal.jsx"
 
 export const ToDoListContext = createContext()
 
