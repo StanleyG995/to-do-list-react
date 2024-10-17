@@ -102,7 +102,7 @@ html {
 
 body{
     font-family: var(--font--body);
-    background: var(--gradient-primary--100-200);
+    background: var(--gradient-primary--100-200, 0.3);
     background-size: cover;
     min-height: 100vh;
 }
@@ -119,9 +119,14 @@ a {
 .backdrop-image {
     position: fixed;
     inset: 0;
-    background: url('https://img.freepik.com/free-photo/top-view-items-blue-background_23-2148565037.jpg?t=st=1729162343~exp=1729165943~hmac=137ee177a106cbc9b4c854fa30af325d5dffaad49d906c7d51147a719422a366&w=1380');
-    background-size: cover;
-    background-position: center bottom;
-    z-index: -999;
-    opacity: 0.05;
+    background:url('https://img.freepik.com/free-photo/desk-workspace-with-various-elements_23-2148043206.jpg?t=st=1729163287~exp=1729166887~hmac=5019f1bcb4fe721655496162c80e465d6792c089424b5b85f792054592845d56&w=1380') no-repeat center center / cover;
+    z-index: -99999;
+}
+
+.backdrop-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-primary--100-200);
+    opacity: 0.93;
 }
