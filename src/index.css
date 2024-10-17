@@ -15,6 +15,9 @@
 
      /* === GRADIENTS === */
 
+    --gradient-background: linear-gradient(135deg, var(--white), var(--primary-color--100));
+
+    --gradient-primary--100-200: linear-gradient(135deg, var(--primary-color--100), var(--primary-color--200));
     --gradient-primary--100-300: linear-gradient(135deg, var(--primary-color--100), var(--primary-color--300));
     --gradient-primary--300-500: linear-gradient(135deg, var(--primary-color--300), var(--primary-color--500));
     --gradient-primary--500-700: linear-gradient(135deg, var(--primary-color--500), var(--primary-color--700));
@@ -73,9 +76,17 @@ html {
 }
 
 body{
-    font-family: var(--font--body)
+    font-family: var(--font--body);
+    background: var(--gradient-primary--100-200);
+    background-size: cover;
+    min-height: 100vh;
 }
 
 a {
     text-decoration: none;
+}
+
+.app-wrapper {
+    max-width: 1200px;
+    margin: auto;
 }
