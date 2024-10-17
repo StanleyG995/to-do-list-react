@@ -22,13 +22,31 @@
   
      /* === SPACING === */
 
-     --space--xs: 5px;
-     --space--s: 10px;
+     --space--xs: 10px;
+     --space--s: 15px;
      --space--m: 20px;
-     --space--l: 30px;
-     --space--xl: 50px;
+     --space--l: 25px;
+     --space--xl: 30px;
 
      /* === RADIUS === */
+     
+    --radius--xs: 5px;
+    --radius--s: 10px;
+    --radius--m: 15px;
+    --radius--l: 20px;
+
+    /* === FONT SIZE === */
+
+    --text--xs: 1.2rem;
+    --text--s: 1.4rem;
+    --text--m: 1.6rem;
+    --text--l: 1.8rem;
+
+    --heading-xs: 2.4rem;
+    --heading-s: 2.8rem;
+    --heading-m: 3.2rem;
+    --heading-l: 3.6rem;
+    --heading-xl: 4rem;
 
   }
 
