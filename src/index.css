@@ -17,11 +17,36 @@
 
     --gradient-background: linear-gradient(135deg, var(--white), var(--primary-color--100));
 
+    /* === SUBTLE ===  */
+
     --gradient-primary--100-200: linear-gradient(135deg, var(--primary-color--100), var(--primary-color--200));
+    --gradient-primary--200-300: linear-gradient(135deg, var(--primary-color--200), var(--primary-color--300));
+    --gradient-primary--300-400: linear-gradient(135deg, var(--primary-color--300), var(--primary-color--400));
+    --gradient-primary--400-500: linear-gradient(135deg, var(--primary-color--400), var(--primary-color--500));
+    --gradient-primary--500-600: linear-gradient(135deg, var(--primary-color--500), var(--primary-color--600));
+    --gradient-primary--600-700: linear-gradient(135deg, var(--primary-color--600), var(--primary-color--700));
+    --gradient-primary--700-800: linear-gradient(135deg, var(--primary-color--700), var(--primary-color--800));
+    --gradient-primary--800-900: linear-gradient(135deg, var(--primary-color--800), var(--primary-color--900));
+
+    /* === MEDIUM ===  */
+
     --gradient-primary--100-300: linear-gradient(135deg, var(--primary-color--100), var(--primary-color--300));
+    --gradient-primary--200-400: linear-gradient(135deg, var(--primary-color--200), var(--primary-color--400));
     --gradient-primary--300-500: linear-gradient(135deg, var(--primary-color--300), var(--primary-color--500));
+    --gradient-primary--400-600: linear-gradient(135deg, var(--primary-color--400), var(--primary-color--600));
     --gradient-primary--500-700: linear-gradient(135deg, var(--primary-color--500), var(--primary-color--700));
+    --gradient-primary--600-800: linear-gradient(135deg, var(--primary-color--600), var(--primary-color--800));
     --gradient-primary--700-900: linear-gradient(135deg, var(--primary-color--700), var(--primary-color--900));
+
+    /* === CRUDE ===  */
+
+    --gradient-primary--100-400: linear-gradient(135deg, var(--primary-color--100), var(--primary-color--400));
+    --gradient-primary--200-500: linear-gradient(135deg, var(--primary-color--200), var(--primary-color--500));
+    --gradient-primary--300-600: linear-gradient(135deg, var(--primary-color--300), var(--primary-color--600));
+    --gradient-primary--400-700: linear-gradient(135deg, var(--primary-color--400), var(--primary-color--700));
+    --gradient-primary--500-800: linear-gradient(135deg, var(--primary-color--500), var(--primary-color--800));
+    --gradient-primary--600-900: linear-gradient(135deg, var(--primary-color--600), var(--primary-color--900));
+   
   
      /* === SPACING === */
 
@@ -89,4 +114,14 @@ a {
 .app-wrapper {
     max-width: 1200px;
     margin: auto;
+}
+
+.backdrop-image {
+    position: fixed;
+    inset: 0;
+    background: url('https://img.freepik.com/free-photo/top-view-items-blue-background_23-2148565037.jpg?t=st=1729162343~exp=1729165943~hmac=137ee177a106cbc9b4c854fa30af325d5dffaad49d906c7d51147a719422a366&w=1380');
+    background-size: cover;
+    background-position: center bottom;
+    z-index: -999;
+    opacity: 0.05;
 }

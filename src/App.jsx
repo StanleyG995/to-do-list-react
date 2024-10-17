@@ -9,6 +9,8 @@ const App = () => {
 			<div className='app-wrapper'>
 				<Header />
 			</div>
+			<div className="backdrop-image">
+			</div>
 		</TaskProvider>
 	)
 }
