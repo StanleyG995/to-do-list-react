@@ -7,7 +7,7 @@ const Header = () => {
             <div className="row">
                 <div className="column">
                     <ul className="menu">
-                        <a href="" className="menu-item text-medium">Current</a>
+                        <a href="" className="menu-item menu-item--active text-medium">Current</a>
                         <a href="" className="menu-item text-medium">History</a>
                         <a href="" className="menu-item text-medium">Deleted</a>
                     </ul>

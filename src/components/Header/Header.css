@@ -30,10 +30,10 @@
     z-index: -1;
 }
 
-.menu-item:hover {
+.menu-item:hover, .menu-item--active {
     color: var(--white);
 }
 
-.menu-item:hover::before {
+.menu-item:hover::before, .menu-item--active::before {
     top: 0%;
 }
