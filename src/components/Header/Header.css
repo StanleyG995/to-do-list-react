@@ -37,3 +37,7 @@
 .menu-item:hover::before, .menu-item--active::before {
     top: 0%;
 }
+
+.menu-item:focus {
+    outline: solid 3px var(--primary-color--500);
+}
