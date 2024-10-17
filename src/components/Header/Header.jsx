@@ -7,9 +7,9 @@ const Header = () => {
             <div className="row">
                 <div className="column">
                     <ul className="menu">
-                        <a href="" className="menu-item menu-item--active text-medium">Current</a>
-                        <a href="" className="menu-item text-medium">History</a>
-                        <a href="" className="menu-item text-medium">Deleted</a>
+                        <a href="" className="menu-item menu-item--active text-medium"><i class="fa-solid fa-list-check menu-item-icon"></i> Current</a>
+                        <a href="" className="menu-item text-medium"><i class="fa-solid fa-clock-rotate-left menu-item-icon"></i> History</a>
+                        <a href="" className="menu-item text-medium"><i class="fa-solid fa-trash menu-item-icon"></i> Deleted</a>
                     </ul>
                 </div>
             </div>

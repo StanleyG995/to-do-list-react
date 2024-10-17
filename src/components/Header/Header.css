@@ -31,7 +31,10 @@
     z-index: -1;
 }
 
-.menu-item:hover, .menu-item--active {
+.menu-item:hover,
+.menu-item--active,
+.menu-item:hover .menu-item-icon,
+.menu-item--active .menu-item-icon {
     color: var(--white);
 }
 
@@ -40,5 +43,11 @@
 }
 
 .menu-item:focus {
-    outline: solid 3px var(--primary-color--500);
+    outline: var(--border--m) var(--primary-color--500);
+}
+
+.menu-item-icon {
+    margin-right: var(--space--xs);
+    color: var(--primary-color--500);
+    transition: color .3s ease-in-out;
 }
