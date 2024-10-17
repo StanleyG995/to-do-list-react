@@ -1,20 +1,21 @@
 .header {
-    padding: 30px;
+    padding: var(--space--xl);
 }
 
 .menu {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 20px;
+    gap: var(--space--m)
 }
 
 .menu-item {
     position: relative;
-    padding: 20px;
+    padding: var(--space--m);
     border: solid 2px var(--primary-color);
     color: var(--primary-color);
     background: none;
+    font-size: var(--text--m);
     font-weight: bold;
     overflow: hidden;
     transition: color .3s ease-in-out;
