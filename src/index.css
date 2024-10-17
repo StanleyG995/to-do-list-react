@@ -11,7 +11,9 @@
     --primary-color--700: #2C06EA;
     --primary-color--800: #25139C;
     --primary-color--900: #180C5A;
+    
     --white: #fcfcfe;
+    --black: #09042b;
 
      /* === GRADIENTS === */
 
@@ -88,6 +90,8 @@
     --heading--l: 3.6rem;
     --heading--xl: 4rem;
 
+    --display: 5rem;
+
   }
 
 * {
@@ -129,4 +133,29 @@ a {
     inset: 0;
     background: var(--gradient-primary--100-200);
     opacity: 0.93;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.row--flex-start {
+    justify-content: flex-start;
+}
+
+.row--flex-center {
+    justify-content: center;
+}
+
+.row--flex-space-around {
+    justify-content: space-around;
+}
+
+.row--flex-space-between {
+    justify-content: space-between;
+}
+
+.row-flex-end {
+    justify-content: flex-end;
 }

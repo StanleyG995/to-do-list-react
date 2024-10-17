@@ -2,6 +2,24 @@
     padding: var(--space--xl);
 }
 
+.site-logo {
+    font-size: var(--heading--l);
+    font-weight: bold;
+    color: var(--black);
+}
+
+.site-logo--color {
+    color: var(--primary-color--500);
+}
+
+.logo-icon {
+    margin-right: var(--space--xs);
+    font-size: var(--display);
+    background: var(--gradient-primary--500-700);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .menu {
     display: flex;
     justify-content: flex-end;
