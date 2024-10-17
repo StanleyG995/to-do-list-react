@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #370cf3;
+    --secondary-color: #2ecc71;
+    --white: #fcfcfe;
+  }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,6 +16,10 @@ html {
 
 body{
     font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 ::-webkit-scrollbar {
@@ -30,3 +40,14 @@ body{
     background: hsl(233, 95%, 44%);
 }
 
+.text-small {
+    font-size: 1.4rem
+}
+
+.text-medium {
+    font-size: 1.6rem;
+}
+
+.text-large {
+    font-size: 1.8rem;
+}

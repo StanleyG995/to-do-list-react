@@ -1,0 +1,36 @@
+.menu {
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-item {
+    position: relative;
+    padding: 20px;
+    border: solid 2px var(--primary-color);
+    color: var(--primary-color);
+    background: none;
+    font-weight: bold;
+    overflow: hidden;
+    transition: color .3s ease-in-out;
+}
+
+.menu-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: 100%;
+    background: var(--primary-color);
+    transition: top .3s ease-in-out;
+    z-index: -1;
+}
+
+.menu-item:hover {
+    color: var(--white);
+}
+
+.menu-item:hover::before {
+    top: 0%;
+}
