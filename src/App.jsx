@@ -7,7 +7,6 @@ import ErrorMessage from './components/UI/ErrorMessage/ErrorMessage.jsx'
 
 
 const App = () => {
-	
 	return (
 		<TaskProvider>
 			<div className='app-wrapper'>

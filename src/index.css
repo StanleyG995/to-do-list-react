@@ -6,18 +6,18 @@
 
     /* === COLORS === */
 
-    --primary-color--100: #E9EDFF;
-    --primary-color--200: #B5C0FF;
-    --primary-color--300: #8997FF;
-    --primary-color--400: #5B5EFF;
-    --primary-color--500: #4436FF;
-    --primary-color--600: #3813FF;
-    --primary-color--700: #2C06EA;
-    --primary-color--800: #25139C;
-    --primary-color--900: #180C5A;
+    --primary-color--100: hsl(229, 100%, 96%);
+    --primary-color--200: hsl(231, 100%, 85%);
+    --primary-color--300: hsl(233, 100%, 77%);
+    --primary-color--400: hsl(239, 100%, 68%);
+    --primary-color--500: hsl(244, 100%, 61%);
+    --primary-color--600: hsl(249, 100%, 54%);
+    --primary-color--700: hsl(250, 95%, 47%);
+    --primary-color--800: hsl(248, 78%, 34%);
+    --primary-color--900: hsl(249, 76%, 20%);
     
-    --white: #fcfcfe;
-    --black: #09042b;
+    --white: hsl(240, 50%, 99%);
+    --black: hsl(248, 83%, 9%);
     --danger--100: hsl(0, 69%, 90%);
     --danger--500: hsl(0, 69%, 50%);
     --danger--900: hsl(0, 69%, 20%);
