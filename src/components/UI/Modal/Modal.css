@@ -1,0 +1,34 @@
+.modal-overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    overflow: hidden;
+    background: rgba(255, 254, 255, 0.253);
+    backdrop-filter: blur(10px);
+}
+
+.modal {
+    padding: var(--space--l);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space--l);
+    max-width: 600px;
+    background: var(--primary-color--100);
+    border: var(--border--s) var(--primary-color--200);
+    flex: 1;
+    box-shadow: 3px 3px 6px var(--primary-color--700--alpha);
+}
+
+.modal-visible {
+    display: flex;
+}
+
+.modal-hidden {
+    display: none;
+}
+

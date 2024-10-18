@@ -16,11 +16,15 @@
     --primary-color--800: hsl(248, 78%, 34%);
     --primary-color--900: hsl(249, 76%, 20%);
     
+    --primary-color--700--alpha: hsl(250, 95%, 47%, 0.2);
+
     --white: hsl(240, 50%, 99%);
     --black: hsl(248, 83%, 9%);
     --danger--100: hsl(0, 69%, 90%);
     --danger--500: hsl(0, 69%, 50%);
     --danger--900: hsl(0, 69%, 20%);
+
+ 
 
      /* === GRADIENTS === */
 
@@ -117,6 +121,7 @@ body{
     background: var(--gradient-primary--100-200, 0.3);
     background-size: cover;
     min-height: 100vh;
+    font-size: 1.6rem;
 }
 
 a {

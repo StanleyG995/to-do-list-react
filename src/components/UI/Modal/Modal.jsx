@@ -5,7 +5,7 @@ import Button from '../Button/Button.jsx'
 
 const Modal = ( {children, buttonPrimary} ) => {
     return (
-        <div className="modal-overlay">
+        <div className="modal-overlay modal-visible">
             <div className="modal">
                 <div className="row row--flex-center modal-content ">
                     { children }
