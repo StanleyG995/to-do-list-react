@@ -14,11 +14,14 @@
     
     --white: #fcfcfe;
     --black: #09042b;
-    --warning: rgb(209, 38, 38);
+    --warning-100: hsl(0, 69%, 90%);
+    --warning-500: hsl(0, 69%, 50%);
+    --warning-900: hsl(0, 69%, 20%);
 
      /* === GRADIENTS === */
 
     --gradient-background: linear-gradient(135deg, var(--white), var(--primary-color--100));
+    --gradient-warning: linear-gradient(135deg, var(--white), var(--warning-100));
 
     /* === SUBTLE ===  */
 

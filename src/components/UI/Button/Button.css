@@ -14,7 +14,7 @@
 }
 
 .button:focus {
-    outline: var(--border--s) var(--primary-color--500);
+    outline: var(--border--m) var(--primary-color--500);
 }
 
 .button--primary {
@@ -31,6 +31,7 @@
 }
 
 .button--danger {
-    border: var(--border--s) var(--warning);
-    color: var(--warning);
+    border: var(--border--s) var(--warning-500);
+    color: var(--warning-500);
+    background: var(--gradient-warning);
 }
