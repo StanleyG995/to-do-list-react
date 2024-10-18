@@ -16,7 +16,7 @@ const App = () => {
 					<Button children={<p>Warning!</p>} classes='button button--l button--danger' onClick={() => {console.log("I'm danger button!")}}/>
 					<ErrorMessage message='Task description must not be empty!' />
 				</section>
-				<Modal children={<p>Test content.</p>} buttonPrimary={<Button children={<p>Primary action</p>} classes='button button--m button--primary' onClick={() => {console.log("I'm primary button!")}}/>}/>
+				<Modal children={<p>Test content.</p>} buttonPrimary={<Button children={<p>Primary action</p>} classes='button button--m button--primary' onClick={() => {console.log("I'm primary button!")}} />} visibility='modal-visible'/>
 			</div>
 			<div className="backdrop-image">
 			</div>
