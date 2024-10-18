@@ -25,7 +25,7 @@
      /* === GRADIENTS === */
 
     --gradient-background: linear-gradient(135deg, var(--white), var(--primary-color--100));
-    --gradient-warning: linear-gradient(135deg, var(--white), var(--warning-100));
+    --gradient-danger: linear-gradient(135deg, var(--white), var(--warning-100));
 
     /* === SUBTLE ===  */
 

@@ -46,5 +46,5 @@
 .button--danger {
     border: var(--border--s) var(--warning-500);
     color: var(--warning-500);
-    background: var(--gradient-warning);
+    background: var(--gradient-danger);
 }
