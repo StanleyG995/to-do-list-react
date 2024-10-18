@@ -1,12 +1,25 @@
 .button {
-    padding: var(--space--s) var(--space--m);
     outline: none;
     border: none;
-    font-size: 1.6rem;
     font-weight: bold;
     background: none;
     transition: filter .3s ease-in-out;
     cursor: pointer;
+}
+
+.button--s {
+    padding: var(--space--xs) var(--space--s);
+    font-size: 1.2rem;
+}
+
+.button--m {
+    padding: var(--space--s) var(--space--m);
+    font-size: 1.4rem;
+}
+
+.button--l {
+    padding: var(--space--m) var(--space--l);
+    font-size: 1.6rem;
 }
 
 .button:hover {

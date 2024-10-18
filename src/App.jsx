@@ -12,9 +12,9 @@ const App = () => {
 			<div className='app-wrapper'>
 				<Header />
 				<section className="row row--flex-center">
-					<Button children={<p>Primary action</p>} classes='button button--primary' onClick={() => {console.log("I'm primary button!")}}/>
-					<Button children={<p>Secondary action</p>} classes='button button--secondary' onClick={() => {console.log("I'm secondary button!")}}/>
-					<Button children={<p>Warning!</p>} classes='button button--danger' onClick={() => {console.log("I'm danger button!")}}/>
+					<Button children={<p>Primary action</p>} classes='button button--s button--primary' onClick={() => {console.log("I'm primary button!")}}/>
+					<Button children={<p>Secondary action</p>} classes='button button--m button--secondary' onClick={() => {console.log("I'm secondary button!")}}/>
+					<Button children={<p>Warning!</p>} classes='button button--l button--danger' onClick={() => {console.log("I'm danger button!")}}/>
 				</section>
 			</div>
 			<div className="backdrop-image">
