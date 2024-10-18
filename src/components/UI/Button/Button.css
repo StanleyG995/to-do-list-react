@@ -1,0 +1,35 @@
+.button {
+    padding: var(--space--s) var(--space--m);
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: none;
+    transition: filter .3s ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover {
+    filter: brightness(0.9);
+}
+
+.button:focus {
+    outline: var(--border--m) var(--primary-color--500);
+}
+
+.button--primary {
+    background: var(--gradient-primary--500-700);
+    border: var(--border--m) transparent;
+    font-weight: bold;
+    color: white;
+}
+
+.button--secondary {
+    border: var(--border--m) var(--primary-color--500);
+    color: var(--primary-color--500);
+}
+
+.button--danger {
+    outline: var(--border--m) var(--warning);
+    color: var(--warning);
+}
