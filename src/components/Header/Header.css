@@ -4,12 +4,13 @@
 
 .site-logo {
     font-size: var(--heading--l);
-    font-weight: bold;
     color: var(--black);
+    letter-spacing: 5px;
 }
 
 .site-logo--color {
     color: var(--primary-color--500);
+    font-weight: bold;
 }
 
 .logo-icon {
