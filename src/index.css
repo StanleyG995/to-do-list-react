@@ -18,14 +18,14 @@
     
     --white: #fcfcfe;
     --black: #09042b;
-    --warning-100: hsl(0, 69%, 90%);
-    --warning-500: hsl(0, 69%, 50%);
-    --warning-900: hsl(0, 69%, 20%);
+    --danger--100: hsl(0, 69%, 90%);
+    --danger--500: hsl(0, 69%, 50%);
+    --danger--900: hsl(0, 69%, 20%);
 
      /* === GRADIENTS === */
 
     --gradient-background: linear-gradient(135deg, var(--white), var(--primary-color--100));
-    --gradient-danger: linear-gradient(135deg, var(--white), var(--warning-100));
+    --gradient-danger: linear-gradient(135deg, var(--white), var(--danger--100));
 
     /* === SUBTLE ===  */
 

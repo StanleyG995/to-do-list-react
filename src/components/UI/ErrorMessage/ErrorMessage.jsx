@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
+import './ErrorMessage.css'
+
 
 const ErrorMessage = ( {message} ) => {
     return (
-        <p>{message}</p>
+        <p className='error-message'>{message}</p>
     )
 }
 
