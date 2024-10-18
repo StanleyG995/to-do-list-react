@@ -14,22 +14,23 @@
 }
 
 .button:focus {
-    outline: var(--border--m) var(--primary-color--500);
+    outline: var(--border--s) var(--primary-color--500);
 }
 
 .button--primary {
     background: var(--gradient-primary--500-700);
-    border: var(--border--m) transparent;
+    border: var(--border--s) transparent;
     font-weight: bold;
     color: white;
 }
 
 .button--secondary {
-    border: var(--border--m) var(--primary-color--500);
-    color: var(--primary-color--500);
+    border: var(--border--s) var(--primary-color--400);
+    color: var(--primary-color--400);
+    background: var(--gradient-primary--100-200);
 }
 
 .button--danger {
-    outline: var(--border--m) var(--warning);
+    border: var(--border--s) var(--warning);
     color: var(--warning);
 }

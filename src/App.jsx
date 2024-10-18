@@ -11,9 +11,11 @@ const App = () => {
 		<TaskProvider>
 			<div className='app-wrapper'>
 				<Header />
-				<Button children={<p>Primary action</p>} classes='button button--primary' action={() => {console.log("I'm primary button!")}}/>
-				<Button children={<p>Secondary action</p>} classes='button button--secondary' action={() => {console.log("I'm secondary button!")}}/>
-				<Button children={<p>Warning!</p>} classes='button button--danger' action={() => {console.log("I'm danger button!")}}/>
+				<section className="row row--flex-center">
+					<Button children={<p>Primary action</p>} classes='button button--primary' onClick={() => {console.log("I'm primary button!")}}/>
+					<Button children={<p>Secondary action</p>} classes='button button--secondary' onClick={() => {console.log("I'm secondary button!")}}/>
+					<Button children={<p>Warning!</p>} classes='button button--danger' onClick={() => {console.log("I'm danger button!")}}/>
+				</section>
 			</div>
 			<div className="backdrop-image">
 			</div>

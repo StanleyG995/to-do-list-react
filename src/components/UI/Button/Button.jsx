@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import './Button.css'
 
-const Button = ( {children, classes, action}) => {
+const Button = ( {children, classes, onClick}) => {
     return (
-        <button className={classes} onClick={action}>
+        <button className={classes} onClick={onClick}>
             {children}
         </button>
     )
@@ -12,7 +12,7 @@ const Button = ( {children, classes, action}) => {
 Button.propTypes = {
     children: PropTypes.node,
     classes: PropTypes.string,
-    action: PropTypes.func,
+    onClick: PropTypes.func,
 }
 
 export default Button
