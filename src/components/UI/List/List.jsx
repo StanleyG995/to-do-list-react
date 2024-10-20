@@ -1,14 +1,18 @@
 import React, { useContext } from 'react'
-import ListItem from '../ListItem/ListItem.jsx'
 
-import { taskData } from '../../../data/taskData.js'
+import { TaskContext } from '../../../context/TaskContext.jsx'
 
-const currentTasks = useContext()
+import { listDisplay } from '../../../helpers/listHelpers.jsx'
 
 const List = () => {
+
+    const { currentTasks, setCurrentTasks } = useContext( TaskContext )
+
     return (
         <ul className='list'>
-            
+            {
+                listDisplay( currentTasks )
+            }
         </ul>
     )    
 }

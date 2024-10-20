@@ -1,4 +1,4 @@
-const taskData = [
+export const taskData = [
     {
         id: 1,
         category: 'Home',
