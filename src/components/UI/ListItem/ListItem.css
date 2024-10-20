@@ -19,8 +19,13 @@
 }
 
 .category {
+    flex: 1;
     font-weight: bold;
     color: var(--primary-color--800)
+}
+
+.description {
+    flex: 4;
 }
 
 .priority {
