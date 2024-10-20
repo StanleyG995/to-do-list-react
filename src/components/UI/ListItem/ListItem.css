@@ -1,7 +1,8 @@
 .list-item {
     padding: var(--space--m);
     display: flex;
-    gap: var(--space--l)
+    gap: var(--space--l);
+    color: var(--primary-color--900)
 }
 
 .list-item:nth-child(odd) {
@@ -18,4 +19,5 @@
 
 .category {
     font-weight: bold;
+    color: var(--primary-color--800)
 }
