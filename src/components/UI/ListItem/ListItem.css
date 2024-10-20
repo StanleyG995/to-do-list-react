@@ -1,9 +1,10 @@
 .list-item {
-    padding: var(--space--m);
+    padding: var(--space--s) var(--space--l);
     display: flex;
     align-items: center;
     gap: var(--space--l);
-    color: var(--primary-color--900)
+    color: var(--primary-color--900);
+    box-shadow: 3px 3px 5px var(--primary-color--700-alpha)
 }
 
 .list-item:nth-child(odd) {

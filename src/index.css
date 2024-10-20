@@ -131,8 +131,12 @@ a {
 }
 
 .app-wrapper {
+    display: flex;
+    gap: var(--space--xl);
+    flex-direction: column;
     max-width: var(--max-width);
     margin: auto;
+    padding: var(--space--xl)
 }
 
 .backdrop-image {

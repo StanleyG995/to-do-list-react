@@ -1,7 +1,3 @@
-.header {
-    padding: var(--space--xl);
-}
-
 .site-logo {
     font-size: var(--heading--l);
     color: var(--black);

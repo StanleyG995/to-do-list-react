@@ -11,11 +11,14 @@ const List = () => {
     const { currentTasks, setCurrentTasks } = useContext( TaskContext )
 
     return (
-        <ul className='list'>
-            {
-                listDisplay( currentTasks )
-            }
-        </ul>
+     
+            <ul className='list'>
+                {
+                    listDisplay( currentTasks )
+                }
+            </ul>
+  
+        
     )    
 }
 
