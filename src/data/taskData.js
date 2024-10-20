@@ -2,6 +2,7 @@ export const taskData = [
     {
         id: 1,
         category: 'Home',
+        categoryIcon: 'fa-solid fa-house',
         description: 'Walk the dog',
         dateAdded: '21.10.2024',
         dateDue: '24.10.2024',
@@ -10,6 +11,7 @@ export const taskData = [
     {
         id: 2,
         category: 'Work',
+        categoryIcon: 'fa-solid fa-briefcase',
         description: 'Prepare presentation for Monday',
         dateAdded: '21.10.2024',
         dateDue: '23.10.2024',
@@ -18,6 +20,7 @@ export const taskData = [
     {
         id: 3,
         category: 'Home',
+        categoryIcon: 'fa-solid fa-house',
         description: 'Grocery shopping',
         dateAdded: '21.10.2024',
         dateDue: '22.10.2024',
@@ -26,6 +29,7 @@ export const taskData = [
     {
         id: 4,
         category: 'Fitness',
+        categoryIcon: 'fa-solid fa-dumbbell',
         description: 'Go for a run',
         dateAdded: '21.10.2024',
         dateDue: '21.10.2024',
@@ -34,6 +38,7 @@ export const taskData = [
     {
         id: 5,
         category: 'Home',
+        categoryIcon: 'fa-solid fa-house',
         description: 'Clean the kitchen',
         dateAdded: '21.10.2024',
         dateDue: '23.10.2024',
@@ -42,6 +47,7 @@ export const taskData = [
     {
         id: 6,
         category: 'Work',
+        categoryIcon: 'fa-solid fa-briefcase',
         description: 'Reply to emails',
         dateAdded: '21.10.2024',
         dateDue: '21.10.2024',
@@ -50,6 +56,7 @@ export const taskData = [
     {
         id: 7,
         category: 'Personal',
+        categoryIcon: 'fa-solid fa-user',
         description: 'Read 50 pages of a book',
         dateAdded: '21.10.2024',
         dateDue: '25.10.2024',
@@ -58,6 +65,7 @@ export const taskData = [
     {
         id: 8,
         category: 'Home',
+        categoryIcon: 'fa-solid fa-house',
         description: 'Organize the garage',
         dateAdded: '21.10.2024',
         dateDue: '28.10.2024',
@@ -66,6 +74,7 @@ export const taskData = [
     {
         id: 9,
         category: 'Work',
+        categoryIcon: 'fa-solid fa-briefcase',
         description: 'Finish the quarterly report',
         dateAdded: '21.10.2024',
         dateDue: '30.10.2024',
@@ -74,6 +83,7 @@ export const taskData = [
     {
         id: 10,
         category: 'Family',
+        categoryIcon: 'fa-solid fa-users',
         description: 'Call mom',
         dateAdded: '21.10.2024',
         dateDue: '21.10.2024',
@@ -82,6 +92,7 @@ export const taskData = [
     {
         id: 11,
         category: 'Fitness',
+        categoryIcon: 'fa-solid fa-dumbbell',
         description: 'Attend yoga class',
         dateAdded: '21.10.2024',
         dateDue: '22.10.2024',
@@ -90,6 +101,7 @@ export const taskData = [
     {
         id: 12,
         category: 'Home',
+        categoryIcon: 'fa-solid fa-house',
         description: 'Fix the leaking faucet',
         dateAdded: '21.10.2024',
         dateDue: '25.10.2024',
@@ -98,6 +110,7 @@ export const taskData = [
     {
         id: 13,
         category: 'Work',
+        categoryIcon: 'fa-solid fa-briefcase',
         description: 'Schedule team meeting',
         dateAdded: '21.10.2024',
         dateDue: '24.10.2024',
@@ -106,6 +119,7 @@ export const taskData = [
     {
         id: 14,
         category: 'Personal',
+        categoryIcon: 'fa-solid fa-user',
         description: 'Plan weekend getaway',
         dateAdded: '21.10.2024',
         dateDue: '31.10.2024',
@@ -114,6 +128,7 @@ export const taskData = [
     {
         id: 15,
         category: 'Home',
+        categoryIcon: 'fa-solid fa-house',
         description: 'Wash the car',
         dateAdded: '21.10.2024',
         dateDue: '22.10.2024',
@@ -122,6 +137,7 @@ export const taskData = [
     {
         id: 16,
         category: 'Work',
+        categoryIcon: 'fa-solid fa-briefcase',
         description: 'Update project timeline',
         dateAdded: '21.10.2024',
         dateDue: '25.10.2024',
@@ -130,6 +146,7 @@ export const taskData = [
     {
         id: 17,
         category: 'Family',
+        categoryIcon: 'fa-solid fa-users',
         description: 'Plan family dinner',
         dateAdded: '21.10.2024',
         dateDue: '27.10.2024',
@@ -138,6 +155,7 @@ export const taskData = [
     {
         id: 18,
         category: 'Fitness',
+        categoryIcon: 'fa-solid fa-dumbbell',
         description: 'Do a home workout',
         dateAdded: '21.10.2024',
         dateDue: '21.10.2024',
@@ -146,6 +164,7 @@ export const taskData = [
     {
         id: 19,
         category: 'Personal',
+        categoryIcon: 'fa-solid fa-user',
         description: 'Meditate for 10 minutes',
         dateAdded: '21.10.2024',
         dateDue: '21.10.2024',
@@ -154,6 +173,7 @@ export const taskData = [
     {
         id: 20,
         category: 'Home',
+        categoryIcon: 'fa-solid fa-house',
         description: 'Prepare lunch for tomorrow',
         dateAdded: '21.10.2024',
         dateDue: '21.10.2024',

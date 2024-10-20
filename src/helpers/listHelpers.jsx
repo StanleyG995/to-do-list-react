@@ -5,6 +5,7 @@ export const listDisplay = ( arr ) => {
             <ListItem
             key={item.id}
             category={item.category}
+            categoryIcon={item.categoryIcon}
             description={item.description}
             dateAdded={item.dateAdded}
             dateDue={item.dateDue}

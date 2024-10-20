@@ -25,6 +25,11 @@
     color: var(--primary-color--800)
 }
 
+.category-icon {
+    color: var(--primary-color--500);
+    margin-right: var(--space--xxs);
+}
+
 .description {
     flex: 4;
 }
@@ -42,21 +47,19 @@
 .priority::before {
     display: block;
     font-size: var(--text--xl);
+    color: var(--primary-color--500);
 }
 
 .priority--high:before {
-    content: '●●●';
-    color: rgb(176, 0, 12);
+    content: '●●●';   
 }
 
 
 .priority--medium:before {
     content: '●●○';
-    color: rgb(190, 123, 0);
 }
 
 
 .priority--low:before {
     content: '●○○';
-    color: rgb(14, 116, 10);
 }

@@ -2,11 +2,11 @@ import { formatDate } from '../../../helpers/dateHelpers.js'
 
 import './ListItem.css'
 
-const ListItem = ({ id, category, description, dateAdded, dateDue, priority, priorityClass }) => {
+const ListItem = ({ id, category, categoryIcon, description, dateAdded, dateDue, priority }) => {
 
     return (
         <li className='list-item' key={id} id={id}>
-            <p className="list-item-property category">{category}</p>
+            <p className="list-item-property category"><i className={`category-icon ${categoryIcon}`}></i> {category}</p>
             <p className="list-item-property description">{description}</p>
             <p className="list-item-property dateAdded">
             {dateAdded}
