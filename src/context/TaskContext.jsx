@@ -12,6 +12,10 @@ export const TaskProvider = ({children}) => {
     setIsModalOpen(!isModalOpen)
   }
 
+  const handleModalClose = () => {
+    setIsModalOpen(false)
+  }
+
   const TaskContextValues = {
     currentTasks, 
     
@@ -20,7 +24,8 @@ export const TaskProvider = ({children}) => {
     modalType,
     setModalType,
 
-    handleModalOpen
+    handleModalOpen,
+    handleModalClose,
 
   }
 
