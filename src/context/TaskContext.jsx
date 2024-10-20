@@ -7,7 +7,7 @@ export const TaskProvider = ({children}) => {
   const currentTasks = useState([])
 
   const ModalValues = {
-    isModalOpen: useState(false),
+    isModalOpen: useState(true),
     modalType: useState('FormAddTask')
   }
   
