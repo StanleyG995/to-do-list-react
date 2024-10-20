@@ -6,13 +6,13 @@ const ListItem = ({ id, category, description, dateAdded, dateDue, priority }) =
 
     return (
         <li className='list-item' key={id} id={id}>
-            <p className="category">{category}</p>
-            <p className="description">{description}</p>
-            <p className="dateAdded">
+            <p className="list-item-property category">{category}</p>
+            <p className="list-item-property description">{description}</p>
+            <p className="list-item-property dateAdded">
             {dateAdded}
             </p>
-            <p className="dateDue">{dateDue}</p>
-            <p className="priority">
+            <p className="list-item-property dateDue">{dateDue}</p>
+            <p className="list-item-property priority">
             {priority}
             </p>
         </li>

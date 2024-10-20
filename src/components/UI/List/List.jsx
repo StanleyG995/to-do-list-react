@@ -4,6 +4,8 @@ import { TaskContext } from '../../../context/TaskContext.jsx'
 
 import { listDisplay } from '../../../helpers/listHelpers.jsx'
 
+import './List.css'
+
 const List = () => {
 
     const { currentTasks, setCurrentTasks } = useContext( TaskContext )

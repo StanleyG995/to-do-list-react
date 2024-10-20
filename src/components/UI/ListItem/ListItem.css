@@ -5,7 +5,15 @@
 }
 
 .list-item:nth-child(odd) {
-    background: var(--primary-color--100)
+    background: var(--gradient-primary--100-200)
+}
+
+.list-item:nth-child(even) {
+    background: var(--gradient-background)
+}
+
+.list-item-property {
+    flex: 1;
 }
 
 .category {
