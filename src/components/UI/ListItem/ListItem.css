@@ -27,6 +27,7 @@
     flex: 1;
     padding: var(--space--xs);
     color: var(--white);
+    font-size: var(--text--xxs);
     font-weight: bold;
     text-align: center;
     
