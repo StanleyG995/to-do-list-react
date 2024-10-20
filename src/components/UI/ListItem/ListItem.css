@@ -1,0 +1,13 @@
+.list-item {
+    padding: var(--space--m);
+    display: flex;
+    gap: var(--space--l)
+}
+
+.list-item:nth-child(odd) {
+    background: var(--primary-color--100)
+}
+
+.category {
+    font-weight: bold;
+}

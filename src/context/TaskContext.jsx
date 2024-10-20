@@ -5,7 +5,7 @@ export const TaskContext = createContext();
 export const TaskProvider = ({children}) => {
 
   const currentTasks = useState([])
-  const [isModalOpen, setIsModalOpen] = useState(true)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalType, setModalType] = useState('FormAddTask')
 
   const handleModalOpen = () => {

@@ -1,13 +1,20 @@
 import { formatDate } from '../../../helpers/dateHelpers.js'
 
-const ListItem = () => {
+import './ListItem.css'
+
+const ListItem = ({ category, description, dateAdded, dateDue, priority }) => {
 
     return (
-        <li>
-            <p className="taskDescription">Do the laundry.</p>
-            <p className="dateAdded">{formatDate(new Date())}</p>
-            <p className="dateDue">{formatDate(new Date())}</p>
-            <p className="category">Home</p>
+        <li className='list-item'>
+            <p className="category">{category}</p>
+            <p className="description">{description}</p>
+            <p className="dateAdded">
+            {dateAdded}
+            </p>
+            <p className="dateDue">{dateDue}</p>
+            <p className="priority">
+            {priority}
+            </p>
         </li>
     )
 }
