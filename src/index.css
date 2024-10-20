@@ -97,6 +97,7 @@
     --text--s: 1.4rem;
     --text--m: 1.6rem;
     --text--l: 1.8rem;
+    --text--xl: 2rem;
 
     --heading--xs: 2.4rem;
     --heading--s: 2.8rem;
@@ -107,6 +108,28 @@
     --display: 5rem;
 
   }
+
+/* === CUSTOM SCROLLBAR === */
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-color--200);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color--500);
+    border-radius: 0px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color--400);
+}
+
 
 * {
     box-sizing: border-box;

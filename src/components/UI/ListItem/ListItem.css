@@ -35,9 +35,12 @@
     flex-direction: column;
     align-items: center;
     padding: var(--space--xs);
-    font-size: var(--text--xl);
     text-align: left
     
+}
+
+.priority::before {
+    font-size: var(--text--l);
 }
 
 .priority--high:before {
