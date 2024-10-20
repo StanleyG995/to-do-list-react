@@ -12,7 +12,7 @@ const ListItem = ({ id, category, description, dateAdded, dateDue, priority, pri
             {dateAdded}
             </p>
             <p className="list-item-property dateDue">{dateDue}</p>
-            <p className={`list-item-property priority ${priorityClass}`}>
+            <p className={`list-item-property priority priority--${priority}`}>
             {priority}
             </p>
         </li>
