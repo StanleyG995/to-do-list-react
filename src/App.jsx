@@ -13,6 +13,12 @@ const App = () => {
 			</div>
 			<div className="backdrop-image">
 			</div>
+			<Modal children={
+				<>
+					<h2>Test</h2>
+					<p>Cokolwiek</p>
+				</>
+			} buttonPrimary={<Button children='Primary action' classNames='button button--primary button--m' onClick={() => console.log('clicked')}/>} />
 		</TaskProvider>
 	)
 }

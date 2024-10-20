@@ -5,13 +5,13 @@ import Button from '../Button/Button.jsx'
 
 const Modal = ( {children, buttonPrimary} ) => {
     return (
-        <div className={`modal-overlay `}>
+        <div className={`modal-overlay`}>
             <div className="modal">
                 <div className="row row--flex-center modal-content ">
                     { children }
                 </div>
                 <div className="row row--flex-center modal-buttons ">
-                    <Button children={'Cancel'} classes='button button--m button--secondary' onClick={() => {console.log("Modal closed")}}/>
+                    <Button children={'Cancel'} classNames='button button--m button--secondary' onClick={() => {console.log("Modal closed")}}/>
                     { buttonPrimary }
                 </div>
             </div>
