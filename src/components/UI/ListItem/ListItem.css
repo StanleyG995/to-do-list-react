@@ -41,22 +41,22 @@
 
 .priority::before {
     display: block;
-    font-size: var(--text--l);
+    font-size: var(--text--xl);
 }
 
 .priority--high:before {
-    content: ' ★★★ ';
+    content: '●●●';
     color: rgb(176, 0, 12);
 }
 
 
 .priority--medium:before {
-    content: ' ★★ ';
+    content: '●●○';
     color: rgb(190, 123, 0);
 }
 
 
 .priority--low:before {
-    content: ' ★';
+    content: '●○○';
     color: rgb(14, 116, 10);
 }
