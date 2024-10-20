@@ -6,18 +6,18 @@ import { TaskContext } from '../../../context/TaskContext.jsx'
 
 import Button from '../Button/Button.jsx'
 
-const Modal = ( {children, buttonPrimary} ) => {
+const Modal = ( {children, buttonPrimary, onClose } ) => {
 
-    const { ModalValues } = useContext(TaskContext)
+    const { isModalOpen, modalType, handleModalOpen } = useContext(TaskContext)
 
     return (
-        <div className={`modal-overlay ${ModalValues.isModalOpen ? 'modal-visible' : ''}`}>
+        <div className={`modal-overlay ${isModalOpen ? 'modal-visible' : ''}`}>
             <div className="modal">
                 <div className="row row--flex-center modal-content ">
                     { children }
                 </div>
                 <div className="row row--flex-center modal-buttons ">
-                    <Button children={'Cancel'} classNames='button button--m button--secondary' onClick={() => {console.log(ModalValues.isModalOpen, ModalValues.modalType)}}/>
+                    <Button children={'Cancel'} classNames='button button--m button--secondary' onClick={onClose} />
                     { buttonPrimary }
                 </div>
             </div>
