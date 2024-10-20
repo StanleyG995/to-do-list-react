@@ -6,6 +6,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '24.10.2024',
         priority: 'medium',
+        priorityClass: 'priority--medium',
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '23.10.2024',
         priority: 'high',
+        priorityClass: 'priority--high',
     },
     {
         id: 3,
@@ -22,6 +24,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '22.10.2024',
         priority: 'medium',
+        priorityClass: 'priority--medium',
     },
     {
         id: 4,
@@ -30,6 +33,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '21.10.2024',
         priority: 'low',
+        priorityClass: 'priority--low',
     },
     {
         id: 5,
@@ -38,6 +42,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '23.10.2024',
         priority: 'medium',
+        priorityClass: 'priority--medium',
     },
     {
         id: 6,
@@ -46,6 +51,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '21.10.2024',
         priority: 'low',
+        priorityClass: 'priority--low',
     },
     {
         id: 7,
@@ -54,6 +60,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '25.10.2024',
         priority: 'medium',
+        priorityClass: 'priority--medium',
     },
     {
         id: 8,
@@ -62,6 +69,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '28.10.2024',
         priority: 'low',
+        priorityClass: 'priority--low',
     },
     {
         id: 9,
@@ -70,6 +78,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '30.10.2024',
         priority: 'high',
+        priorityClass: 'priority--high',
     },
     {
         id: 10,
@@ -78,6 +87,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '21.10.2024',
         priority: 'medium',
+        priorityClass: 'priority--medium',
     },
     {
         id: 11,
@@ -86,6 +96,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '22.10.2024',
         priority: 'medium',
+        priorityClass: 'priority--medium',
     },
     {
         id: 12,
@@ -94,6 +105,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '25.10.2024',
         priority: 'high',
+        priorityClass: 'priority--high',
     },
     {
         id: 13,
@@ -102,6 +114,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '24.10.2024',
         priority: 'medium',
+        priorityClass: 'priority--medium',
     },
     {
         id: 14,
@@ -110,6 +123,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '31.10.2024',
         priority: 'low',
+        priorityClass: 'priority--low',
     },
     {
         id: 15,
@@ -118,6 +132,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '22.10.2024',
         priority: 'low',
+        priorityClass: 'priority--low',
     },
     {
         id: 16,
@@ -126,6 +141,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '25.10.2024',
         priority: 'medium',
+        priorityClass: 'priority--medium',
     },
     {
         id: 17,
@@ -134,6 +150,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '27.10.2024',
         priority: 'medium',
+        priorityClass: 'priority--medium',
     },
     {
         id: 18,
@@ -142,6 +159,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '21.10.2024',
         priority: 'low',
+        priorityClass: 'priority--low',
     },
     {
         id: 19,
@@ -150,6 +168,7 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '21.10.2024',
         priority: 'low',
+        priorityClass: 'priority--low',
     },
     {
         id: 20,
@@ -158,5 +177,6 @@ export const taskData = [
         dateAdded: '21.10.2024',
         dateDue: '21.10.2024',
         priority: 'medium',
+        priorityClass: 'priority--medium',
     },
 ];

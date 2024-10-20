@@ -1,6 +1,7 @@
 .list-item {
     padding: var(--space--m);
     display: flex;
+    align-items: center;
     gap: var(--space--l);
     color: var(--primary-color--900)
 }
@@ -14,10 +15,30 @@
 }
 
 .list-item-property {
-    flex: 1;
+    flex: 2;
 }
 
 .category {
     font-weight: bold;
     color: var(--primary-color--800)
+}
+
+.priority {
+    flex: 1;
+    padding: var(--space--xs);
+    color: var(--white);
+    font-weight: bold;
+    text-align: center;
+    
+}
+.priority--high {
+    background-color: rgb(176, 0, 12);
+}
+
+.priority--medium {
+    background-color: rgb(190, 123, 0);
+}
+
+.priority--low {
+    background-color: rgb(14, 116, 10);
 }

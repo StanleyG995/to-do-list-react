@@ -2,7 +2,7 @@ import { formatDate } from '../../../helpers/dateHelpers.js'
 
 import './ListItem.css'
 
-const ListItem = ({ id, category, description, dateAdded, dateDue, priority }) => {
+const ListItem = ({ id, category, description, dateAdded, dateDue, priority, priorityClass }) => {
 
     return (
         <li className='list-item' key={id} id={id}>
@@ -12,7 +12,7 @@ const ListItem = ({ id, category, description, dateAdded, dateDue, priority }) =
             {dateAdded}
             </p>
             <p className="list-item-property dateDue">{dateDue}</p>
-            <p className="list-item-property priority">
+            <p className={`list-item-property priority ${priorityClass}`}>
             {priority}
             </p>
         </li>

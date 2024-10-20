@@ -8,6 +8,7 @@ export const listDisplay = ( arr ) => {
             description={item.description}
             dateAdded={item.dateAdded}
             dateDue={item.dateDue}
-            priority={item.priority} />
+            priority={item.priority}
+            priorityClass={item.priorityClass} />
     ))
 }
