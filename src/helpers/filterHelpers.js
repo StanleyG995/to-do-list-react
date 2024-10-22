@@ -31,3 +31,13 @@ export const sortDescription = (arr, ascending) => {
         return 0
     })
 }
+
+export const sortDate = (arr, ascending, dateType) => {
+    return [...arr].sort((a, b) => {
+        const dateA = new Date(a.dateDue.split('.').reverse().join('-'))
+        const dateB = new Date(b.dateDue.split('.').reverse().join('-'))
+        
+        return ascending ? dateA - dateB : dateB - dateA
+          
+    })
+}
