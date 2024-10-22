@@ -13,3 +13,27 @@ export const sortPriorityDescend = (arr) => {
         return priorityOrder[b.priority] - priorityOrder[a.priority]
     })
 }
+
+export const sortCategoryAescend = (arr) => {
+    return [...arr].sort((a, b) => {
+        if (a.category < b.category) {
+            return 1
+        }
+        if (a.category > b.category) {
+            return -1
+        }
+        return 0
+    });
+};
+
+export const sortCategoryDescend = (arr) => {
+    return [...arr].sort((a, b) => {
+        if (a.category > b.category) {
+            return 1
+        }
+        if (a.category < b.category) {
+            return -1
+        }
+        return 0
+    });
+};
