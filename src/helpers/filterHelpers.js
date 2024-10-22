@@ -8,12 +8,12 @@ export const sortPriority = (arr, ascending, extra = null) => {
 
 }
 
-export const sortCategory = (arr, ascending, extra = null) => {
+export const sortAlphabetical = (arr, ascending, extra = null) => {
     return [...arr].sort((a, b) => {
-        if (a.category < b.category) {
+        if (a[extra] < b[extra]) {
             return ascending ? -1 : 1
         }
-        if (a.category > b.category) {
+        if (a[extra] > b[extra]) {
             return ascending ? 1 : -1
         }
         return 0
