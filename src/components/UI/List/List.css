@@ -44,4 +44,22 @@
 .list-heading-caret {
     margin-left: var(--space--xxs);
     font-size: var(--text--s);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.list-heading:hover .list-heading-caret {
+    opacity: 1;
+}
+
+.caret-visible {
+    opacity: 1;
+}
+
+.caret-up {
+    transform: rotate(180deg);
+}
+
+.caret-down {
+    transform: rotate(0deg);
 }
