@@ -41,6 +41,7 @@
     flex: 2;
 }
 
-.list-heading-chevron {
+.list-heading-caret {
+    margin-left: var(--space--xxs);
     font-size: var(--text--s);
 }
