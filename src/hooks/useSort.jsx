@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { TaskContext } from '../context/TaskContext.jsx';
-import { sortPriorityAscend, sortPriorityDescend, sortCategoryAscend, sortCategoryDescend } from '../helpers/filterHelpers.js'
+import { sortPriorityAscend, sortPriorityDescend, sortCategoryAscend, sortCategoryDescend, sortDescriptionAscend, sortDescriptionDescend } from '../helpers/filterHelpers.js'
 
-export const useFilter = () => {
+export const useSort = () => {
     const { currentTasks, setCurrentTasks, currentFilter, setCurrentFilter } = useContext( TaskContext )
 
     const sortPriorityState = () => {
@@ -31,6 +31,19 @@ export const useFilter = () => {
         console.log(currentFilter)
     }
 
+    const sortDescriptionState = () => {
+        console.log('Sorting tasks...');
+        if (currentFilter !== 'descriptionAscend') {
+            setCurrentTasks(c => sortDescriptionAscend(c))
+            setCurrentFilter('descriptionAscend')
+        }
+        else {
+            setCurrentTasks(c => sortDescriptionDescend(c))
+            setCurrentFilter('descriptionDescend')
+        }
+        console.log(currentFilter)
+    }
 
-    return { currentTasks, sortPriorityState, sortCategoryState }
+
+    return { currentTasks, sortPriorityState, sortCategoryState, sortDescriptionState }
 }

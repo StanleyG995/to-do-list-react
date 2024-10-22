@@ -23,8 +23,8 @@ export const sortCategoryAscend = (arr) => {
             return -1
         }
         return 0
-    });
-};
+    })
+}
 
 export const sortCategoryDescend = (arr) => {
     return [...arr].sort((a, b) => {
@@ -35,5 +35,29 @@ export const sortCategoryDescend = (arr) => {
             return -1
         }
         return 0
-    });
-};
+    })
+}
+
+export const sortDescriptionAscend = (arr) => {
+    return [...arr].sort((a, b) => {
+        if (a.description < b.description) {
+            return 1
+        }
+        if (a.description > b.description) {
+            return -1
+        }
+        return 0
+    })
+}
+
+export const sortDescriptionDescend = (arr) => {
+    return [...arr].sort((a, b) => {
+        if (a.description > b.description) {
+            return 1
+        }
+        if (a.description < b.description) {
+            return -1
+        }
+        return 0
+    })
+}
