@@ -4,6 +4,10 @@
 
     --max-width: 1200px;
 
+    /* === SCROLLBAR VALUES === */
+
+    --scrollbar-width: 12px;
+
     /* === COLORS === */
 
     --primary-color--100: hsl(229, 100%, 96%);
@@ -112,7 +116,7 @@
 /* === CUSTOM SCROLLBAR === */
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: var(--scrollbar-width);
     height: 12px;
 }
 

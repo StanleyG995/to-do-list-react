@@ -11,20 +11,20 @@ const List = () => {
     const { currentTasks, setCurrentTasks } = useContext( TaskContext )
 
     return (
-        <>
+        <div className='list'>
              <div className="list-header">
-                <button>Category</button>
-                <button>Description</button>
-                <button>Added</button>
-                <button>Due</button>
-                <button>Priority</button>
+                <button className='list-heading category-heading'>Category</button>
+                <button className='list-heading description-heading'>Description</button>
+                <button className='list-heading date-added-heading'>Added</button>
+                <button className='list-heading date-due-heading'>Due</button>
+                <button className='list-heading priority-heading'>Priority</button>
             </div>
-            <ul className='list'>
+            <ul className='list-inner'>
                 {
                     listDisplay( currentTasks )
                 }
             </ul>
-        </>
+        </div>
         
     )    
 }

@@ -1,4 +1,41 @@
-.list {
+.list-inner {
     max-height: 80vh;
     overflow-y: scroll;
+    position: relative;
+}
+
+
+.list-header {
+    width: calc(100% - var(--scrollbar-width));
+    padding: var(--space--s) var(--space--l);
+    display: flex;
+    align-items: center;
+    gap: var(--space--l);
+    color: var(--primary-color--900);
+    box-shadow: 3px 3px 5px var(--primary-color--700-alpha)
+}
+
+.list-heading {
+    flex: 2;
+    font-size: var(--text--m);
+    font-weight: bold;
+    color: var(--primary-color--900);
+    text-align: left;
+    outline: none;
+    background: none;
+    border:none;
+}
+
+.description-heading {
+    flex: 6;
+}
+
+.priority-heading {
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.category-heading {
+    flex: 2;
 }
