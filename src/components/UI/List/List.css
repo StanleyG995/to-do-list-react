@@ -39,3 +39,7 @@
 .category-heading {
     flex: 2;
 }
+
+.list-heading-chevron {
+    font-size: var(--text--s);
+}
