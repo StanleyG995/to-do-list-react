@@ -22,7 +22,7 @@ const List = () => {
                 <button className='list-heading description-heading'>Description <i className="fa-solid fa-caret-up list-heading-caret"></i></button>
                 <button className='list-heading date-added-heading'> Added <i className="fa-solid fa-caret-up list-heading-caret"></i></button>
                 <button className='list-heading date-due-heading'>Due <i className="fa-solid fa-caret-up list-heading-caret"></i></button>
-                <button className='list-heading priority-heading' onClick={ () => sortPriorityState(currentTasks) }> Priority <i className="fa-solid fa-caret-up list-heading-caret"></i></button>
+                <button className='list-heading priority-heading' onClick={() => sortPriorityState() } > Priority <i className="fa-solid fa-caret-up list-heading-caret"></i></button>
             </div>
             <ul className='list-inner'>
                 {

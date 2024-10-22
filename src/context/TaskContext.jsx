@@ -10,6 +10,9 @@ export const TaskProvider = ({children}) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalType, setModalType] = useState('FormAddTask')
 
+  const [currentFilter, setCurrentFilter] = useState('AddedDescend')
+
+
   const handleModalOpen = () => {
     setIsModalOpen(!isModalOpen)
   }
@@ -29,6 +32,9 @@ export const TaskProvider = ({children}) => {
 
     handleModalOpen,
     handleModalClose,
+
+    currentFilter,
+    setCurrentFilter,
 
   }
 
