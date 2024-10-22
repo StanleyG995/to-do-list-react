@@ -117,7 +117,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--primary-color--200);
+    background: var(--primary-color--300);
 }
 
 ::-webkit-scrollbar-thumb {
