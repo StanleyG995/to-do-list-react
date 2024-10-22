@@ -4,14 +4,14 @@ import { TaskContext } from '../context/TaskContext.jsx';
 export const useSort = () => {
     const { currentTasks, setCurrentTasks, ascending, setAscending } = useContext( TaskContext )
 
-    const sortState = ( sortingFunction, sort ) => {
+    const sortState = ( sortingFunction, sort, extra ) => {
             if (ascending === true) {
                 setAscending(false)
             }
             else {
                 setAscending(true)
             }   
-            setCurrentTasks(c => sortingFunction(c, ascending))
+            setCurrentTasks(c => sortingFunction(c, ascending, extra))
             console.log(ascending)
         }
 

@@ -1,4 +1,4 @@
-export const sortPriority = (arr, ascending) => {
+export const sortPriority = (arr, ascending, extra = null) => {
 
     const priorityOrder = { low: 3, medium: 2, high: 1 }
 
@@ -8,7 +8,7 @@ export const sortPriority = (arr, ascending) => {
 
 }
 
-export const sortCategory = (arr, ascending) => {
+export const sortCategory = (arr, ascending, extra = null) => {
     return [...arr].sort((a, b) => {
         if (a.category < b.category) {
             return ascending ? -1 : 1
@@ -20,7 +20,7 @@ export const sortCategory = (arr, ascending) => {
     })
 }
 
-export const sortDescription = (arr, ascending) => {
+export const sortDescription = (arr, ascending, extra = null) => {
     return [...arr].sort((a, b) => {
         if (a.description < b.description) {
             return ascending ? -1 : 1
@@ -32,10 +32,10 @@ export const sortDescription = (arr, ascending) => {
     })
 }
 
-export const sortDate = (arr, ascending, dateType) => {
+export const sortDate = (arr, ascending, extra = null) => {
     return [...arr].sort((a, b) => {
-        const dateA = new Date(a.dateDue.split('.').reverse().join('-'))
-        const dateB = new Date(b.dateDue.split('.').reverse().join('-'))
+        const dateA = new Date(a[extra].split('.').reverse().join('-'))
+        const dateB = new Date(b[extra].split('.').reverse().join('-'))
         
         return ascending ? dateA - dateB : dateB - dateA
           
