@@ -14,7 +14,7 @@ export const sortPriorityDescend = (arr) => {
     })
 }
 
-export const sortCategoryAescend = (arr) => {
+export const sortCategoryAscend = (arr) => {
     return [...arr].sort((a, b) => {
         if (a.category < b.category) {
             return 1
