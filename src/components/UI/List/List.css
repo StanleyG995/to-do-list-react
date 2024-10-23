@@ -17,6 +17,14 @@
     box-shadow: 3px 3px 5px var(--primary-color--700-alpha)
 }
 
+.list-empty-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: inherit;
+    gap: var(--space--xs);
+}
+
 .list-heading {
     flex: 2;
     font-size: var(--text--m);
