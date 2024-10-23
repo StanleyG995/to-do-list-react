@@ -275,41 +275,4 @@ export const historyData = [
     },
 ];
 
-export const trashData = [
-    {
-        id: 1,
-        category: 'Home',
-        categoryIcon: 'fa-solid fa-house',
-        description: 'Walk the dog',
-        dateAdded: '21.10.2024',
-        dateDue: '24.10.2024',
-        priority: 'medium',
-    },
-    {
-        id: 2,
-        category: 'Work',
-        categoryIcon: 'fa-solid fa-briefcase',
-        description: 'Finish project report',
-        dateAdded: '20.10.2024',
-        dateDue: '25.10.2024',
-        priority: 'high',
-    },
-    {
-        id: 3,
-        category: 'Shopping',
-        categoryIcon: 'fa-solid fa-cart-shopping',
-        description: 'Buy groceries',
-        dateAdded: '22.10.2024',
-        dateDue: '22.10.2024',
-        priority: 'low',
-    },
-    {
-        id: 4,
-        category: 'Fitness',
-        categoryIcon: 'fa-solid fa-dumbbell',
-        description: 'Go to the gym',
-        dateAdded: '21.10.2024',
-        dateDue: '23.10.2024',
-        priority: 'medium',
-    },
-];
+export const trashData = []
