@@ -10,7 +10,7 @@ const Header = () => {
 
     const { changeTab } = useNavigation()
 
-    const { currentTab, currentTasks, historyTasks, trashTasks } = useContext( TaskContext )
+    const { currentTabName, currentTasks, historyTasks, trashTasks } = useContext( TaskContext )
 
     return (
         <div className="header">
@@ -22,9 +22,9 @@ const Header = () => {
                 </div>
                 <div className="column">
                     <ul className="menu">
-                        <button onClick={ () => changeTab( currentTasks, 'current' )} className={`menu-item text-medium ${ currentTab === currentTasks ? 'menu-item--active' : ''}`}><i className="fa-solid fa-list-check menu-item-icon"></i> Current</button>
-                        <button onClick={ () => changeTab( historyTasks, 'history')} className={`menu-item text-medium ${ currentTab === historyTasks ? 'menu-item--active' : ''}`}><i className="fa-solid fa-clock-rotate-left menu-item-icon"></i> History</button>
-                        <button onClick={ () => changeTab( trashTasks, 'trash' )} className={`menu-item text-medium ${ currentTab === trashTasks ? 'menu-item--active' : ''}`}><i className="fa-solid fa-trash menu-item-icon"></i> Deleted</button>
+                        <button onClick={ () => changeTab( currentTasks, 'current' )} className={`menu-item text-medium ${ currentTabName === 'current' ? 'menu-item--active' : ''}`}><i className="fa-solid fa-list-check menu-item-icon"></i> Current</button>
+                        <button onClick={ () => changeTab( historyTasks, 'history')} className={`menu-item text-medium ${ currentTabName === 'history' ? 'menu-item--active' : ''}`}><i className="fa-solid fa-clock-rotate-left menu-item-icon"></i> History</button>
+                        <button onClick={ () => changeTab( trashTasks, 'trash' )} className={`menu-item text-medium ${ currentTabName === 'trash' ? 'menu-item--active' : ''}`}><i className="fa-solid fa-trash menu-item-icon"></i> Deleted</button>
                     </ul>
                 </div>
             </div>

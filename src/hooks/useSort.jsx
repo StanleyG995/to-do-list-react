@@ -14,10 +14,6 @@ export const useSort = () => {
             setCurrentTab(c => sortingFunction(c, ascending, type))
             setCurrentSort(type)
         }
-
-        useEffect(() => {
-            console.log(currentSort);
-        }, [currentSort])
-
+        
     return { currentTab, sortState }
 }
