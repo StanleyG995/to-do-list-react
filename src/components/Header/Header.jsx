@@ -1,6 +1,16 @@
+import React, { useContext } from 'react'
+
+import { useNavigation } from '../../hooks/useNavigation.jsx'
+import { TaskContext } from '../../context/TaskContext.jsx';
+
 import './Header.css'
 
+
 const Header = () => {
+
+    const { changeTab } = useNavigation()
+
+    const { currentTasks, historyTasks, trashTasks } = useContext( TaskContext )
 
     return (
         <div className="header">
@@ -12,9 +22,9 @@ const Header = () => {
                 </div>
                 <div className="column">
                     <ul className="menu">
-                        <a href="" className="menu-item menu-item--active text-medium"><i className="fa-solid fa-list-check menu-item-icon"></i> Current</a>
-                        <a href="" className="menu-item text-medium"><i className="fa-solid fa-clock-rotate-left menu-item-icon"></i> History</a>
-                        <a href="" className="menu-item text-medium"><i className="fa-solid fa-trash menu-item-icon"></i> Deleted</a>
+                        <button onClick={ () => changeTab( currentTasks )} className="menu-item menu-item--active text-medium"><i className="fa-solid fa-list-check menu-item-icon"></i> Current</button>
+                        <button onClick={ () => changeTab( historyTasks )} className="menu-item text-medium"><i className="fa-solid fa-clock-rotate-left menu-item-icon"></i> History</button>
+                        <button onClick={ () => changeTab( trashTasks )} className="menu-item text-medium"><i className="fa-solid fa-trash menu-item-icon"></i> Deleted</button>
                     </ul>
                 </div>
             </div>

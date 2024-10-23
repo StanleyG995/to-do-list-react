@@ -5,6 +5,7 @@ import { TaskContext } from '../../../context/TaskContext.jsx'
 import { listDisplay } from '../../../helpers/listHelpers.jsx'
 
 import { useSort } from '../../../hooks/useSort.jsx'
+
 import { sortPriority, sortAlphabetical, sortDate } from '../../../helpers/filterHelpers.js'
 
 import './List.css'
@@ -14,6 +15,7 @@ const List = ( { source } ) => {
 
     const { currentSort, ascending } = useContext( TaskContext )
     const { sortState } = useSort()
+    
 
     return (
         <div className='list'>

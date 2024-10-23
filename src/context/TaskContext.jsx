@@ -6,11 +6,12 @@ export const TaskContext = createContext();
 
 export const TaskProvider = ({children}) => {
 
-  const [currentTab, setCurrentTab] = useState( currentData )
-
+  
   const [currentTasks, setCurrentTasks] = useState( currentData )
   const [historyTasks, setHistoryTasks] = useState( historyData )
   const [trashTasks, setTrashTasks] = useState( trashData )
+  
+  const [currentTab, setCurrentTab] = useState( currentTasks )
 
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalType, setModalType] = useState('FormAddTask')

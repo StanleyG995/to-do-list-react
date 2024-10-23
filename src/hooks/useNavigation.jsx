@@ -1,12 +1,12 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { TaskContext } from '../context/TaskContext.jsx';
 
 export const useNavigation = () => {
-    const { currentTasks, setCurrentTasks, ascending, setAscending, currentSort, setCurrentSort } = useContext( TaskContext )
+    const { currentTab, setCurrentTab } = useContext( TaskContext )
 
-    const changeTab ( tab ) => {
-            
+    const changeTab = (tab) => {
+            setCurrentTab(tab)
         }
 
-    return { currentTasks, sortState }
+    return { changeTab }
 }
