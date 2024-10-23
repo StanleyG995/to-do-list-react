@@ -1,12 +1,13 @@
 import React, { createContext, useState } from "react";
 
-import { taskData } from '../data/taskData.js'
+import { currentTaskData, historyData, trashData } from '../data/taskData.js'
 
 export const TaskContext = createContext();
 
 export const TaskProvider = ({children}) => {
 
-  const [currentTasks, setCurrentTasks] = useState( taskData )
+  const [currentTasks, setCurrentTasks] = useState( currentTaskData )
+  const [historyTasks, setHistoryTasks] = useState( currentTaskData )
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalType, setModalType] = useState('FormAddTask')
 
