@@ -12,6 +12,7 @@ export const TaskProvider = ({children}) => {
   const [trashTasks, setTrashTasks] = useState( trashData )
   
   const [currentTab, setCurrentTab] = useState( currentTasks )
+  const [currentTabName, setCurrentTabName] = useState( 'current' )
 
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalType, setModalType] = useState('FormAddTask')
@@ -38,6 +39,8 @@ export const TaskProvider = ({children}) => {
 
     currentTab,
     setCurrentTab,
+    currentTabName,
+    setCurrentTabName,
     
     isModalOpen,
     setIsModalOpen,
