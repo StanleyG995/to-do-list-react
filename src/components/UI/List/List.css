@@ -67,7 +67,7 @@
 }
 
 .list-history .description {
-    color: var(--primary-color--500);
+    color: var(--success--700);
     font-weight: bold;
     
 }

@@ -26,11 +26,15 @@
     --black: hsl(248, 83%, 9%);
 
     --danger--100: hsl(0, 69%, 90%);
+    --danger--300: hsl(0, 69%, 65%);
     --danger--500: hsl(0, 69%, 50%);
+    --danger--700: hsl(0, 69%, 35%);
     --danger--900: hsl(0, 69%, 20%);
 
     --success--100: hsl(120, 69%, 90%);
+    --success--300: hsl(120, 69%, 65%);
     --success--500: hsl(120, 69%, 50%);
+    --success--700: hsl(120, 69%, 35%);
     --success--900: hsl(120, 69%, 20%);
 
  
@@ -155,7 +159,7 @@ body{
     background: var(--gradient-primary--100-200, 0.3);
     background-size: cover;
     min-height: 100vh;
-    font-size: 1.6rem;
+    font-size: var(--text--m);
 }
 
 a {
