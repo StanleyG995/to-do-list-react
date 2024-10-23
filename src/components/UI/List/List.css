@@ -2,6 +2,8 @@
     max-height: 80vh;
     overflow-y: scroll;
     position: relative;
+    min-height: 80vh;
+    background: var(--gradient-primary--100-200);
 }
 
 
