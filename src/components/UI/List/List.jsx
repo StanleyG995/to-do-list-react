@@ -10,10 +10,9 @@ import { sortPriority, sortAlphabetical, sortDate } from '../../../helpers/filte
 import './List.css'
 
 
+const List = ( { source } ) => {
 
-const List = () => {
-
-    const { currentTasks, setCurrentTasks, currentSort, ascending } = useContext( TaskContext )
+    const { currentSort, ascending } = useContext( TaskContext )
     const { sortState } = useSort()
 
     return (
@@ -61,7 +60,7 @@ const List = () => {
             </div>
             <ul className='list-inner'>
                 {
-                    listDisplay( currentTasks )
+                    listDisplay( source )
                 }
             </ul>
         </div>
