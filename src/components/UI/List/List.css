@@ -66,8 +66,9 @@
     transform: rotate(0deg);
 }
 
-.list-history .list-item *, .list-history .list-item *::before {
-    color: var(--primary-color--400);
+.list-history .description {
+    color: var(--primary-color--500);
+    font-weight: bold;
     
 }
 
@@ -81,6 +82,7 @@
 }
 
 
-.list-trash .list-item *, .list-trash .list-item *::before {
+.list-trash .description {
     color: var(--danger--500);
+    text-decoration: line-through;
 }

@@ -182,17 +182,9 @@ export const currentData = [
 ];
 
 export const historyData = [
+    
     {
         id: 1,
-        category: 'Home',
-        categoryIcon: 'fa-solid fa-house',
-        description: 'Walk the dog',
-        dateAdded: '21.10.2024',
-        dateDue: '24.10.2024',
-        priority: 'medium',
-    },
-    {
-        id: 2,
         category: 'Work',
         categoryIcon: 'fa-solid fa-briefcase',
         description: 'Finish project report',
@@ -201,7 +193,7 @@ export const historyData = [
         priority: 'high',
     },
     {
-        id: 3,
+        id: 2,
         category: 'Shopping',
         categoryIcon: 'fa-solid fa-cart-shopping',
         description: 'Buy groceries',
@@ -210,12 +202,21 @@ export const historyData = [
         priority: 'low',
     },
     {
-        id: 4,
+        id: 3,
         category: 'Fitness',
         categoryIcon: 'fa-solid fa-dumbbell',
         description: 'Go to the gym',
         dateAdded: '21.10.2024',
         dateDue: '23.10.2024',
+        priority: 'medium',
+    },
+    {
+        id: 4,
+        category: 'Home',
+        categoryIcon: 'fa-solid fa-house',
+        description: 'Walk the dog',
+        dateAdded: '21.10.2024',
+        dateDue: '24.10.2024',
         priority: 'medium',
     },
     {
