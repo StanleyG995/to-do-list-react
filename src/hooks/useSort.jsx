@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { TaskContext } from '../context/TaskContext.jsx';
 
 export const useSort = () => {
-    const { currentTasks, setCurrentTasks, ascending, setAscending, currentSort, setCurrentSort } = useContext( TaskContext )
+    const { currentTab, setCurrentTab, ascending, setAscending, currentSort, setCurrentSort } = useContext( TaskContext )
 
     const sortState = ( sortingFunction, type ) => {
             if (ascending === true) {
@@ -11,7 +11,7 @@ export const useSort = () => {
             else {
                 setAscending(true)
             }   
-            setCurrentTasks(c => sortingFunction(c, ascending, type))
+            setCurrentTab(c => sortingFunction(c, ascending, type))
             setCurrentSort(type)
         }
 
@@ -19,5 +19,5 @@ export const useSort = () => {
             console.log(currentSort);
         }, [currentSort])
 
-    return { currentTasks, sortState }
+    return { currentTab, sortState }
 }
