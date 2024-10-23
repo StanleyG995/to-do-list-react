@@ -11,14 +11,14 @@ import { sortPriority, sortAlphabetical, sortDate } from '../../../helpers/filte
 import './List.css'
 
 
-const List = ( { source } ) => {
+const List = ( { source, className } ) => {
 
     const { currentSort, ascending } = useContext( TaskContext )
     const { sortState } = useSort()
     
 
     return (
-        <div className='list'>
+        <div className={`list ${className}`}>
              <div className="list-header">
                 <button 
                     className='list-heading category-heading' 

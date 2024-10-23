@@ -5,11 +5,11 @@ import List from './components/UI/List/List.jsx'
 
 const Body = () => {
 
-    const { currentTab } = useContext( TaskContext )
+    const { currentTab, currentTabName } = useContext( TaskContext )
 
 	return (
 	    <>
-			<List source = { currentTab }/>
+			<List source = { currentTab } className={`list-${currentTabName}`}/>
 		</>
 	)
 }
