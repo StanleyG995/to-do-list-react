@@ -28,7 +28,6 @@ export const TaskProvider = ({children}) => {
 
   useEffect(() => {
     if (!loading && firestoreTasks) {
-      console.log("Firestore Tasks:", firestoreTasks);
       setCurrentTasks(firestoreTasks.filter(item => item.status === 'current'));
       setHistoryTasks(firestoreTasks.filter(item => item.status === 'history'));
       setTrashTasks(firestoreTasks.filter(item => item.status === 'trash'));

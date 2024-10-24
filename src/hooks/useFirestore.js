@@ -13,10 +13,8 @@ const useFirestore = (collectionName) => { // Zmiana nazwy parametru
             try {
                 const querySnapshot = await getDocs(collection(db, collectionName)); // Użyj 'collectionName'
                 const fetchedData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-                console.log("Fetched Data:", fetchedData);
                 setData(fetchedData);
             } catch (err) {
-                console.error("Error fetching data:", err);
                 setError(err);
             } finally {
                 setLoading(false);
