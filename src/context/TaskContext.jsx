@@ -1,15 +1,15 @@
 import React, { createContext, useState } from "react";
 
-import { currentData, historyData, trashData } from '../data/taskData.js'
+import { data } from '../data/taskData.js'
 
 export const TaskContext = createContext();
 
 export const TaskProvider = ({children}) => {
 
   
-  const [currentTasks, setCurrentTasks] = useState( currentData )
-  const [historyTasks, setHistoryTasks] = useState( historyData )
-  const [trashTasks, setTrashTasks] = useState( trashData )
+  const [currentTasks, setCurrentTasks] = useState( data.filter(item => item.status === 'current') )
+  const [historyTasks, setHistoryTasks] = useState( data.filter(item => item.status === 'history') )
+  const [trashTasks, setTrashTasks] = useState( data.filter(item => item.status === 'trash') )
   
   const [currentTab, setCurrentTab] = useState( currentTasks )
   const [currentTabName, setCurrentTabName] = useState( 'current' )
