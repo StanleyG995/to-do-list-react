@@ -10,5 +10,5 @@ export const listDisplay = ( arr ) => {
             dateAdded={item.dateAdded}
             dateDue={item.dateDue}
             priority={item.priority}/>
-    )) : <p className='list-empty-message'><i class="fa-solid fa-list"></i>No tasks.</p>
+    )) : <p className='list-empty-message'><i className="fa-solid fa-list"></i>No tasks.</p>
 }
