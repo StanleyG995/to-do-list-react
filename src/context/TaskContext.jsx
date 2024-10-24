@@ -1,40 +1,41 @@
-import React, { createContext, useState, useEffect } from "react";
-import useFirestore from '../hooks/useFirestore'; // Importuj hook
+import React, { createContext, useState, useEffect } from "react"
+import useFirestore from '../hooks/useFirestore' // Importuj hook
 
-export const TaskContext = createContext();
+export const TaskContext = createContext()
 
 export const TaskProvider = ({children}) => {
-  const { data: firestoreTasks, loading, error } = useFirestore('tasks'); // Zmiana na odpowiednią kolekcję
-  const [currentTasks, setCurrentTasks] = useState([]);
-  const [historyTasks, setHistoryTasks] = useState([]);
-  const [trashTasks, setTrashTasks] = useState([]);
 
-  const [currentTab, setCurrentTab] = useState([]); // Inicjalizacja jako pusta tablica
-  const [currentTabName, setCurrentTabName] = useState('current');
+  const { data: firestoreTasks, loading, error } = useFirestore('tasks')
+  const [currentTasks, setCurrentTasks] = useState([])
+  const [historyTasks, setHistoryTasks] = useState([])
+  const [trashTasks, setTrashTasks] = useState([])
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalType, setModalType] = useState('FormAddTask');
+  const [currentTab, setCurrentTab] = useState([])
+  const [currentTabName, setCurrentTabName] = useState('current')
 
-  const [currentSort, setCurrentSort] = useState('AddedDescend');
-  const [ascending, setAscending] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalType, setModalType] = useState('FormAddTask')
+
+  const [currentSort, setCurrentSort] = useState('AddedDescend')
+  const [ascending, setAscending] = useState(true)
 
   const handleModalOpen = () => {
-    setIsModalOpen(!isModalOpen);
-  };
+    setIsModalOpen(!isModalOpen)
+  }
 
   const handleModalClose = () => {
-    setIsModalOpen(false);
-  };
+    setIsModalOpen(false)
+  }
 
   useEffect(() => {
     if (!loading && firestoreTasks) {
-      setCurrentTasks(firestoreTasks.filter(item => item.status === 'current'));
-      setHistoryTasks(firestoreTasks.filter(item => item.status === 'history'));
-      setTrashTasks(firestoreTasks.filter(item => item.status === 'trash'));
+      setCurrentTasks(firestoreTasks.filter(item => item.status === 'current'))
+      setHistoryTasks(firestoreTasks.filter(item => item.status === 'history'))
+      setTrashTasks(firestoreTasks.filter(item => item.status === 'trash'))
 
-      setCurrentTab(firestoreTasks.filter(item => item.status === 'current'));
+      setCurrentTab(firestoreTasks.filter(item => item.status === 'current'))
     }
-  }, [firestoreTasks, loading]);
+  }, [firestoreTasks, loading])
 
   const TaskContextValues = {
     currentTasks,
@@ -61,11 +62,11 @@ export const TaskProvider = ({children}) => {
     setCurrentSort,
     ascending,
     setAscending,
-  };
+  }
 
   return (
     <TaskContext.Provider value={TaskContextValues}>
       {children}
     </TaskContext.Provider>
-  );
-};
+  )
+}
