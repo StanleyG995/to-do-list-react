@@ -13,7 +13,7 @@ export const TaskProvider = ({children}) => {
   const [currentTab, setCurrentTab] = useState([])
   const [currentTabName, setCurrentTabName] = useState('current')
 
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(true)
   const [modalType, setModalType] = useState('FormAddTask')
 
   const [currentSort, setCurrentSort] = useState('AddedDescend')
