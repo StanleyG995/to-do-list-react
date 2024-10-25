@@ -2,36 +2,37 @@ const FormTaskInfo = () => {
     
 
     return (
-        <div className="form form-task-info">
+        
+       
+            <form className="form-task-info column">
+                <label htmlFor="category">Category</label>
+                <select  id="category" className='form-field'>
+                    <option>Home</option>
+                    <option>Work</option>
+                    <option>Education</option>
+                    <option>Family</option>
+                    <option>Personal</option>
+                    <option>Fitness</option>
+                    <option>Health</option>
+                </select>
 
-            <label for="category">Category</label>
-            <select id="category">
-                <option>Home</option>
-                <option>Work</option>
-                <option>Education</option>
-                <option>Family</option>
-                <option>Personal</option>
-                <option>Fitness</option>
-                <option>Health</option>
-            </select>
+                <label htmlFor="description">Description</label>
+                <input type="" id="dateDue" className='form-field'/>
 
-            <label for="description">Description</label>
-            <input type="" id="dateDue"/>
+                <label htmlFor="dateAdded">Added</label>
+                <input type="date" id="dateCreated" className='form-field'/>
 
-            <label for="dateAdded">Added</label>
-            <input type="date" id="dateCreated"/>
+                <label htmlFor="dateDue">Due:</label>
+                <input type="date" id="dateCreated" className='form-field'/>
 
-            <label for="dateDue">Due:</label>
-            <input type="date" id="dateCreated"/>
-
-            <label for="priority">Priority</label>
-            <select id="priority">
-                <option>High</option>
-                <option>Medium</option>
-                <option>Low</option>
-            </select>
-            
-        </div>
+                <label htmlFor="priority">Priority</label>
+                <select id="priority" className='form-field'>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
+            </form>
+     
     )
 
 }

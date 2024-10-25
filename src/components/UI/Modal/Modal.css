@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: var(--space--l);
     max-width: 600px;
     background: var(--primary-color--100);
@@ -31,4 +31,3 @@
 .modal-hidden {
     display: none;
 }
-

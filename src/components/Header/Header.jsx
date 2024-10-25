@@ -14,7 +14,7 @@ const Header = () => {
 
     return (
         <div className="header">
-            <div className="row row--flex-space-between">
+            <div className="row flex--space-between">
                 <div className="column">
                     <div className="logo">
                         <a href="" className="site-logo"><i className="fa-regular fa-pen-to-square logo-icon"/> Prior<span className='site-logo--color'>IT</span>ize</a>

@@ -13,10 +13,10 @@ const Modal = ( {children, buttonPrimary } ) => {
     return (
         <div className={`modal-overlay ${isModalOpen ? 'modal-visible' : ''}`}>
             <div className="modal">
-                <div className="row row--flex-center modal-content ">
+                <div className="modal-content ">
                     { children }
                 </div>
-                <div className="row row--flex-center modal-buttons ">
+                <div className="row flex--center modal-buttons ">
                     <Button children={'Cancel'} classNames='button button--m button--secondary' onClick={ handleModalClose } />
                     { buttonPrimary }
                 </div>
