@@ -27,10 +27,9 @@ const Header = () => {
                 </div>
                 <div className="column">
                     <ul className="menu">
-                        
-                        <button onClick={ () => changeTab( currentTasks, 'current' )} className={`menu-item text-medium ${ currentTabName === 'current' ? 'menu-item--active' : ''}`}><i className="fa-solid fa-list-check menu-item-icon"></i> Current</button>
-                        <button onClick={ () => changeTab( historyTasks, 'history')} className={`menu-item text-medium ${ currentTabName === 'history' ? 'menu-item--active' : ''}`}><i className="fa-solid fa-clock-rotate-left menu-item-icon"></i> History</button>
-                        <button onClick={ () => changeTab( trashTasks, 'trash' )} className={`menu-item text-medium ${ currentTabName === 'trash' ? 'menu-item--active' : ''}`}><i className="fa-solid fa-trash menu-item-icon"></i> Deleted</button>
+                        <Button onClick={ () => changeTab( currentTasks, 'current' )} classNames={`menu-item text-medium ${ currentTabName === 'current' ? 'menu-item--active' : ''}`}><i className="fa-solid fa-list-check menu-item-icon"></i> Current</Button>
+                        <Button onClick={ () => changeTab( historyTasks, 'history')} classNames={`menu-item text-medium ${ currentTabName === 'history' ? 'menu-item--active' : ''}`}><i className="fa-solid fa-clock-rotate-left menu-item-icon"></i> History</Button>
+                        <Button onClick={ () => changeTab( trashTasks, 'trash' )} classNames={`menu-item text-medium ${ currentTabName === 'trash' ? 'menu-item--active' : ''}`}><i className="fa-solid fa-trash menu-item-icon"></i> Deleted</Button>
                     </ul>
                 </div>
             </div>
