@@ -26,7 +26,10 @@
 }
 
 .list-heading {
+    display: flex;
     flex: 2;
+    align-items: center;
+    flex-direction: column;
     font-size: var(--text--m);
     font-weight: bold;
     color: var(--primary-color--900);
