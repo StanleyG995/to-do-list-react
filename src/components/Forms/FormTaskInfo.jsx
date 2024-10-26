@@ -13,7 +13,7 @@ const FormTaskInfo = () => {
                     <option value='family'>Family</option>
                     <option value='personal'>Personal</option>
                     <option value='fitness'>Fitness</option>
-                    <option value='health'>Health</option>
+                    <option value=''>Health</option>
                 </select>
 
                 <label htmlFor="description">Description</label>
@@ -27,9 +27,9 @@ const FormTaskInfo = () => {
 
                 <label htmlFor="priority">Priority</label>
                 <select id="priority" className='form-field'>
-                    <option>High</option>
-                    <option>Medium</option>
-                    <option>Low</option>
+                    <option value='high'>High</option>
+                    <option value='medium'>Medium</option>
+                    <option value='low'>Low</option>
                 </select>
             </form>
      
