@@ -7,13 +7,13 @@ const FormTaskInfo = () => {
             <form className="form-task-info column">
                 <label htmlFor="category">Category</label>
                 <select  id="category" className='form-field'>
-                    <option>Home</option>
-                    <option>Work</option>
-                    <option>Education</option>
-                    <option>Family</option>
-                    <option>Personal</option>
-                    <option>Fitness</option>
-                    <option>Health</option>
+                    <option value='home'>Home</option>
+                    <option value='work'>Work</option>
+                    <option value='education'>Education</option>
+                    <option value='family'>Family</option>
+                    <option value='personal'>Personal</option>
+                    <option value='fitness'>Fitness</option>
+                    <option value='health'>Health</option>
                 </select>
 
                 <label htmlFor="description">Description</label>

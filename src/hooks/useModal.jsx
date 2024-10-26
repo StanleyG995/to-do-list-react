@@ -13,6 +13,7 @@ export const useModal = () => {
     const handleModalClose = () => {
         setIsModalOpen(false)
     }
+    
 
     return { handleModalOpen, handleModalClose }
 }
