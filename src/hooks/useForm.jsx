@@ -11,7 +11,7 @@ export const useForm = () => {
     }
 
     const handleInputReset = () => {
-        setTaskInfo(t => ({
+        setTaskInfo({
             id: '',
             category: 'home',
             categoryIcon: '',
@@ -20,7 +20,7 @@ export const useForm = () => {
             dateDue: '',
             priority: 'low',
             status: 'current',
-        }))
+        })
     }
 
     useEffect(() => {

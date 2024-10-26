@@ -31,10 +31,10 @@ const FormTaskInfo = () => {
                     value={ taskInfo.description } />
 
                 <label htmlFor="dateAdded">Added</label>
-                <input type="date" id="dateCreated" className='form-field'/>
+                <input type="date" id="dateCreated" className='form-field' value={ taskInfo.dateAdded } onChange={ (e) => handleInputChange(e, 'dateAdded')}/>
 
                 <label htmlFor="dateDue">Due:</label>
-                <input type="date" id="dateCreated" className='form-field'/>
+                <input type="date" id="dateCreated" className='form-field' value={ taskInfo.dateDue } onChange={ (e) => handleInputChange(e, 'dateDue')}/>
 
                 <label htmlFor="priority">Priority</label>
                 <select id="priority" className='form-field' value= { taskInfo.priority } onChange={ (e) => handleInputChange(e, 'priority')}>
