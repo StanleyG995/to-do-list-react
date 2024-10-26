@@ -37,7 +37,7 @@ const FormTaskInfo = () => {
                 <input type="date" id="dateCreated" className='form-field'/>
 
                 <label htmlFor="priority">Priority</label>
-                <select id="priority" className='form-field'>
+                <select id="priority" className='form-field' value= { taskInfo.priority } onChange={ (e) => handleInputChange(e, 'priority')}>
                     <option value='high'>High</option>
                     <option value='medium'>Medium</option>
                     <option value='low'>Low</option>
