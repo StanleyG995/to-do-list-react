@@ -232,5 +232,11 @@ a {
 
 .form-field {
     padding: var(--space--s) var(--space--m);
-    
+    border: var(--border--s) var(--primary-color--300);
+    outline: none;
+}
+
+.form-field:focus {
+    border-color: var(--primary-color--600);
+    background: var(--gradient-primary--100-300)
 }
