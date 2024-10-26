@@ -4,11 +4,14 @@ import './Modal.css'
 import React, { useContext, useState } from 'react'
 import { TaskContext } from '../../../context/TaskContext.jsx'
 
+import { useModal } from '../../../hooks/useModal.jsx'
+
 import Button from '../Button/Button.jsx'
 
 const Modal = ( {children, buttonPrimary } ) => {
 
-    const { isModalOpen, modalType, handleModalOpen, handleModalClose } = useContext(TaskContext)
+    const { isModalOpen } = useContext(TaskContext)
+    const { handleModalClose } = useModal()
 
     return (
         <div className={`modal-overlay ${isModalOpen ? 'modal-visible' : ''}`}>
@@ -17,7 +20,7 @@ const Modal = ( {children, buttonPrimary } ) => {
                     { children }
                 </div>
                 <div className="row flex--center modal-buttons ">
-                    <Button children={'Cancel'} classNames='button button--m button--secondary' onClick={ handleModalClose } />
+                    <Button children={'Cancel'} classNames='button button--m button--secondary' onClick={ () => handleModalClose() } />
                     { buttonPrimary }
                 </div>
             </div>

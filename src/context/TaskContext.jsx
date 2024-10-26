@@ -13,19 +13,13 @@ export const TaskProvider = ({children}) => {
   const [currentTab, setCurrentTab] = useState([])
   const [currentTabName, setCurrentTabName] = useState('current')
 
-  const [isModalOpen, setIsModalOpen] = useState(true)
-  const [modalType, setModalType] = useState('FormAddTask')
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalType, setModalType] = useState('FormTaskInfo')
 
   const [currentSort, setCurrentSort] = useState('AddedDescend')
   const [ascending, setAscending] = useState(true)
 
-  const handleModalOpen = () => {
-    setIsModalOpen(!isModalOpen)
-  }
-
-  const handleModalClose = () => {
-    setIsModalOpen(false)
-  }
+  
 
   useEffect(() => {
     if (!loading && firestoreTasks) {
@@ -54,9 +48,6 @@ export const TaskProvider = ({children}) => {
     setIsModalOpen,
     modalType,
     setModalType,
-
-    handleModalOpen,
-    handleModalClose,
 
     currentSort,
     setCurrentSort,
