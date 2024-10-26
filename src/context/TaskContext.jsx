@@ -21,7 +21,7 @@ export const TaskProvider = ({children}) => {
 
   const [taskInfo, setTaskInfo] = useState( {
     id: '',
-    category: '',
+    category: 'work',
     categoryIcon: '',
     description: '',
     dateAdded: '',
@@ -41,6 +41,9 @@ export const TaskProvider = ({children}) => {
   }, [firestoreTasks, loading])
 
   const TaskContextValues = {
+    taskInfo,
+    setTaskInfo,
+
     currentTasks,
     setCurrentTasks,
     historyTasks,
