@@ -8,7 +8,7 @@ import Modal from '../components/UI/Modal/Modal.jsx'
 
 export const useModal = () => {
 
-    const { modal, setModal, isModalOpen, setIsModalOpen, modalType, setModalType } = useContext( TaskContext )
+    const { setModal, isModalOpen, setIsModalOpen} = useContext( TaskContext )
     
     const handleModalOpen = () => {
         setIsModalOpen(!isModalOpen)
@@ -43,8 +43,6 @@ export const useModal = () => {
         handleModalOpen()
         
     }
-    
-    
 
     return { handleModalOpen, handleModalClose, handleModalType }
 }
