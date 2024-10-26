@@ -21,6 +21,8 @@ export const useModal = () => {
     const handleModalType = ( type ) => {
         if ( type === 'addTask' ) {
             setModal(<Modal buttonPrimary={<Button children='Add task' classNames='button button--primary button--m' onClick={() => console.log('clicked')}/>}>
+            <h2>Add new task</h2>
+            <p>Fill in the task information.</p>
             <FormTaskInfo />
             </Modal>)
         }
