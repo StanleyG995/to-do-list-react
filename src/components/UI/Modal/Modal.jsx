@@ -6,12 +6,14 @@ import { TaskContext } from '../../../context/TaskContext.jsx'
 
 import { useModal } from '../../../hooks/useModal.jsx'
 
+
 import Button from '../Button/Button.jsx'
 
 const Modal = ( {children, buttonPrimary } ) => {
 
     const { isModalOpen } = useContext(TaskContext)
     const { handleModalClose } = useModal()
+    
 
     return (
         <div className={`modal-overlay ${isModalOpen ? 'modal-visible' : ''}`}>
