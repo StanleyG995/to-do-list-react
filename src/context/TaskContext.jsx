@@ -21,13 +21,13 @@ export const TaskProvider = ({children}) => {
 
   const [taskInfo, setTaskInfo] = useState( {
     id: '',
-    category: 'work',
+    category: 'home',
     categoryIcon: '',
     description: '',
     dateAdded: '',
     dateDue: '',
-    priority: '',
-    status: '',
+    priority: 'low',
+    status: 'current',
   })
 
   useEffect(() => {

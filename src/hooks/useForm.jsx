@@ -10,9 +10,22 @@ export const useForm = () => {
         setTaskInfo(t => ({...t, [field]:e.target.value}))
     }
 
+    const handleInputReset = () => {
+        setTaskInfo(t => ({
+            id: '',
+            category: 'home',
+            categoryIcon: '',
+            description: '',
+            dateAdded: '',
+            dateDue: '',
+            priority: 'low',
+            status: 'current',
+        }))
+    }
+
     useEffect(() => {
         console.log(taskInfo)
     },[taskInfo])
 
-    return { handleInputChange }
+    return { handleInputChange, handleInputReset }
 }
