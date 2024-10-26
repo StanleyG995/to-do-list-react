@@ -12,7 +12,8 @@ export const TaskProvider = ({children}) => {
 
   const [currentTab, setCurrentTab] = useState([])
   const [currentTabName, setCurrentTabName] = useState('current')
-  
+
+  const [modal, setModal] = useState()
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const [currentSort, setCurrentSort] = useState('AddedDescend')
@@ -43,6 +44,8 @@ export const TaskProvider = ({children}) => {
     currentTabName,
     setCurrentTabName,
 
+    modal,
+    setModal,
     isModalOpen,
     setIsModalOpen,
 
