@@ -18,9 +18,7 @@ const App = () => {
 				<Body />
 			</div>
 
-			<Modal buttonPrimary={<Button children='Primary action' classNames='button button--primary button--m' onClick={() => console.log('clicked')}/>}>
-				<FormTaskInfo />
-			</Modal>
+			
 
 			<div className="backdrop-image">
 			</div>

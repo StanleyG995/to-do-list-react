@@ -13,7 +13,7 @@ const FormTaskInfo = () => {
                     <option value='family'>Family</option>
                     <option value='personal'>Personal</option>
                     <option value='fitness'>Fitness</option>
-                    <option value=''>Health</option>
+                    <option value='health'>Health</option>
                 </select>
 
                 <label htmlFor="description">Description</label>
