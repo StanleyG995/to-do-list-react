@@ -14,7 +14,7 @@ export const useFirestoreUpload = (collectionName) => {
 
     const { taskInfo } = useContext( TaskContext )
     const { fetchData } = useFirestore()
-
+    
     const saveData = async (data) => {
         setLoading(true)
         try {
@@ -29,13 +29,7 @@ export const useFirestoreUpload = (collectionName) => {
         }
     }
 
-    const handleSaveTask = () => {
-        saveData(taskInfo)
-        fetchData()
-        handleModalClose()
-    }
-
-    return { saveData, loading, error, handleSaveTask }
+    return { saveData, loading, error }
 
 }
 
