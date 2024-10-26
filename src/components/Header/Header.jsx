@@ -12,7 +12,7 @@ import './Header.css'
 const Header = () => {
 
     const { changeTab } = useNavigation()
-    const { handleModalOpen } = useModal()
+    const { handleModalOpen, handleModalType } = useModal()
 
     const { currentTabName, currentTasks, historyTasks, trashTasks } = useContext( TaskContext )
 
@@ -23,7 +23,8 @@ const Header = () => {
                     <div className="logo">
                         <a href="" className="site-logo"><i className="fa-regular fa-pen-to-square logo-icon"/> Prior<span className='site-logo--color'>IT</span>ize</a>
                     </div>
-                    <Button classNames='button button--l button--primary' onClick={() => handleModalOpen() }>+ Add task</Button>
+                    <Button classNames='button button--l button--primary' onClick={() => handleModalType('addTask') }>+ Add task</Button>
+                    <Button classNames='button button--l button--danger' onClick={() => handleModalType('delete') }>x Delete task</Button>
                 </div>
                 <div className="column">
                     <ul className="menu">
