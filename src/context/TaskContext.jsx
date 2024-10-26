@@ -19,7 +19,16 @@ export const TaskProvider = ({children}) => {
   const [currentSort, setCurrentSort] = useState('AddedDescend')
   const [ascending, setAscending] = useState(true)
 
-  
+  const [taskInfo, setTaskInfo] = useState( {
+    id: '',
+    category: '',
+    categoryIcon: '',
+    description: '',
+    dateAdded: '',
+    dateDue: '',
+    priority: '',
+    status: '',
+  })
 
   useEffect(() => {
     if (!loading && firestoreTasks) {
