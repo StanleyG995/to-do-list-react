@@ -50,15 +50,15 @@
 }
 
 .priority--high:before {
-    content: '●●●';   
+    content: '★★★';   
 }
 
 
 .priority--medium:before {
-    content: '●●○';
+    content: '★★☆';
 }
 
 
 .priority--low:before {
-    content: '●○○';
+    content: '★☆☆';
 }
