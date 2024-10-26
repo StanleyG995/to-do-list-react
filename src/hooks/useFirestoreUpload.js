@@ -6,12 +6,14 @@ import { db } from '../../firebaseConfig.js'
 import { TaskContext } from '../context/TaskContext.jsx'
 
 import { useModal } from '../hooks/useModal.jsx'
+import { useFirestore } from '../hooks/useFirestore.js'
 
 export const useFirestoreUpload = (collectionName) => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
 
     const { taskInfo } = useContext( TaskContext )
+    const { fetchData } = useFirestore()
 
     const saveData = async (data) => {
         setLoading(true)
@@ -29,6 +31,7 @@ export const useFirestoreUpload = (collectionName) => {
 
     const handleSaveTask = () => {
         saveData(taskInfo)
+        fetchData()
         handleModalClose()
     }
 

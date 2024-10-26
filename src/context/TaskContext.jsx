@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react"
-import useFirestore from '../hooks/useFirestore' // Importuj hook
+import  { useFirestore } from '../hooks/useFirestore'
 
 export const TaskContext = createContext()
 
