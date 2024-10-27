@@ -13,13 +13,13 @@ const FormTaskInfo = () => {
             <form className="form-task-info column">
                 <label htmlFor="category">Category</label>
                 <select value={ taskInfo.category } onChange={(e) => handleInputChange(e, 'category')} id="category" className='form-field'>
-                    <option value='home'>Home</option>
-                    <option value='work'>Work</option>
-                    <option value='education'>Education</option>
-                    <option value='family'>Family</option>
-                    <option value='personal'>Personal</option>
-                    <option value='fitness'>Fitness</option>
-                    <option value='health'>Health</option>
+                    <option value='Home'>Home</option>
+                    <option value='Work'>Work</option>
+                    <option value='Education'>Education</option>
+                    <option value='Family'>Family</option>
+                    <option value='Personal'>Personal</option>
+                    <option value='Fitness'>Fitness</option>
+                    <option value='Health'>Health</option>
                 </select>
 
                 <label htmlFor="description">Description</label>
