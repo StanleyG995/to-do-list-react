@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 
 import { TaskContext } from '../context/TaskContext.jsx';
 
@@ -12,10 +12,15 @@ import Modal from '../components/UI/Modal/Modal.jsx'
 
 export const useModal = () => {
 
-    const { setModal, isModalOpen, setIsModalOpen, taskInfo} = useContext( TaskContext )
+    const { setModal, isModalOpen, setIsModalOpen, taskInfo, setTaskInfo} = useContext( TaskContext )
     const { handleInputReset } = useForm()
-    const { saveData } = useFirestoreUpload('tasks')
-    const { fetchData } = useFirestore()
+    const { saveData, loading } = useFirestoreUpload('tasks')
+    const { fetchData } = useFirestore('tasks')
+
+    useEffect(() => {
+        setTaskInfo(taskInfo)
+    }, [taskInfo])
+    
     
     const handleModalOpen = () => {
         setIsModalOpen(!isModalOpen)
@@ -23,13 +28,17 @@ export const useModal = () => {
     
     const handleModalClose = () => {
         setIsModalOpen(false)
-        handleInputReset()
+        // handleInputReset()
     }
 
     const handleSaveTask = () => {
-        saveData(taskInfo)
-        fetchData()
-        handleModalClose()
+        if (!loading) {
+            // Zaktualizuj obiekt taskInfo bezpośrednio z kontekstu
+            const updatedTaskInfo = { ...taskInfo }; // lub taskInfo może być przekazywane jako argument
+            console.log('Task info przed zapisaniem:', updatedTaskInfo)
+            saveData(updatedTaskInfo);
+            fetchData();
+        }
     }
 
     const handleModalType = ( type ) => {

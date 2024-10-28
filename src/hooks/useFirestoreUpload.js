@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 
 import { addDoc, collection } from 'firebase/firestore'
 import { db } from '../../firebaseConfig.js'
@@ -13,7 +13,10 @@ export const useFirestoreUpload = (collectionName) => {
     const [error, setError] = useState(null)
 
     const { taskInfo } = useContext( TaskContext )
-    const { fetchData } = useFirestore()
+
+    useEffect(() => {
+        console.log(taskInfo)
+    }, [taskInfo])
     
     const saveData = async (data) => {
         setLoading(true)

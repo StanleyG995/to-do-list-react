@@ -16,13 +16,15 @@ export const TaskProvider = ({children}) => {
   const [modal, setModal] = useState()
   const [isModalOpen, setIsModalOpen] = useState(false)
 
+  const [currentID, setCurrentID] = useState(0)
+
   const [currentSort, setCurrentSort] = useState('AddedDescend')
   const [ascending, setAscending] = useState(true)
 
   const [taskInfo, setTaskInfo] = useState( {
-    id: '',
+    id: currentID,
     category: 'home',
-    categoryIcon: '',
+    categoryIcon: 'fa-solid fa-home',
     description: '',
     dateAdded: '',
     dateDue: '',
@@ -65,6 +67,7 @@ export const TaskProvider = ({children}) => {
     setCurrentSort,
     ascending,
     setAscending,
+    
   }
 
   return (
