@@ -23,9 +23,5 @@ export const useForm = () => {
         })
     }
 
-    useEffect(() => {
-        console.log(taskInfo)
-    },[taskInfo])
-
     return { handleInputChange, handleInputReset }
 }

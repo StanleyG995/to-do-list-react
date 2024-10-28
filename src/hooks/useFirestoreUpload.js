@@ -14,10 +14,6 @@ export const useFirestoreUpload = (collectionName) => {
 
     const { taskInfo } = useContext( TaskContext )
 
-    useEffect(() => {
-        console.log(taskInfo)
-    }, [taskInfo])
-    
     const saveData = async (data) => {
         setLoading(true)
         try {
