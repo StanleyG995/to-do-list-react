@@ -5,12 +5,12 @@ import { db } from '../../firebaseConfig.js'
 
 import { TaskContext } from '../context/TaskContext.jsx'
 
-import { useModal } from '../hooks/useModal.jsx'
 import { useFirestore } from '../hooks/useFirestore.js'
 
 export const useFirestoreUpload = (collectionName) => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
+    
 
     const saveData = async (data) => {
         setLoading(true)
@@ -24,6 +24,7 @@ export const useFirestoreUpload = (collectionName) => {
             setError(err)
         } finally {
             setLoading(false)
+
         }
     }
 

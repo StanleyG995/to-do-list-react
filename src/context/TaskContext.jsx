@@ -32,10 +32,6 @@ export const TaskProvider = ({children}) => {
     status: 'current',
   })
 
-  const updateTaskInfo = (newData) => {
-    setTaskInfo(prev => ({ ...prev, ...newData }));
-};
-
   useEffect(() => {
     if (!loading && firestoreTasks) {
       setCurrentTasks(firestoreTasks.filter(item => item.status === 'current'))
@@ -46,11 +42,11 @@ export const TaskProvider = ({children}) => {
     }
   }, [firestoreTasks, loading])
 
-  useEffect(() => {
-    console.log('Aktualny taskInfo:', taskInfo);
-  }, [taskInfo]);
 
   const TaskContextValues = {
+    currentID,
+    setCurrentID,
+
     taskInfo,
     setTaskInfo,
 

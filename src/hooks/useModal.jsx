@@ -10,7 +10,7 @@ import FormTaskInfo from '../components/Forms/FormTaskInfo.jsx'
 import Modal from '../components/UI/Modal/Modal.jsx'
 
 export const useModal = () => {
-    const { setModal, isModalOpen, setIsModalOpen, taskInfo } = useContext(TaskContext)
+    const { setModal, isModalOpen, setIsModalOpen, taskInfo, currentID, setCurrentID } = useContext(TaskContext)
     const { handleInputReset } = useForm()
     const { saveData } = useFirestoreUpload('tasks')
     const { fetchData } = useFirestore('tasks')
@@ -39,9 +39,10 @@ export const useModal = () => {
     }, [isReadyToSave, local])
 
     const handleSaveTask = () => {
-        
         setIsReadyToSave(true)
-        console.log('taskInfo:', local)
+        handleModalClose()
+        handleInputReset()
+        
     }
 
     const handleModalType = (type) => {
