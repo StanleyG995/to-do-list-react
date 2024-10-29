@@ -7,7 +7,7 @@ export const useForm = () => {
     const { taskInfo, setTaskInfo } = useContext( TaskContext )
 
     const handleInputChange = (e, field) => {
-        setTaskInfo(t => ({...t, [field]:e.target.value}))
+            setTaskInfo(t => ({...t, [field]:e.target.value}))
     }
 
     const handleInputReset = () => {
