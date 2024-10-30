@@ -16,7 +16,7 @@ export const useForm = () => {
         setTaskInfo(t => ({
             id: currentID,
             category: 'home',
-            categoryIcon: '',
+            categoryIcon: 'fa-solid fa-home',
             description: '',
             dateAdded: '',
             dateDue: '',
