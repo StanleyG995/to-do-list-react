@@ -20,9 +20,5 @@ export const useFirestore = (collectionName) => {
         }
     }
     
-    useEffect(() => {
-        fetchData()
-    }, [collectionName])
-
     return { data, loading, error, fetchData }
 }

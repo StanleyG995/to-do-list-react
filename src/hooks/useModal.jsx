@@ -43,7 +43,6 @@ export const useModal = () => {
         setIsReadyToSave(i => true)
         handleModalClose()
         handleInputReset()
-        setCurrentID(c => c + 1)
     }
 
     const handleModalType = (type) => {

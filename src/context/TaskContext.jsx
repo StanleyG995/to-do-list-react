@@ -5,7 +5,7 @@ export const TaskContext = createContext()
 
 export const TaskProvider = ({children}) => {
 
-  const { data: firestoreTasks, loading, error } = useFirestore('tasks')
+  const { data: firestoreTasks, loading, error, fetchData } = useFirestore('tasks')
   const [currentTasks, setCurrentTasks] = useState([])
   const [historyTasks, setHistoryTasks] = useState([])
   const [trashTasks, setTrashTasks] = useState([])
@@ -22,7 +22,7 @@ export const TaskProvider = ({children}) => {
   const [ascending, setAscending] = useState(true)
 
   const [taskInfo, setTaskInfo] = useState( {
-    id: currentID,
+    id: '',
     category: 'home',
     categoryIcon: 'fa-solid fa-home',
     description: '',
@@ -31,6 +31,10 @@ export const TaskProvider = ({children}) => {
     priority: 'low',
     status: 'current',
   })
+
+  useEffect(() =>  {
+    fetchData()
+  }, [firestoreTasks, loading])
 
   useEffect(() => {
       setCurrentTasks(c => [...firestoreTasks].filter(item => item.status === 'current'))
