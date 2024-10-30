@@ -1,11 +1,13 @@
 import React, { createContext, useState, useEffect } from "react"
 import  { useFirestore } from '../hooks/useFirestore'
+import  { useFirestoreUpload } from '../hooks/useFirestoreUpload'
 
 export const TaskContext = createContext()
 
 export const TaskProvider = ({children}) => {
 
   const { data: firestoreTasks, loading, error, fetchData } = useFirestore('tasks')
+  const { saveData } = useFirestoreUpload()
   const [currentTasks, setCurrentTasks] = useState([])
   const [historyTasks, setHistoryTasks] = useState([])
   const [trashTasks, setTrashTasks] = useState([])
@@ -34,15 +36,15 @@ export const TaskProvider = ({children}) => {
 
   useEffect(() =>  {
     fetchData()
-  }, [firestoreTasks, loading])
+  }, [currentTasks, historyTasks, trashTasks])
 
   useEffect(() => {
-      setCurrentTasks(c => [...firestoreTasks].filter(item => item.status === 'current'))
-      setHistoryTasks(h => [...firestoreTasks].filter(item => item.status === 'history'))
-      setTrashTasks(t => [...firestoreTasks].filter(item => item.status === 'trash'))
+      setCurrentTasks(c => firestoreTasks.filter(item => item.status === 'current'))
+      setHistoryTasks(h => firestoreTasks.filter(item => item.status === 'history'))
+      setTrashTasks(t => firestoreTasks.filter(item => item.status === 'trash'))
 
-      setCurrentTab(c => [...firestoreTasks].filter(item => item.status === 'current'))
-    }, [firestoreTasks, loading])
+      setCurrentTab(c => firestoreTasks.filter(item => item.status === 'current'))
+    }, [firestoreTasks])
 
 
   const TaskContextValues = {
