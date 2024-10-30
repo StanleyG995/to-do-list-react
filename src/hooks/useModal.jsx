@@ -19,35 +19,36 @@ export const useModal = () => {
     const [isReadyToSave, setIsReadyToSave] = useState(false)
 
     const handleModalOpen = () => {
-        setIsModalOpen(!isModalOpen)
+        setIsModalOpen(i => !i)
     }
     
     const handleModalClose = () => {
-        setIsModalOpen(false)
+        setIsModalOpen(i => false)
     }
 
     useEffect(() => {
-        setLocal(taskInfo)
-        setIsReadyToSave(false)
+        setLocal(l => taskInfo)
+        setIsReadyToSave(i => false)
     }, [taskInfo])
 
     useEffect(() => {
         if (isReadyToSave && local) {
             saveData(local)
-            setIsReadyToSave(false)
+            setIsReadyToSave(i =>false)
+
         }
     }, [isReadyToSave, local])
 
     const handleSaveTask = () => {
-        setIsReadyToSave(true)
+        setIsReadyToSave(i => true)
         handleModalClose()
         handleInputReset()
-        
+        setCurrentID(c => c + 1)
     }
 
     const handleModalType = (type) => {
         if (type === 'addTask') {
-            setModal(
+            setModal(m =>
                 <Modal 
                     buttonPrimary={
                         <Button 
@@ -63,7 +64,7 @@ export const useModal = () => {
                 </Modal>
             )
         } else if (type === 'editTask') {
-            setModal(
+            setModal(m =>
                 <Modal 
                     buttonPrimary={
                         <Button 
@@ -77,7 +78,7 @@ export const useModal = () => {
                 </Modal>
             )
         } else {
-            setModal(
+            setModal(m =>
                 <Modal 
                     buttonPrimary={
                         <Button 

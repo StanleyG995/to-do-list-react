@@ -8,15 +8,15 @@ export const useFirestore = (collectionName) => {
     const [error, setError] = useState(null)
 
     const fetchData = async () => {
-        setLoading(true)
+        setLoading(l => true)
         try {
             const querySnapshot = await getDocs(collection(db, collectionName))
             const fetchedData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-            setData(fetchedData)
+            setData(d => fetchedData)
         } catch (err) {
             setError(err)
         } finally {
-            setLoading(false)
+            setLoading(l => false)
         }
     }
     

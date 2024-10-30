@@ -34,11 +34,11 @@ export const TaskProvider = ({children}) => {
 
   useEffect(() => {
     if (!loading && firestoreTasks) {
-      setCurrentTasks(firestoreTasks.filter(item => item.status === 'current'))
-      setHistoryTasks(firestoreTasks.filter(item => item.status === 'history'))
-      setTrashTasks(firestoreTasks.filter(item => item.status === 'trash'))
+      setCurrentTasks(c => firestoreTasks.filter(item => item.status === 'current'))
+      setHistoryTasks(h => firestoreTasks.filter(item => item.status === 'history'))
+      setTrashTasks(t => firestoreTasks.filter(item => item.status === 'trash'))
 
-      setCurrentTab(firestoreTasks.filter(item => item.status === 'current'))
+      setCurrentTab(c => firestoreTasks.filter(item => item.status === 'current'))
     }
   }, [firestoreTasks, loading])
 

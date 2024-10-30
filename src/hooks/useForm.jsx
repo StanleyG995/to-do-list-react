@@ -13,7 +13,7 @@ export const useForm = () => {
     }
 
     const handleInputReset = () => {
-        setTaskInfo({
+        setTaskInfo(t => ({
             id: currentID,
             category: 'home',
             categoryIcon: '',
@@ -22,7 +22,7 @@ export const useForm = () => {
             dateDue: '',
             priority: 'low',
             status: 'current',
-        })
+        }))
 
         
     }
