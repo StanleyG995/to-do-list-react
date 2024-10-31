@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react'
 
 import { TaskContext } from '../context/TaskContext.jsx';
 import  { useFirestore } from '../hooks/useFirestore.js'
+import { formatDate, formatInputDate } from '../helpers/dateHelpers.js'
 
 export const useForm = () => {
 
@@ -14,11 +15,11 @@ export const useForm = () => {
 
     const handleInputReset = () => {
         setTaskInfo(t => ({
-            id: currentID,
+            id: '',
             category: 'home',
             categoryIcon: 'fa-solid fa-home',
             description: '',
-            dateAdded: '',
+            dateAdded: formatInputDate(new Date()),
             dateDue: '',
             priority: 'low',
             status: 'current',

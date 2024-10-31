@@ -2,6 +2,8 @@ import React, { createContext, useState, useEffect } from "react"
 import  { useFirestore } from '../hooks/useFirestore'
 import  { useFirestoreUpload } from '../hooks/useFirestoreUpload'
 
+import { formatInputDate, formatDate } from '../helpers/dateHelpers.js'
+
 export const TaskContext = createContext()
 
 export const TaskProvider = ({children}) => {
@@ -28,7 +30,7 @@ export const TaskProvider = ({children}) => {
     category: 'home',
     categoryIcon: 'fa-solid fa-home',
     description: '',
-    dateAdded: '',
+    dateAdded: formatInputDate(new Date()),
     dateDue: '',
     priority: 'low',
     status: 'current',
