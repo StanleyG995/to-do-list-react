@@ -26,6 +26,7 @@ export const useModal = () => {
     
     const handleModalClose = () => {
         setIsModalOpen(i => false)
+        handleInputReset()
     }
 
     useEffect(() => {
