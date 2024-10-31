@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 
 import { TaskContext } from '../../../context/TaskContext.jsx'
 
@@ -15,10 +15,6 @@ const List = ( { source, className } ) => {
 
     const { currentSort, ascending } = useContext( TaskContext )
     const { sortState } = useSort()
-
-    useEffect(() => {
-        sortState( sortDate, 'dateAdded')
-      },[])
     
 
     return (

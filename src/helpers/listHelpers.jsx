@@ -1,26 +1,6 @@
-import React, { useEffect, useContext } from 'react'
-
-import { TaskContext } from '../context/TaskContext.jsx'
-
-import { useFirestoreFetch } from '../hooks/Firestore/useFirestoreFetch.js'
-
-import { sortDate } from './filterHelpers.js'
-import { useSort } from '../hooks/useSort.jsx'
-
 import ListItem from '../components/UI/ListItem/ListItem.jsx'
 
 export const listDisplay = ( arr ) => {
-
-    const { isModalOpen, setAscending } = useContext( TaskContext )
-    const { fetchData } = useFirestoreFetch('tasks')
-    const { sortState } = useSort()
-
-    useEffect(() =>  {
-        fetchData()
-        console.log('test')
-        setAscending(false)
-        sortState( sortDate, 'dateAdded')
-      }, [isModalOpen])
 
     return arr.length ? arr.map (item => (
             <ListItem
