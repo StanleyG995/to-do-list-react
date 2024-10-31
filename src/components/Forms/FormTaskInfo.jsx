@@ -26,6 +26,8 @@ const FormTaskInfo = () => {
                     <option value='Personal'>Personal</option>
                     <option value='Fitness'>Fitness</option>
                     <option value='Health'>Health</option>
+                    <option value='Hobby'>Hobby</option>
+                    <option value='Car'>Car</option>
                 </select>
 
                 <label htmlFor="description">Description</label>

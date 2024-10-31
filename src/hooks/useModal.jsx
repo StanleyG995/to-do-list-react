@@ -38,7 +38,7 @@ export const useModal = () => {
         if (isReadyToSave && local) {
             saveData(local)
             setIsReadyToSave(i =>false)
-
+            fetchData()
         }
     }, [isReadyToSave, local])
 
