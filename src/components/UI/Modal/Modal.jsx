@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import './Modal.css'
 
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { TaskContext } from '../../../context/TaskContext.jsx'
 
 import { useModal } from '../../../hooks/useModal.jsx'

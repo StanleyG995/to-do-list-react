@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { addDoc, collection, doc, setDoc } from 'firebase/firestore'
-import { db } from '../../firebaseConfig.js'
+import { db } from '../../../firebaseConfig.js'
 
 export const useFirestoreUpload = (collectionName) => {
     const [loading, setLoading] = useState(false)

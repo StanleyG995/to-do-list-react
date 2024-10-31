@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react"
-import  { useFirestore } from '../hooks/useFirestore'
-import  { useFirestoreUpload } from '../hooks/useFirestoreUpload'
+import  { useFirestore } from '../hooks/Firestore/useFirestoreFetch.js'
+import  { useFirestoreUpload } from '../hooks/Firestore/useFirestoreUpload.js'
 
 import { formatInputDate, formatDate } from '../helpers/dateHelpers.js'
 import { setIcon } from '../helpers/iconHelpers.js'

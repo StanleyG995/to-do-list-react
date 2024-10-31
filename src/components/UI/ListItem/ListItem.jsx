@@ -1,5 +1,3 @@
-import { formatDate } from '../../../helpers/dateHelpers.js'
-
 import './ListItem.css'
 
 const ListItem = ({ id, category, categoryIcon, description, dateAdded, dateDue, priority }) => {
