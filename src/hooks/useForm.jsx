@@ -20,7 +20,7 @@ export const useForm = () => {
             categoryIcon: 'fa-solid fa-home',
             description: '',
             dateAdded: formatInputDate(new Date()),
-            dateDue: '',
+            dateDue: formatInputDate(new Date()),
             priority: 'low',
             status: 'current',
         }))
