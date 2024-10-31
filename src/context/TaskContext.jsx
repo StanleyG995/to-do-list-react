@@ -39,7 +39,8 @@ export const TaskProvider = ({children}) => {
 
   useEffect(() =>  {
     fetchData()
-  }, [currentTasks, historyTasks, trashTasks])
+    console.log('test')
+  }, [isModalOpen])
 
   useEffect(() => {
       setCurrentTasks(c => firestoreTasks.filter(item => item.status === 'current'))
