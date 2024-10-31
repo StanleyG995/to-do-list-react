@@ -46,7 +46,7 @@ export const TaskProvider = ({children}) => {
       setHistoryTasks(h => firestoreTasks.filter(item => item.status === 'history'))
       setTrashTasks(t => firestoreTasks.filter(item => item.status === 'trash'))
 
-      setCurrentTab(c => firestoreTasks.filter(item => item.status === 'current'))
+      setCurrentTab(c => firestoreTasks.filter(item => item.status === currentTabName))
     }, [firestoreTasks])
 
 
