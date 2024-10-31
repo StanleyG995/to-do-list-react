@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { getDocs, collection } from 'firebase/firestore'
 import { db } from '../../../firebaseConfig.js'
 
-export const useFirestore = (collectionName) => {
+export const useFirestoreFetch = (collectionName) => {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)

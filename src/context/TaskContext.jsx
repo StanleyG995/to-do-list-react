@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react"
-import  { useFirestore } from '../hooks/Firestore/useFirestoreFetch.js'
+import  { useFirestoreFetch } from '../hooks/Firestore/useFirestoreFetch.js'
 import  { useFirestoreUpload } from '../hooks/Firestore/useFirestoreUpload.js'
 import { useSort } from '../hooks/useSort.jsx'
 
@@ -10,7 +10,7 @@ export const TaskContext = createContext()
 
 export const TaskProvider = ({children}) => {
 
-  const { data: firestoreTasks, loading, error, fetchData } = useFirestore('tasks')
+  const { data: firestoreTasks, loading, error, fetchData } = useFirestoreFetch('tasks')
   const { saveData } = useFirestoreUpload()
   const [currentTasks, setCurrentTasks] = useState([])
   const [historyTasks, setHistoryTasks] = useState([])

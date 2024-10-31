@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react'
 import { TaskContext } from '../context/TaskContext.jsx'
 
 import { useForm } from '../hooks/useForm.jsx'
-import { useFirestore } from './Firestore/useFirestoreFetch.js'
+import { useFirestoreFetch } from './Firestore/useFirestoreFetch.js'
 import { useFirestoreUpload } from './Firestore/useFirestoreUpload.js'
 
 import { setIcon } from '../helpers/iconHelpers.js'
@@ -15,7 +15,7 @@ export const useModal = () => {
     const { setModal, isModalOpen, setIsModalOpen, taskInfo, currentID, setCurrentID } = useContext(TaskContext)
     const { handleInputReset } = useForm()
     const { saveData } = useFirestoreUpload('tasks')
-    const { fetchData } = useFirestore('tasks')
+    const { fetchData } = useFirestoreFetch('tasks')
     
     const [local, setLocal] = useState()
     const [isReadyToSave, setIsReadyToSave] = useState(false)
