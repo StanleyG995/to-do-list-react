@@ -1,4 +1,4 @@
-const setIcon = ( obj ) => {
+export const setIcon = ( obj ) => {
     switch ( obj.category ){
         case 'Home':
             obj.categoryIcon='fa-solid fa-house'

@@ -5,6 +5,8 @@ import { useForm } from '../hooks/useForm.jsx'
 import { useFirestore } from '../hooks/useFirestore.js'
 import { useFirestoreUpload } from '../hooks/useFirestoreUpload.js'
 
+import { setIcon } from '../helpers/iconHelpers.js'
+
 import Button from '../components/UI/Button/Button.jsx'
 import FormTaskInfo from '../components/Forms/FormTaskInfo.jsx'
 import Modal from '../components/UI/Modal/Modal.jsx'

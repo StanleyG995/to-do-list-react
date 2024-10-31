@@ -1,11 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { TaskContext } from '../../context/TaskContext.jsx'
 import { useForm } from '../../hooks/useForm.jsx'
+
+import { setIcon } from '../../helpers/iconHelpers.js'
 
 const FormTaskInfo = () => {
     
     const { taskInfo } = useContext( TaskContext )
     const { handleInputChange } = useForm()
+
+    useEffect(() => {
+        setIcon(taskInfo)
+    })
 
     return (
         

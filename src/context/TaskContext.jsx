@@ -3,6 +3,7 @@ import  { useFirestore } from '../hooks/useFirestore'
 import  { useFirestoreUpload } from '../hooks/useFirestoreUpload'
 
 import { formatInputDate, formatDate } from '../helpers/dateHelpers.js'
+import { setIcon } from '../helpers/iconHelpers.js'
 
 export const TaskContext = createContext()
 
