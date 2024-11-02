@@ -8,14 +8,14 @@ import Button from '../components/UI/Button/Button.jsx'
 import FormTaskInfo from '../components/Forms/FormTaskInfo.jsx'
 import Modal from '../components/UI/Modal/Modal.jsx'
 
-import { setIcon } from '../helpers/iconHelpers.js'
+
 
 export const useModal = () => {
     const { setModal, setIsModalOpen, taskInfo, setTaskInfo} = useContext(TaskContext)
     const { handleInputReset, handleSaveTask } = useForm()
     
 
-    setIcon(taskInfo)
+    
 
     const handleModalOpen = (type) => {
         console.log('Opening modal with taskInfo:', taskInfo);

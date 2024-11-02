@@ -4,6 +4,7 @@ import  { useFirestoreUpload } from '../hooks/Firestore/useFirestoreUpload.js'
 
 import { formatInputDate, formatDate } from '../helpers/dateHelpers.js'
 
+import { setIcon } from '../helpers/iconHelpers.js'
 
 export const TaskContext = createContext()
 
@@ -43,6 +44,10 @@ export const TaskProvider = ({children}) => {
       setCurrentTab(c => firestoreTasks.filter(item => item.status === currentTabName))
     }, [firestoreTasks])
 
+  useEffect(() => {
+    setIcon(taskInfo)
+    console.log('1')
+  },[taskInfo.category])
 
   const TaskContextValues = {
 
