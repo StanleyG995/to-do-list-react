@@ -28,11 +28,9 @@ export const useForm = () => {
     }
 
     
-    const handleSaveTask = async (e) => {
-        e.preventDefault()
+    const handleSaveTask = () => {
         console.log('Task Info in save task: ', taskInfo)
         saveData({...taskInfo})
-        handleModalClose()
     }
 
     return { handleInputChange, handleInputReset, handleSaveTask }
