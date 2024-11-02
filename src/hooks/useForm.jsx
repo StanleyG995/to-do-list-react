@@ -26,7 +26,6 @@ export const useForm = () => {
             status: 'current',
         }))
     }
-
     
     const handleSaveTask = () => {
         console.log('Task Info in save task: ', taskInfo)
