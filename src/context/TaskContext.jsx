@@ -26,7 +26,7 @@ export const TaskProvider = ({children}) => {
 
   const [taskInfo, setTaskInfo] = useState( {
     id: '',
-    category: 'home',
+    category: 'Home',
     categoryIcon: 'fa-solid fa-home',
     description: '',
     dateAdded: formatInputDate(new Date()),

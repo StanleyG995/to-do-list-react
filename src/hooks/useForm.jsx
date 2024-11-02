@@ -16,7 +16,7 @@ export const useForm = () => {
     const handleInputReset = () => {
         setTaskInfo(t => ({
             id: '',
-            category: 'dupsko',
+            category: 'Home',
             categoryIcon: 'fa-solid fa-home',
             description: '',
             dateAdded: formatInputDate(new Date()),
@@ -24,8 +24,6 @@ export const useForm = () => {
             priority: 'low',
             status: 'current',
         }))
-
-        
     }
 
     return { handleInputChange, handleInputReset }

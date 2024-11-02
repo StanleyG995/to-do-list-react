@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { addDoc, collection, doc, setDoc } from 'firebase/firestore'
 import { db } from '../../../firebaseConfig.js'
 
@@ -9,10 +9,10 @@ export const useFirestoreUpload = (collectionName) => {
     const saveData = async (data) => {
         setLoading(true)
         try {
+            console.log('Data to save: ', data)
             const docRef = await addDoc(collection(db, collectionName), data)
             console.log('Document written with ID: ', docRef.id)
             const dataWithId = { ...data, id: docRef.id }
-
             await setDoc(docRef, dataWithId) 
             
             setError(null)
