@@ -9,11 +9,12 @@ export const useFirestoreUpload = (collectionName) => {
     const saveData = async (data) => {
         setLoading(true)
         try {
+            await (data)
             console.log('Data to save: ', data)
-            const docRef = await addDoc(collection(db, collectionName), data)
-            console.log('Document written with ID: ', docRef.id)
-            const dataWithId = { ...data, id: docRef.id }
-            await setDoc(docRef, dataWithId) 
+            // const docRef = await addDoc(collection(db, collectionName), data)
+            // console.log('Document written with ID: ', docRef.id)
+            // const dataWithId = { ...data, id: docRef.id }
+            // await setDoc(docRef, dataWithId) 
             
             setError(null)
         } catch (err) {

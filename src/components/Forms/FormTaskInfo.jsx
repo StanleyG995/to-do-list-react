@@ -9,9 +9,7 @@ const FormTaskInfo = () => {
     const { taskInfo } = useContext( TaskContext )
     const { handleInputChange } = useForm()
 
-    useEffect(() => {
-        setIcon(taskInfo)
-    })
+    console.log('Task info in modal comp: ', taskInfo)
 
     return (
         

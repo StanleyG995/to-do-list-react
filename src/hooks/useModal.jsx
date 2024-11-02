@@ -8,27 +8,18 @@ import Button from '../components/UI/Button/Button.jsx'
 import FormTaskInfo from '../components/Forms/FormTaskInfo.jsx'
 import Modal from '../components/UI/Modal/Modal.jsx'
 
+import { setIcon } from '../helpers/iconHelpers.js'
+
 export const useModal = () => {
-    const { setModal, setIsModalOpen, taskInfo} = useContext(TaskContext)
-    const { handleInputReset } = useForm()
-    const { saveData } = useFirestoreUpload('tasks')
-
-    const handleModalOpen = () => {
-        setIsModalOpen(i => !i)
-    }
+    const { setModal, setIsModalOpen, taskInfo, setTaskInfo} = useContext(TaskContext)
+    const { handleInputReset, handleSaveTask } = useForm()
     
-    const handleModalClose = () => {
-        setIsModalOpen(i => false)
-        handleInputReset()
-    }
 
-    const handleSaveTask = () => {
-        saveData(taskInfo)
-        handleModalClose()
-        handleInputReset()
-    }
+    setIcon(taskInfo)
 
-    const handleModalType = (type) => {
+    const handleModalOpen = (type) => {
+        console.log('Opening modal with taskInfo:', taskInfo);
+        setIsModalOpen(i => !i)
         if (type === 'addTask') {
             setModal(m =>
                 <Modal 
@@ -75,9 +66,12 @@ export const useModal = () => {
                 </Modal>
             )
         }
-
-        handleModalOpen()
+    }
+    
+    const handleModalClose = () => {
+        setIsModalOpen(i => false)
+        // handleInputReset()
     }
 
-    return { handleModalOpen, handleModalClose, handleModalType }
+    return { handleModalOpen, handleModalClose }
 }
