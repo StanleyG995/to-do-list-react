@@ -6,8 +6,9 @@ import { formatDate, formatInputDate } from '../helpers/dateHelpers.js'
 
 export const useForm = () => {
 
-    const { taskInfo, setTaskInfo, setCurrentID, currentID } = useContext( TaskContext )
-    const { fetchData } = useFirestoreFetch()
+    const { taskInfo, setTaskInfo } = useContext( TaskContext )
+
+    console.log('Task info in modal comp: ', taskInfo)
 
     const handleInputChange = (e, field) => {
             setTaskInfo(t => ({...t, [field]:e.target.value}))

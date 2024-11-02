@@ -11,9 +11,10 @@ import Button from '../Button/Button.jsx'
 
 const Modal = ( {children, buttonPrimary } ) => {
 
-    const { isModalOpen } = useContext(TaskContext)
+    const { isModalOpen, taskInfo } = useContext(TaskContext)
     const { handleModalClose } = useModal()
     
+    console.log('Task info in modal comp: ', taskInfo)
 
     return (
         <div className={`modal-overlay ${isModalOpen ? 'modal-visible' : ''}`}>
