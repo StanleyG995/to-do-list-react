@@ -1,7 +1,6 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 
 import { TaskContext } from '../context/TaskContext.jsx';
-import  { useFirestoreFetch } from './Firestore/useFirestoreFetch.js'
 import { formatDate, formatInputDate } from '../helpers/dateHelpers.js'
 
 export const useForm = () => {
@@ -11,13 +10,13 @@ export const useForm = () => {
     console.log('Task info in modal comp: ', taskInfo)
 
     const handleInputChange = (e, field) => {
-            setTaskInfo(t => ({...t, [field]:e.target.value}))
+        setTaskInfo(t => ({...t, [field]:e.target.value}))
     }
 
     const handleInputReset = () => {
         setTaskInfo(t => ({
             id: '',
-            category: 'home',
+            category: 'dupsko',
             categoryIcon: 'fa-solid fa-home',
             description: '',
             dateAdded: formatInputDate(new Date()),

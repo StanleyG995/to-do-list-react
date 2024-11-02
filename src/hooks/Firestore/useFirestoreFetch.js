@@ -1,24 +1,28 @@
-import React, { useState } from 'react'
-import { getDocs, collection } from 'firebase/firestore'
-import { db } from '../../../firebaseConfig.js'
+import React, { useState, useEffect } from 'react';
+import { onSnapshot, collection } from 'firebase/firestore';
+import { db } from '../../../firebaseConfig.js';
 
 export const useFirestoreFetch = (collectionName) => {
-    const [data, setData] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null)
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    const fetchData = async () => {
-        setLoading(l => true)
-        try {
-            const querySnapshot = await getDocs(collection(db, collectionName))
-            const fetchedData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-            setData(d => fetchedData)
-        } catch (err) {
-            setError(err)
-        } finally {
-            setLoading(l => false)
-        }
-    }
-    
-    return { data, loading, error, fetchData }
-}
+    useEffect(() => {
+        const unsubscribe = onSnapshot(
+            collection(db, collectionName),
+            (querySnapshot) => {
+                const fetchedData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+                setData(fetchedData);
+                setLoading(false);
+                console.log('fetching')
+            },
+            (err) => {
+                setError(err);
+                setLoading(false);
+            }
+        );
+        return () => unsubscribe();
+    }, [collectionName]);
+
+    return { data, loading, error };
+};

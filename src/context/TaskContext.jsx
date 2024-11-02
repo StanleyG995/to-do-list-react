@@ -1,16 +1,15 @@
 import React, { createContext, useState, useEffect } from "react"
 import  { useFirestoreFetch } from '../hooks/Firestore/useFirestoreFetch.js'
 import  { useFirestoreUpload } from '../hooks/Firestore/useFirestoreUpload.js'
-import { useSort } from '../hooks/useSort.jsx'
 
 import { formatInputDate, formatDate } from '../helpers/dateHelpers.js'
-import { setIcon } from '../helpers/iconHelpers.js'
+
 
 export const TaskContext = createContext()
 
 export const TaskProvider = ({children}) => {
 
-  const { data: firestoreTasks, loading, error, fetchData } = useFirestoreFetch('tasks')
+  const { data: firestoreTasks, loading, error } = useFirestoreFetch('tasks')
   const { saveData } = useFirestoreUpload()
   const [currentTasks, setCurrentTasks] = useState([])
   const [historyTasks, setHistoryTasks] = useState([])
@@ -35,12 +34,6 @@ export const TaskProvider = ({children}) => {
     priority: 'low',
     status: 'current',
   })
-
-  useEffect(() =>  {
-    fetchData()
-    console.log('test')
-  }, [isModalOpen])
-
 
   useEffect(() => {
       setCurrentTasks(c => firestoreTasks.filter(item => item.status === 'current'))
