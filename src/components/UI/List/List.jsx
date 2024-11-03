@@ -59,6 +59,7 @@ const List = ( { source, className } ) => {
                         className={`fa-solid fa-caret-up list-heading-caret
                         ${currentSort === 'priority' ? 'caret-visible' : ''} 
                         ${ascending ? 'caret-up' : 'caret-down'} `}></i></button>
+                <div className='list-heading'>   </div>
             </div>
             <ul className='list-inner'>
                 {

@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react"
-import  { useFirestoreFetch } from '../hooks/Firestore/useFirestoreFetch.js'
+import  { useFirestoreFetchCollection } from '../hooks/Firestore/useFirestoreFetchCollection.js'
 import  { useFirestoreUpload } from '../hooks/Firestore/useFirestoreUpload.js'
 
 import { formatInputDate, formatDate } from '../helpers/dateHelpers.js'
@@ -10,8 +10,7 @@ export const TaskContext = createContext()
 
 export const TaskProvider = ({children}) => {
 
-  const { data: firestoreTasks, loading, error } = useFirestoreFetch('tasks')
-  const { saveData } = useFirestoreUpload()
+  const { data: firestoreTasks } = useFirestoreFetchCollection('tasks')
   const [currentTasks, setCurrentTasks] = useState([])
   const [historyTasks, setHistoryTasks] = useState([])
   const [trashTasks, setTrashTasks] = useState([])

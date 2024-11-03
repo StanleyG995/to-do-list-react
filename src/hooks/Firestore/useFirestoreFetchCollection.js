@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection } from 'firebase/firestore';
 import { db } from '../../../firebaseConfig.js';
 
-export const useFirestoreFetch = (collectionName) => {
+export const useFirestoreFetchCollection = (collectionName) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

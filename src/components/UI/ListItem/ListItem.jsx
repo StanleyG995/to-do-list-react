@@ -1,5 +1,7 @@
 import './ListItem.css'
 
+import Button from '../Button/Button.jsx'
+
 const ListItem = ({ id, category, categoryIcon, description, dateAdded, dateDue, priority }) => {
 
     return (
@@ -14,6 +16,10 @@ const ListItem = ({ id, category, categoryIcon, description, dateAdded, dateDue,
                 <p className={`list-item-property priority priority--${priority}`}>
                 {priority}
                 </p>
+                <div className='list-item-property row'>
+                    <Button classNames='button button--s button--secondary list-item-property'>Edit</Button>
+                    <Button classNames='button button--s button--danger list-item-property'>Delete</Button>
+                </div>
             </li>
         </>
     )

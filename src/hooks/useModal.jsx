@@ -2,26 +2,28 @@ import React, { useState, useContext, useEffect } from 'react'
 import { TaskContext } from '../context/TaskContext.jsx'
 
 import { useForm } from '../hooks/useForm.jsx'
-import { useFirestoreUpload } from './Firestore/useFirestoreUpload.js'
+import { useFirestoreFetchDocument } from './Firestore/useFirestoreFetchDocument.js'
 
 import Button from '../components/UI/Button/Button.jsx'
-import FormTaskInfo from '../components/Forms/FormTaskInfo.jsx'
-import Modal from '../components/UI/Modal/Modal.jsx'
-
-
 
 export const useModal = () => {
-    const { setModalType, setIsModalOpen, taskInfo, setTaskInfo} = useContext(TaskContext)
+    const { modalType, setModalType, setIsModalOpen, taskInfo} = useContext(TaskContext)
     const { handleInputReset, handleSaveTask } = useForm()
+    const { data } = useFirestoreFetchDocument('tasks', taskInfo.id)
 
     const handleModalOpen = (type) => {
         setModalType(type)
+        if(modalType === 'addTask') {
+            handleInputReset()
+        }
         setIsModalOpen(i => !i)
     }
     
     const handleModalClose = () => {
         setIsModalOpen(i => false)
-        handleInputReset()
+        if(modalType === 'addTask' || modalType === 'editTask') {
+            handleInputReset()
+        }
     }
 
     const handleButtonType = (type) => {
@@ -34,6 +36,14 @@ export const useModal = () => {
             case 'deleteTask':
                 return (
                     <Button classNames='button button--m button--danger' onClick={() => {console.log('Task deleted.'); handleModalClose()}}>x Delete task</Button>
+                )
+            case 'deletePermanently':
+                return (
+                    <Button classNames='button button--m button--danger' onClick={() => {console.log('Task deleted.'); handleModalClose()}}>x Delete task permanently</Button>
+                )
+            case 'editTask':
+                return (
+                    <Button classNames='button button--m button--primary' onClick={() => {handleModalClose()}}>Edit task</Button>
                 )
         }
     }

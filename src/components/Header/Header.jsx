@@ -2,6 +2,9 @@ import React, { useContext } from 'react'
 
 import { useNavigation } from '../../hooks/useNavigation.jsx'
 import { useModal } from '../../hooks/useModal.jsx'
+
+import { useFirestoreFetchDocument } from '../../hooks/Firestore/useFirestoreFetchDocument.js'
+
 import { TaskContext } from '../../context/TaskContext.jsx'
 
 import Button from '../UI/Button/Button.jsx'
@@ -11,10 +14,13 @@ import './Header.css'
 
 const Header = () => {
 
+    const { currentTabName, currentTasks, historyTasks, trashTasks, taskInfo, setTaskInfo } = useContext( TaskContext )
+    
     const { changeTab } = useNavigation()
     const { handleModalOpen } = useModal()
+    const { data } = useFirestoreFetchDocument('tasks', taskInfo.id)
 
-    const { currentTabName, currentTasks, historyTasks, trashTasks } = useContext( TaskContext )
+
 
     return (
         <div className="header">
@@ -24,7 +30,7 @@ const Header = () => {
                         <a href="" className="site-logo"><i className="fa-regular fa-pen-to-square logo-icon"/> Prior<span className='site-logo--color'>IT</span>ize</a>
                     </div>
                     <Button classNames='button button--l button--primary' onClick={() => handleModalOpen('addTask') }>+ Add task</Button>
-                    <Button classNames='button button--l button--danger' onClick={() => handleModalOpen('deleteTask') }>x Delete task</Button>
+                
                 </div>
                 <div className="column">
                     <ul className="menu">

@@ -158,7 +158,6 @@ body{
     font-family: var(--font--body);
     background: var(--gradient-primary--100-200, 0.3);
     background-size: cover;
-    min-height: 100vh;
     font-size: var(--text--m);
 }
 

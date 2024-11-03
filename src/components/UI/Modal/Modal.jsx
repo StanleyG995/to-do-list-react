@@ -11,7 +11,7 @@ import Button from '../Button/Button.jsx'
 
 const Modal = ( {children, buttonPrimary } ) => {
 
-    const { isModalOpen, taskInfo } = useContext(TaskContext)
+    const { isModalOpen } = useContext(TaskContext)
     const { handleModalClose } = useModal()
 
     return (
