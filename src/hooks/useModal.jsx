@@ -11,61 +11,12 @@ import Modal from '../components/UI/Modal/Modal.jsx'
 
 
 export const useModal = () => {
-    const { setModal, setIsModalOpen, taskInfo, setTaskInfo} = useContext(TaskContext)
+    const { setModalType, setIsModalOpen, taskInfo, setTaskInfo} = useContext(TaskContext)
     const { handleInputReset, handleSaveTask } = useForm()
-    
-
-    
 
     const handleModalOpen = (type) => {
-        console.log('Opening modal with taskInfo:', taskInfo);
+        setModalType(type)
         setIsModalOpen(i => !i)
-        // if (type === 'addTask') {
-        //     setModal(m =>
-        //         <Modal 
-        //             buttonPrimary={
-        //                 <Button 
-        //                     children="Add task" 
-        //                     classNames="button button--primary button--m" 
-        //                     onClick={handleSaveTask} 
-        //                 />
-        //             }
-        //         >
-        //             <h2>Add new task</h2>
-        //             <p>Fill in the task information.</p>
-        //             <FormTaskInfo />
-        //         </Modal>
-        //     )
-        // } else if (type === 'editTask') {
-        //     setModal(m =>
-        //         <Modal 
-        //             buttonPrimary={
-        //                 <Button 
-        //                     children="Edit task" 
-        //                     classNames="button button--primary button--m" 
-        //                     onClick={() => console.log('clicked')}
-        //                 />
-        //             }
-        //         >
-        //             <FormTaskInfo />
-        //         </Modal>
-        //     )
-        // } else {
-        //     setModal(m =>
-        //         <Modal 
-        //             buttonPrimary={
-        //                 <Button 
-        //                     children="Delete" 
-        //                     classNames="button button--danger button--m" 
-        //                     onClick={() => console.log('clicked')}
-        //                 />
-        //             }
-        //         >
-        //             <h2>Delete task permanently?</h2>
-        //             <p>This operation is irreversible.</p>
-        //         </Modal>
-        //     )
-        // }
     }
     
     const handleModalClose = () => {
@@ -73,5 +24,19 @@ export const useModal = () => {
         handleInputReset()
     }
 
-    return { handleModalOpen, handleModalClose }
+    const handleButtonType = (type) => {
+        switch (type) {
+            case 'addTask': 
+                return (
+                    <Button classNames='button button--m button--primary' onClick={() => {handleSaveTask(); handleModalClose()}}>+ Add task</Button>
+                )
+                break;
+            case 'deleteTask':
+                return (
+                    <Button classNames='button button--m button--danger' onClick={() => {console.log('Task deleted.'); handleModalClose()}}>x Delete task</Button>
+                )
+        }
+    }
+
+    return { handleModalOpen, handleModalClose, handleButtonType }
 }

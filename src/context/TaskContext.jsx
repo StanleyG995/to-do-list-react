@@ -46,7 +46,6 @@ export const TaskProvider = ({children}) => {
 
   useEffect(() => {
     setIcon(taskInfo)
-    console.log('1')
   },[taskInfo.category])
 
   const TaskContextValues = {

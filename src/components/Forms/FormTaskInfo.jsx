@@ -12,7 +12,9 @@ const FormTaskInfo = () => {
     console.log('Task info in modal comp: ', taskInfo)
 
     return (
-        
+        <>
+            <h2>Add new task</h2>
+            <p>Fill in the task information.</p>
        
             <form className="form-task-info column">
                 <label htmlFor="category">Category</label>
@@ -49,7 +51,7 @@ const FormTaskInfo = () => {
                     <option value='low'>Low</option>
                 </select>
             </form>
-     
+        </>
     )
 
 }
