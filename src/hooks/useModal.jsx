@@ -8,7 +8,7 @@ import Button from '../components/UI/Button/Button.jsx'
 
 export const useModal = () => {
     const { modalType, setModalType, setIsModalOpen, taskInfo} = useContext(TaskContext)
-    const { handleInputReset, handleSaveTask, handleUpdateTask, handleRemoveTask } = useForm()
+    const { handleInputReset, handleSaveTask, handleUpdateTask, handleRemoveTask, handleCompleteTask } = useForm()
     const { data } = useFirestoreFetchDocument('tasks', taskInfo.id)
 
     const handleModalOpen = (type) => {
@@ -21,9 +21,7 @@ export const useModal = () => {
     
     const handleModalClose = () => {
         setIsModalOpen(i => false)
-        if(modalType === 'addTask' || modalType === 'editTask') {
-            handleInputReset()
-        }
+        handleInputReset()
     }
 
     const handleButtonType = (type) => {
@@ -44,6 +42,10 @@ export const useModal = () => {
             case 'editTask':
                 return (
                     <Button classNames='button button--m button--primary' onClick={() => {handleUpdateTask(); handleModalClose()}}>Edit task</Button>
+                )
+            case 'completeTask':
+                return (
+                    <Button classNames='button button--m button--primary' onClick={() => {handleCompleteTask(); handleModalClose()}}>Complete task</Button>
                 )
         }
     }

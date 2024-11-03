@@ -7,16 +7,14 @@ import { useGetId } from './useGetId.jsx'
 
 import { useFirestoreUpload } from './Firestore/useFirestoreUpload.js'
 import { useFirestoreUpdate } from './Firestore/useFirestoreUpdate.js'
-import { useFirestoreRemove} from './Firestore/useFirestoreRemove.js'
+import { useFirestoreMove} from './Firestore/useFirestoreMove.js'
 
 export const useForm = () => {
 
     const { taskInfo, setTaskInfo } = useContext( TaskContext )
     const { saveData } = useFirestoreUpload('tasks')
     const { updateDocument } = useFirestoreUpdate('tasks')
-    const { removeTask } = useFirestoreRemove('tasks')
-    
-    
+    const { moveTask } = useFirestoreMove('tasks')
 
     const handleInputChange = (e, field) => {
         setTaskInfo(t => ({...t, [field]:e.target.value}))
@@ -45,8 +43,12 @@ export const useForm = () => {
     }
 
     const handleRemoveTask = async (e) => {
-        removeTask(taskInfo.id)
+        moveTask(taskInfo.id, {status: 'trash'})
     }
 
-    return { handleInputChange, handleInputReset, handleSaveTask, handleUpdateTask, handleRemoveTask}
+    const handleCompleteTask = async (e) => {
+        moveTask(taskInfo.id, {status: 'history'})
+    }
+
+    return { handleInputChange, handleInputReset, handleSaveTask, handleUpdateTask, handleRemoveTask, handleCompleteTask}
 }

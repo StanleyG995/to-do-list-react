@@ -7,6 +7,7 @@ import Button from './components/UI/Button/Button.jsx'
 import FormTaskInfo from './components/Forms/FormTaskInfo.jsx'
 import DeleteTask from './components/Forms/DeleteTask.jsx'
 import DeletePermanent from './components/Forms/DeletePermanent.jsx'
+import CompleteTask from './components/Forms/CompleteTask.jsx'
 
 import { useModal } from './hooks/useModal.jsx'
 
@@ -24,6 +25,7 @@ const Body = () => {
                 {modalType === 'deleteTask' && <DeleteTask />}
                 {modalType === 'deletePermanently' && <DeletePermanent />}
                 {modalType === 'editTask' && <FormTaskInfo />}
+                {modalType === 'completeTask' && <CompleteTask />}
             </Modal>
 		</>
 	)

@@ -3,17 +3,17 @@ import { doc, updateDoc } from 'firebase/firestore'
 import { db } from '../../../firebaseConfig.js'
 
 
-export const useFirestoreRemove = (collectionName) => {
+export const useFirestoreMove = (collectionName) => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
 
-    const removeTask = async (id) => {
+    const moveTask = async (id, status) => {
         setLoading(true)
         setError(null)
 
         try {
             const docRef = doc(db, collectionName, id)
-            await updateDoc(docRef, {status: 'trash'})
+            await updateDoc(docRef, status)
         }
 
         catch(err) {
@@ -26,5 +26,5 @@ export const useFirestoreRemove = (collectionName) => {
         }
     }
 
-    return { removeTask }
+    return { moveTask }
 }
