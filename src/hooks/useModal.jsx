@@ -8,7 +8,7 @@ import Button from '../components/UI/Button/Button.jsx'
 
 export const useModal = () => {
     const { modalType, setModalType, setIsModalOpen, taskInfo} = useContext(TaskContext)
-    const { handleInputReset, handleSaveTask, handleUpdateTask } = useForm()
+    const { handleInputReset, handleSaveTask, handleUpdateTask, handleRemoveTask } = useForm()
     const { data } = useFirestoreFetchDocument('tasks', taskInfo.id)
 
     const handleModalOpen = (type) => {
@@ -35,7 +35,7 @@ export const useModal = () => {
                 break;
             case 'deleteTask':
                 return (
-                    <Button classNames='button button--m button--danger' onClick={() => {console.log('Task deleted.'); handleModalClose()}}>x Delete task</Button>
+                    <Button classNames='button button--m button--danger' onClick={() => {handleRemoveTask(taskInfo.id); handleModalClose()}}>x Delete task</Button>
                 )
             case 'deletePermanently':
                 return (

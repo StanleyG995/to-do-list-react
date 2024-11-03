@@ -3,16 +3,21 @@ import React, { useContext } from 'react'
 import { TaskContext } from '../context/TaskContext.jsx';
 
 import { formatInputDate } from '../helpers/dateHelpers.js'
+import { useGetId } from './useGetId.jsx'
 
 import { useFirestoreUpload } from './Firestore/useFirestoreUpload.js'
 import { useFirestoreUpdate } from './Firestore/useFirestoreUpdate.js'
+import { useFirestoreRemove} from './Firestore/useFirestoreRemove.js'
 
 export const useForm = () => {
 
     const { taskInfo, setTaskInfo } = useContext( TaskContext )
     const { saveData } = useFirestoreUpload('tasks')
     const { updateDocument } = useFirestoreUpdate('tasks')
+    const { removeTask } = useFirestoreRemove('tasks')
     
+    
+
     const handleInputChange = (e, field) => {
         setTaskInfo(t => ({...t, [field]:e.target.value}))
     }
@@ -39,5 +44,9 @@ export const useForm = () => {
         updateDocument(taskInfo.id, taskInfo)
     }
 
-    return { handleInputChange, handleInputReset, handleSaveTask, handleUpdateTask}
+    const handleRemoveTask = async (e) => {
+        removeTask(taskInfo.id)
+    }
+
+    return { handleInputChange, handleInputReset, handleSaveTask, handleUpdateTask, handleRemoveTask}
 }
