@@ -62,3 +62,7 @@
 .priority--low:before {
     content: '★☆☆';
 }
+
+.history-list .list-buttons {
+    display: none;
+}
