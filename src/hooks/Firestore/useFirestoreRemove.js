@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { doc, deleteDoc } from 'firebase/firestore'
+import { doc, updateDoc } from 'firebase/firestore'
 import { db } from '../../../firebaseConfig.js'
 
 
@@ -13,7 +13,7 @@ export const useFirestoreRemove = (collectionName) => {
 
         try {
             const docRef = doc(db, collectionName, id)
-            await deleteDoc(docRef)
+            await updateDoc(docRef, {status: 'trash'})
         }
 
         catch(err) {
