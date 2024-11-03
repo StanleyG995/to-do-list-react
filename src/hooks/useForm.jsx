@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
 
 import { TaskContext } from '../context/TaskContext.jsx';
-import { formatDate, formatInputDate } from '../helpers/dateHelpers.js'
-import { useFirestoreUpload } from './Firestore/useFirestoreUpload.js'
 
+import { formatInputDate } from '../helpers/dateHelpers.js'
+
+import { useFirestoreUpload } from './Firestore/useFirestoreUpload.js'
 
 export const useForm = () => {
 
@@ -32,5 +33,5 @@ export const useForm = () => {
         saveData({...taskInfo})
     }
 
-    return { handleInputChange, handleInputReset, handleSaveTask }
+    return { handleInputChange, handleInputReset, handleSaveTask}
 }

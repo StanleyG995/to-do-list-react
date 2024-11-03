@@ -1,43 +1,34 @@
-import { useState, useEffect, useContext } from "react"
+import { useState, useEffect } from "react"
 import { doc, getDoc } from "firebase/firestore"
-import { db } from '../../../firebaseConfig.js';
+import { db } from '../../../firebaseConfig.js'
 
-import { TaskContext } from '../../context/TaskContext.jsx'
-
-export const useFirestoreFetchDocument = (collectionName, documentId) => {
+export const useFirestoreFetchDocument = (collectionName) => {
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
 
-    const { taskInfo } = useContext( TaskContext )
+    const fetchDocument = async (documentId) => {
+        setLoading(true)
+        setError(null)
 
-    useEffect(() => {
+        try {
+            const docRef = doc(db, collectionName, documentId)
+            const docSnap = await getDoc(docRef)
 
-        const fetchDocument = async () => {
-            setLoading(true);
-
-            try {
-                const docRef = doc(db, collectionName, documentId)
-                const docSnap = await getDoc(docRef)
-
-                if (docSnap.exists()) {
-                    setData(docSnap.data())
-                } else {
-                    console.log("Nie znaleziono dokumentu.")
-                    setError("Dokument nie istnieje.")
-                }
-            } catch (err) {
-                console.error("Błąd pobierania dokumentu:", err)
-                setError("Błąd pobierania dokumentu.")
-            } finally {
-                setLoading(false)
+            if (docSnap.exists()) {
+                setData(docSnap.data())
+                return docSnap.data()
+            } else {
+                setError("Dokument nie istnieje.")
+                return null
             }
-        };
-
-        if (documentId) {
-            fetchDocument();
+        } catch (err) {
+            setError("Błąd pobierania dokumentu.")
+            return null
+        } finally {
+            setLoading(false)
         }
-    }, [collectionName, documentId]);
+    }
 
-    return {data, loading, error };
-};
+    return { data, loading, error, fetchDocument }
+}

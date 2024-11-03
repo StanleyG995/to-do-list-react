@@ -8,7 +8,7 @@ import Button from '../components/UI/Button/Button.jsx'
 
 export const useModal = () => {
     const { modalType, setModalType, setIsModalOpen, taskInfo} = useContext(TaskContext)
-    const { handleInputReset, handleSaveTask } = useForm()
+    const { handleInputReset, handleSaveTask, handleEditTask } = useForm()
     const { data } = useFirestoreFetchDocument('tasks', taskInfo.id)
 
     const handleModalOpen = (type) => {

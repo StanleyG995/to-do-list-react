@@ -2,9 +2,13 @@ import './ListItem.css'
 
 import Button from '../Button/Button.jsx'
 
-import { getTaskId } from '../../../helpers/taskOperationsHelpers.js'
+import { useList } from '../../../hooks/useList.jsx'
+import { useModal } from '../../../hooks/useModal.jsx'
 
 const ListItem = ({ id, category, categoryIcon, description, dateAdded, dateDue, priority }) => {
+
+    const { handleEditTask } = useList()
+    const { handleModalOpen } = useModal()
 
     return (
         <>
@@ -19,7 +23,7 @@ const ListItem = ({ id, category, categoryIcon, description, dateAdded, dateDue,
                 {priority}
                 </p>
                 <div className='list-item-property row'>
-                    <Button classNames='button button--s button--secondary list-item-property' onClick={(e) => getTaskId(e)}>Edit</Button>
+                    <Button classNames='button button--s button--secondary list-item-property' onClick={(e) => { handleEditTask(e); handleModalOpen('editTask')}}>Edit</Button>
                     <Button classNames='button button--s button--danger list-item-property'>Delete</Button>
                 </div>
             </li>
