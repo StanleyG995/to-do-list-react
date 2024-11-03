@@ -5,11 +5,13 @@ import { TaskContext } from '../context/TaskContext.jsx';
 import { formatInputDate } from '../helpers/dateHelpers.js'
 
 import { useFirestoreUpload } from './Firestore/useFirestoreUpload.js'
+import { useFirestoreUpdate } from './Firestore/useFirestoreUpdate.js'
 
 export const useForm = () => {
 
     const { taskInfo, setTaskInfo } = useContext( TaskContext )
     const { saveData } = useFirestoreUpload('tasks')
+    const { updateDocument } = useFirestoreUpdate('tasks')
     
     const handleInputChange = (e, field) => {
         setTaskInfo(t => ({...t, [field]:e.target.value}))
@@ -33,5 +35,9 @@ export const useForm = () => {
         saveData({...taskInfo})
     }
 
-    return { handleInputChange, handleInputReset, handleSaveTask}
+    const handleUpdateTask = () => {
+        updateDocument(taskInfo.id, taskInfo)
+    }
+
+    return { handleInputChange, handleInputReset, handleSaveTask, handleUpdateTask}
 }
