@@ -4,6 +4,7 @@ export const listDisplay = ( arr ) => {
 
     return arr.length ? arr.map (item => (
             <ListItem
+            id={item.id}
             key={item.id}
             category={item.category}
             categoryIcon={item.categoryIcon}
