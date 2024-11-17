@@ -19,6 +19,24 @@
     flex: 2;
 }
 
+.list-item-options {
+    border: none;
+    background: none;
+    padding: var(--space--s);
+    cursor: pointer;
+}
+
+.list-item-options i {
+    color: var(--primary-color--500);
+    font-style: normal;
+    font-size: var(--heading--s);
+    transition: color .3s ease-in-out;
+}
+
+.list-item-options i:hover {
+    color: var(--primary-color--400);
+}
+
 .category {
     flex: 2;
     font-weight: bold;

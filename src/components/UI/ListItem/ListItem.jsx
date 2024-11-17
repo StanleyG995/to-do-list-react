@@ -25,8 +25,8 @@ const ListItem = ({ id, category, categoryIcon, description, dateAdded, dateDue,
                 <p className={`list-item-property priority priority--${priority}`}>
                 {priority}
                 </p>
-                <button class='list-item-options'>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                <button className='list-item-options'>
+                    <i className="fa-solid fa-ellipsis-vertical"></i>
                 </button>
                 
             </li>
